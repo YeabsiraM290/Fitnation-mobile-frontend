@@ -34,7 +34,7 @@ class SignupForm extends StatelessWidget {
                     height: 20,
                   ),
                   Form(
-                    autovalidate: state.showErrorMessages,
+                    autovalidateMode: AutovalidateMode.onUserInteraction,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
@@ -43,10 +43,10 @@ class SignupForm extends StatelessWidget {
                               color: Colors.white, fontSize: 15),
                           autocorrect: false,
                           onChanged: (value) => context
-                              .bloc<SignupFormBloc>()
+                              .read<SignupFormBloc>()
                               .add(SignupFormEvent.emailChanged(value)),
                           validator: (_) => context
-                              .bloc<SignupFormBloc>()
+                              .read<SignupFormBloc>()
                               .state
                               .emailAddress
                               .value
@@ -82,10 +82,10 @@ class SignupForm extends StatelessWidget {
                               color: Colors.white, fontSize: 15),
                           autocorrect: false,
                           onChanged: (value) => context
-                              .bloc<SignupFormBloc>()
+                              .read<SignupFormBloc>()
                               .add(SignupFormEvent.usernameChanged(value)),
                           validator: (_) => context
-                              .bloc<SignupFormBloc>()
+                              .read<SignupFormBloc>()
                               .state
                               .username
                               .value
@@ -122,10 +122,10 @@ class SignupForm extends StatelessWidget {
                               color: Colors.white, fontSize: 15),
                           autocorrect: false,
                           onChanged: (value) => context
-                              .bloc<SignupFormBloc>()
+                              .read<SignupFormBloc>()
                               .add(SignupFormEvent.secretAnswerChanged(value)),
                           validator: (_) => context
-                              .bloc<SignupFormBloc>()
+                              .read<SignupFormBloc>()
                               .state
                               .secretAnswer
                               .value
@@ -161,10 +161,10 @@ class SignupForm extends StatelessWidget {
                               color: Colors.white, fontSize: 15),
                           autocorrect: false,
                           onChanged: (value) => context
-                              .bloc<SignupFormBloc>()
+                              .read<SignupFormBloc>()
                               .add(SignupFormEvent.passwordChanged(value)),
                           validator: (_) => context
-                              .bloc<SignupFormBloc>()
+                              .read<SignupFormBloc>()
                               .state
                               .password
                               .value
@@ -200,10 +200,10 @@ class SignupForm extends StatelessWidget {
                               color: Colors.white, fontSize: 15),
                           autocorrect: false,
                           onChanged: (value) => context
-                              .bloc<SignupFormBloc>()
+                              .read<SignupFormBloc>()
                               .add(SignupFormEvent.passwordChanged(value)),
                           validator: (_) => context
-                              .bloc<SignupFormBloc>()
+                              .read<SignupFormBloc>()
                               .state
                               .password
                               .value
@@ -239,10 +239,10 @@ class SignupForm extends StatelessWidget {
                               color: Colors.white, fontSize: 15),
                           autocorrect: false,
                           onChanged: (value) => context
-                              .bloc<SignupFormBloc>()
+                              .read<SignupFormBloc>()
                               .add(SignupFormEvent.passwordChanged(value)),
                           validator: (_) => context
-                              .bloc<SignupFormBloc>()
+                              .read<SignupFormBloc>()
                               .state
                               .emailAddress
                               .value
@@ -278,10 +278,10 @@ class SignupForm extends StatelessWidget {
                               color: Colors.white, fontSize: 15),
                           autocorrect: false,
                           onChanged: (value) => context
-                              .bloc<SignupFormBloc>()
+                              .read<SignupFormBloc>()
                               .add(SignupFormEvent.passwordChanged(value)),
                           validator: (_) => context
-                              .bloc<SignupFormBloc>()
+                              .read<SignupFormBloc>()
                               .state
                               .emailAddress
                               .value
@@ -317,10 +317,10 @@ class SignupForm extends StatelessWidget {
                               color: Colors.white, fontSize: 15),
                           autocorrect: false,
                           onChanged: (value) => context
-                              .bloc<SignupFormBloc>()
+                              .read<SignupFormBloc>()
                               .add(SignupFormEvent.passwordChanged(value)),
                           validator: (_) => context
-                              .bloc<SignupFormBloc>()
+                              .read<SignupFormBloc>()
                               .state
                               .emailAddress
                               .value
@@ -360,7 +360,7 @@ class SignupForm extends StatelessWidget {
                       child: ElevatedButton(
                         style: signupbuttonstyle,
                         onPressed: () {
-                          context.bloc<SignupFormBloc>().add(
+                          context.read<SignupFormBloc>().add(
                                 const SignupFormEvent
                                     .registerWithEmailAndPasswordPressed(),
                               );

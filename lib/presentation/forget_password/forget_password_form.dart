@@ -5,7 +5,7 @@ import 'package:flushbar/flushbar.dart';
 import 'package:fitnation_frontend/presentation/routes/router.gr.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fitnation_frontend/application/auth/login-form/login-form_bloc.dart';
+import 'package:fitnation_frontend/application/auth/forget-password-form/forget-password_bloc.dart';
 
 Color loginbuttoncolor = HexColor("#c66319");
 
@@ -16,17 +16,17 @@ final loginbuttonstyle = ButtonStyle(
       fontWeight: FontWeight.bold,
     )));
 
-class LoginForm extends StatelessWidget {
+class ForgetPasswordform extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<LoginFormBloc, LoginFormState>(
+    return BlocConsumer<ForgetPasswordBloc, ForgetPasswordState>(
         listener: (context, state) {
       state.authFailureOrSuccessOption.fold(
         () {},
         (either) => either.fold((failure) {
           FlushbarHelper.createError(
             message: failure.maybeMap(
-                invalidEmailAndPassword: (_) => 'Wrong email or password',
+                invalidCredentials: (_) => 'Wrong information provided',
                 serverError: (_) => 'Server error',
                 orElse: () => null),
           ).show(context);
@@ -34,11 +34,25 @@ class LoginForm extends StatelessWidget {
       );
     }, builder: (context, state) {
       return Padding(
-          padding: const EdgeInsets.all(15),
+          padding: const EdgeInsets.all(10),
           child: ListView(
             children: <Widget>[
+              Align(
+                alignment: Alignment.topLeft,
+                child: GestureDetector(
+                  onTap: () {
+                    ExtendedNavigator.of(context)
+                        .replace(Routes.loginFormContainer);
+                  },
+                  child: const Icon(
+                    Icons.arrow_back,
+                    size: 30,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
               const SizedBox(
-                height: 60,
+                height: 40,
               ),
               const Text(
                 "FITNATION",
@@ -61,8 +75,8 @@ class LoginForm extends StatelessWidget {
                         fontSize: 15,
                       ),
                       onChanged: (value) => context
-                          .read<LoginFormBloc>()
-                          .add(LoginFormEvent.emailChanged(value)),
+                          .read<ForgetPasswordBloc>()
+                          .add(ForgetPasswordEvent.emailChanged(value)),
                       decoration: const InputDecoration(
                         icon: Icon(
                           Icons.email,
@@ -91,8 +105,8 @@ class LoginForm extends StatelessWidget {
                         fontSize: 15,
                       ),
                       onChanged: (value) => context
-                          .read<LoginFormBloc>()
-                          .add(LoginFormEvent.passwordChanged(value)),
+                          .read<ForgetPasswordBloc>()
+                          .add(ForgetPasswordEvent.passwordChanged(value)),
                       decoration: const InputDecoration(
                         icon: Icon(
                           Icons.lock,
@@ -112,24 +126,37 @@ class LoginForm extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ],
-                ),
-              ),
-              TextButton(
-                onPressed: () {
-                  //forgot password screen
-                },
-                child: const Align(
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Forgot Password',
-                    textAlign: TextAlign.right,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 13,
-                      fontWeight: FontWeight.w300,
+                    const SizedBox(
+                      height: 20,
                     ),
-                  ),
+                    TextFormField(
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                      ),
+                      onChanged: (value) => context
+                          .read<ForgetPasswordBloc>()
+                          .add(ForgetPasswordEvent.secretAnswerChanged(value)),
+                      decoration: const InputDecoration(
+                        icon: Icon(
+                          Icons.question_answer,
+                          color: Colors.orange,
+                        ),
+                        hintText: 'Enter secret answer',
+                        labelText: 'Secret answer',
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.orange,
+                          ),
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               const SizedBox(
@@ -141,32 +168,12 @@ class LoginForm extends StatelessWidget {
                   child: ElevatedButton(
                     style: loginbuttonstyle,
                     onPressed: () {
-                      context.read<LoginFormBloc>().add(
-                            const LoginFormEvent.signInWithEmailAndPassword(),
+                      context.read<ForgetPasswordBloc>().add(
+                            const ForgetPasswordEvent.changePassword(),
                           );
                     },
-                    child: const Text('Login'),
+                    child: const Text('Reset'),
                   )),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  const Text(
-                    'Does not have account?',
-                    style: TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.w300),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      ExtendedNavigator.of(context)
-                          .replace(Routes.signupFormContainer);
-                    },
-                    child: const Text(
-                      'Sign in',
-                      style: TextStyle(fontSize: 15),
-                    ),
-                  ),
-                ],
-              ),
             ],
           ));
     });

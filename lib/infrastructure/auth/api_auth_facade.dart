@@ -42,4 +42,16 @@ class ApiAuthFacade implements AuthFacade {
   Future<void> signOut() async {
     print("signed out");
   }
+
+  @override
+  Future<Either<AuthFailure, Unit>> changePassword({
+    @required EmailAddress emailAddress,
+    @required Password password,
+    @required SecretAnswer secretAnswer,
+  }) async {
+    if (emailAddress.isValid()) {
+      return right(unit);
+    }
+    return left(const AuthFailure.invalidCredentials());
+  }
 }
