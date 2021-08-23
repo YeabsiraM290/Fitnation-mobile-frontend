@@ -24,4 +24,10 @@ abstract class AuthFacade {
     @required SecretAnswer secretAnswer,
     @required Password password,
   });
+  Future<Either<AuthFailure, Unit>> updateProfile({
+    @required Username username,
+    @required Age age,
+    @required Height height,
+    @required Weight weight,
+  });
 }
