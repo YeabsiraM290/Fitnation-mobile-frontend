@@ -43,3 +43,30 @@ Either<ValueFailure<String>, String> validatePasswordEquality(
     return left(ValueFailure.unmatchedPassword(failedValue: input2));
   }
 }
+
+Either<ValueFailure<int>, int> validateAge(int age) {
+  // You can also add some advanced password checks (uppercase/lowercase, at least 1 number, ...)
+  if (age > 15 && age < 70) {
+    return right(age);
+  } else {
+    return left(ValueFailure.invalidAge(failedValue: age));
+  }
+}
+
+Either<ValueFailure<double>, double> validateHeight(double height) {
+  // You can also add some advanced password checks (uppercase/lowercase, at least 1 number, ...)
+  if (height > 1.40 && height < 2.4) {
+    return right(height);
+  } else {
+    return left(ValueFailure.invalidHeight(failedValue: height));
+  }
+}
+
+Either<ValueFailure<double>, double> validateWeight(double weight) {
+  // You can also add some advanced password checks (uppercase/lowercase, at least 1 number, ...)
+  if (weight > 25.0 && weight < 200.0) {
+    return right(weight);
+  } else {
+    return left(ValueFailure.invalidWeight(failedValue: weight));
+  }
+}

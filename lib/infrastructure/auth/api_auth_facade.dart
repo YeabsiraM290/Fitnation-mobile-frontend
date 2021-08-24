@@ -54,4 +54,18 @@ class ApiAuthFacade implements AuthFacade {
     }
     return left(const AuthFailure.invalidCredentials());
   }
+
+  @override
+  Future<Either<AuthFailure, Unit>> updateProfile({
+    @required Username username,
+    @required Age age,
+    @required Height height,
+    @required Weight weight,
+  }) async {
+    if (username.isValid()) {
+      print(age);
+      return right(unit);
+    }
+    return left(const AuthFailure.usernameInUse());
+  }
 }
