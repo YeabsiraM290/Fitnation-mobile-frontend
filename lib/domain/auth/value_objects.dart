@@ -67,3 +67,42 @@ class SecretAnswer extends ValueObject<String> {
 
   const SecretAnswer._(this.value);
 }
+
+class Age extends ValueObject<int> {
+  @override
+  final Either<ValueFailure<int>, int> value;
+
+  factory Age(int input) {
+    return Age._(
+      validateAge(input),
+    );
+  }
+
+  const Age._(this.value);
+}
+
+class Weight extends ValueObject<double> {
+  @override
+  final Either<ValueFailure<double>, double> value;
+
+  factory Weight(double input) {
+    return Weight._(
+      validateWeight(input),
+    );
+  }
+
+  const Weight._(this.value);
+}
+
+class Height extends ValueObject<double> {
+  @override
+  final Either<ValueFailure<double>, double> value;
+
+  factory Height(double input) {
+    return Height._(
+      validateHeight(input),
+    );
+  }
+
+  const Height._(this.value);
+}

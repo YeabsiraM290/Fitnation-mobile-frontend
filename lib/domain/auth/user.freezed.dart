@@ -18,9 +18,9 @@ class _$UserTearOff {
       {@required EmailAddress emailAddress,
       @required Password password,
       @required Username username,
-      @required int age,
-      @required double height,
-      @required double weight}) {
+      @required Age age,
+      @required Height height,
+      @required Weight weight}) {
     return _User(
       emailAddress: emailAddress,
       password: password,
@@ -41,9 +41,9 @@ mixin _$User {
   EmailAddress get emailAddress;
   Password get password;
   Username get username;
-  int get age;
-  double get height;
-  double get weight;
+  Age get age;
+  Height get height;
+  Weight get weight;
 
   @JsonKey(ignore: true)
   $UserCopyWith<User> get copyWith;
@@ -57,9 +57,9 @@ abstract class $UserCopyWith<$Res> {
       {EmailAddress emailAddress,
       Password password,
       Username username,
-      int age,
-      double height,
-      double weight});
+      Age age,
+      Height height,
+      Weight weight});
 }
 
 /// @nodoc
@@ -85,9 +85,9 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
           : emailAddress as EmailAddress,
       password: password == freezed ? _value.password : password as Password,
       username: username == freezed ? _value.username : username as Username,
-      age: age == freezed ? _value.age : age as int,
-      height: height == freezed ? _value.height : height as double,
-      weight: weight == freezed ? _value.weight : weight as double,
+      age: age == freezed ? _value.age : age as Age,
+      height: height == freezed ? _value.height : height as Height,
+      weight: weight == freezed ? _value.weight : weight as Weight,
     ));
   }
 }
@@ -101,9 +101,9 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       {EmailAddress emailAddress,
       Password password,
       Username username,
-      int age,
-      double height,
-      double weight});
+      Age age,
+      Height height,
+      Weight weight});
 }
 
 /// @nodoc
@@ -130,9 +130,9 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
           : emailAddress as EmailAddress,
       password: password == freezed ? _value.password : password as Password,
       username: username == freezed ? _value.username : username as Username,
-      age: age == freezed ? _value.age : age as int,
-      height: height == freezed ? _value.height : height as double,
-      weight: weight == freezed ? _value.weight : weight as double,
+      age: age == freezed ? _value.age : age as Age,
+      height: height == freezed ? _value.height : height as Height,
+      weight: weight == freezed ? _value.weight : weight as Weight,
     ));
   }
 }
@@ -160,11 +160,11 @@ class _$_User implements _User {
   @override
   final Username username;
   @override
-  final int age;
+  final Age age;
   @override
-  final double height;
+  final Height height;
   @override
-  final double weight;
+  final Weight weight;
 
   @override
   String toString() {
@@ -213,9 +213,9 @@ abstract class _User implements User {
       {@required EmailAddress emailAddress,
       @required Password password,
       @required Username username,
-      @required int age,
-      @required double height,
-      @required double weight}) = _$_User;
+      @required Age age,
+      @required Height height,
+      @required Weight weight}) = _$_User;
 
   @override
   EmailAddress get emailAddress;
@@ -224,11 +224,11 @@ abstract class _User implements User {
   @override
   Username get username;
   @override
-  int get age;
+  Age get age;
   @override
-  double get height;
+  Height get height;
   @override
-  double get weight;
+  Weight get weight;
   @override
   @JsonKey(ignore: true)
   _$UserCopyWith<_User> get copyWith;

@@ -9,7 +9,13 @@ import 'package:fitnation_frontend/domain/auth/value_objects.dart';
 
 @LazySingleton(as: AuthFacade)
 class ApiAuthFacade implements AuthFacade {
-  User user;
+  User user = User(
+      emailAddress: EmailAddress("q@dc.com"),
+      password: Password("weerrtu"),
+      username: Username('sdasdsa'),
+      age: Age(23),
+      height: Height(1.56),
+      weight: Weight(45));
   @override
   Future<Option<User>> getSignedInUser() async => optionOf(user);
 

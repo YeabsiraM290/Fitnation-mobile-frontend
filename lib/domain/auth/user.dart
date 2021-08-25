@@ -9,8 +9,8 @@ abstract class User with _$User {
     @required EmailAddress emailAddress,
     @required Password password,
     @required Username username,
-    @required int age,
-    @required double height,
-    @required double weight,
+    @required Age age,
+    @required Height height,
+    @required Weight weight,
   }) = _User;
 }

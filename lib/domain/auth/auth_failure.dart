@@ -10,17 +10,4 @@ abstract class AuthFailure with _$AuthFailure {
   const factory AuthFailure.usernameInUse() = UsernameAlreadyInUse;
   const factory AuthFailure.invalidEmailAndPassword() = InvalidEmailAndPassword;
   const factory AuthFailure.invalidCredentials() = InvalidCredentials;
-
-      const factory ValueFailure.invalidAge({
-    @required T failedValue,
-  }) = InvalidAge<T>;
-
-  const factory ValueFailure.invalidHeight({
-    @required T failedValue,
-  }) = InvalidHeight<T>;
-
-  const factory ValueFailure.invalidWeight({
-    @required T failedValue,
-  }) = InvalidWeight<T>;
-}
 }
