@@ -6,9 +6,9 @@ import 'package:meta/meta.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
-import 'package:temp_builder/domain/auth/auth_facade.dart';
-import 'package:temp_builder/domain/auth/auth_failure.dart';
-import 'package:temp_builder/domain/auth/value_objects.dart';
+import 'package:fitnation_frontend/domain/auth/auth_facade.dart';
+import 'package:fitnation_frontend/domain/auth/auth_failure.dart';
+import 'package:fitnation_frontend/domain/auth/value_objects.dart';
 
 part 'profile-form_event.dart';
 part 'profile-form_state.dart';

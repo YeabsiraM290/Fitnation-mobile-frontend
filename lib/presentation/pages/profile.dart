@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:temp_builder/application/auth/profile-form/profile-form_bloc.dart';
+import 'package:fitnation_frontend/application/auth/profile-form/profile-form_bloc.dart';
 
 Color deletebuttoncolor = HexColor("#a5140f");
 Color savebuttoncolor = HexColor("#3aaa28");
