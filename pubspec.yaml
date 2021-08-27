@@ -26,6 +26,8 @@ dependencies:
   provider: ^4.3.2+2
   rxdart: ^0.24.1
   hexcolor: ^2.0.4
+  youtube_player_flutter: ^8.0.0
+  youtube_player_iframe: ^2.2.2
 
 dev_dependencies:
   flutter_test:
