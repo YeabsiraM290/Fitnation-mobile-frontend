@@ -1,7 +1,13 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:fitnation_frontend/application/auth/profile-form/profile-form_bloc.dart';
+import 'package:fitnation_frontend/application/auth/auth_bloc.dart';
+import 'package:fitnation_frontend/application/profile/profile_form/profile_form_bloc.dart';
+import 'package:fitnation_frontend/application/profile/profile_watcher/profile_watcher_bloc.dart';
+import 'package:fitnation_frontend/domain/profile/user.dart';
+import 'package:fitnation_frontend/presentation/routes/router.gr.dart';
 
 Color deletebuttoncolor = HexColor("#a5140f");
 Color savebuttoncolor = HexColor("#3aaa28");
@@ -19,12 +25,51 @@ final savebuttonStyle = ButtonStyle(
     )));
 
 class ProfilePage extends StatelessWidget {
+  final User user;
+
+  const ProfilePage({
+    Key key,
+    @required this.user,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     var screen_size = MediaQuery.of(context).size;
 
     return BlocConsumer<ProfileFormBloc, ProfileFormState>(
-      listener: (context, state) {},
+      listener: (context, state) {
+        context.read<ProfileFormBloc>().add(ProfileFormEvent.usernameChanged(
+            user.username.getOrCrash().toString()));
+        context
+            .read<ProfileFormBloc>()
+            .add(ProfileFormEvent.sexChanged(user.sex.getOrCrash().toString()));
+        context.read<ProfileFormBloc>().add(ProfileFormEvent.emailChanged(
+            user.emailAddress.getOrCrash().toString()));
+        context.read<ProfileFormBloc>().add(ProfileFormEvent.heightChanged(
+            double.parse(user.height.getOrCrash().toString())));
+        context.read<ProfileFormBloc>().add(ProfileFormEvent.weightChanged(
+            double.parse(user.weight.getOrCrash().toString())));
+        context.read<ProfileFormBloc>().add(ProfileFormEvent.ageChanged(
+            int.parse(user.age.getOrCrash().toString())));
+        state.actionFailureOrSuccessOption.fold(
+          () {},
+          (either) => either.fold((failure) {
+            FlushbarHelper.createError(
+              message: failure.maybeMap(
+                  usetNotFound: (_) => 'User not found',
+                  serverError: (_) => 'Server error',
+                  usernameInUse: (_) => 'Username in use',
+                  orElse: () => null),
+            ).show(context);
+          }, (_) {
+            ExtendedNavigator.of(context).replace(
+              Routes.loginFormContainer,
+            );
+
+            context.read<AuthBloc>().add(const AuthEvent.authCheckRequested());
+          }),
+        );
+      },
       builder: (context, state) {
         return Scaffold(
           backgroundColor: Colors.transparent,
@@ -40,23 +85,46 @@ class ProfilePage extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Align(
-                            alignment: Alignment.topRight,
-                            child: GestureDetector(
-                              onTap: () {
-                                context.read<ProfileFormBloc>().add(
-                                      const ProfileFormEvent.editProfile(),
-                                    );
-                              },
-                              child: const Icon(
-                                Icons.edit,
-                                size: 20,
-                                color: Colors.grey,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Align(
+                                alignment: Alignment.topRight,
+                                child: GestureDetector(
+                                  onTap: () {
+                                    context.read<ProfileFormBloc>().add(
+                                          const ProfileFormEvent.editProfile(),
+                                        );
+                                  },
+                                  child: const Icon(
+                                    Icons.edit,
+                                    size: 20,
+                                    color: Colors.grey,
+                                  ),
+                                ),
                               ),
                             ),
-                          ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Align(
+                                alignment: Alignment.topLeft,
+                                child: GestureDetector(
+                                  onTap: () {
+                                    context
+                                        .read<AuthBloc>()
+                                        .add(const AuthEvent.signedOut());
+                                  },
+                                  child: const Icon(
+                                    Icons.exit_to_app,
+                                    size: 20,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                         Align(
                           alignment: Alignment.topCenter,
@@ -113,7 +181,8 @@ class ProfilePage extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                initialValue: state.username.value.toString()),
+                                initialValue:
+                                    user.username.getOrCrash().toString()),
                           ),
                         ),
                         Padding(
@@ -131,8 +200,8 @@ class ProfilePage extends StatelessWidget {
                                   ),
                                 ),
                                 Expanded(
-                                  child: const Text(
-                                    "Yeabsira290@gmail.com",
+                                  child: Text(
+                                    user.emailAddress.getOrCrash().toString(),
                                     style: TextStyle(
                                       color: Colors.white70,
                                       fontSize: 15,
@@ -278,7 +347,7 @@ class ProfilePage extends StatelessWidget {
                                                   orElse: () => null),
                                               (_) => null),
                                       initialValue:
-                                          state.username.value.toString(),
+                                          user.age.getOrCrash().toString(),
                                       enabled: state.editting,
                                       style: const TextStyle(
                                         color: Colors.white70,
@@ -332,7 +401,7 @@ class ProfilePage extends StatelessWidget {
                                                   orElse: () => null),
                                               (_) => null),
                                       initialValue:
-                                          state.username.value.toString(),
+                                          user.weight.getOrCrash().toString(),
                                       enabled: state.editting,
                                       style: const TextStyle(
                                         color: Colors.white70,
@@ -386,7 +455,7 @@ class ProfilePage extends StatelessWidget {
                                                   orElse: () => null),
                                               (_) => null),
                                       initialValue:
-                                          state.username.value.toString(),
+                                          user.height.getOrCrash().toString(),
                                       enabled: state.editting,
                                       style: const TextStyle(
                                         color: Colors.white70,
@@ -426,7 +495,11 @@ class ProfilePage extends StatelessWidget {
                   } else ...{
                     ElevatedButton(
                       style: deletebuttonStyle,
-                      onPressed: () {},
+                      onPressed: () {
+                        context.read<ProfileFormBloc>().add(
+                              const ProfileFormEvent.deleteProfile(),
+                            );
+                      },
                       child: const Text("Delete account"),
                     )
                   }
