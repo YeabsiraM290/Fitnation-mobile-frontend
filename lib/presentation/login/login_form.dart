@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flushbar/flushbar.dart';
+import 'package:fitnation_frontend/application/auth/auth_bloc.dart';
 import 'package:fitnation_frontend/presentation/routes/router.gr.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -30,7 +31,13 @@ class LoginForm extends StatelessWidget {
                 serverError: (_) => 'Server error',
                 orElse: () => null),
           ).show(context);
-        }, (_) {}),
+        }, (_) {
+          ExtendedNavigator.of(context).replace(
+            Routes.mainPageBlueprint,
+          );
+
+          context.read<AuthBloc>().add(const AuthEvent.authCheckRequested());
+        }),
       );
     }, builder: (context, state) {
       return Padding(
@@ -117,7 +124,8 @@ class LoginForm extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  //forgot password screen
+                  ExtendedNavigator.of(context)
+                      .replace(Routes.forgetPasswordContainer);
                 },
                 child: const Align(
                   alignment: Alignment.centerRight,
@@ -167,6 +175,10 @@ class LoginForm extends StatelessWidget {
                   ),
                 ],
               ),
+              if (state.isSubmitting) ...[
+                const SizedBox(height: 8),
+                const LinearProgressIndicator(value: null),
+              ],
             ],
           ));
     });

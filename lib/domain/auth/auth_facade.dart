@@ -1,11 +1,10 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
-import 'package:fitnation_frontend/domain/auth/value_objects.dart';
-import 'package:fitnation_frontend/domain/auth/user.dart';
+import 'package:fitnation_frontend/domain/core/value_objects/value_objects.dart';
 import 'auth_failure.dart';
 
 abstract class AuthFacade {
-  Future<Option<User>> getSignedInUser();
+  Future<Option<bool>> getSignedInUser();
   Future<void> signOut();
 
   Future<Either<AuthFailure, Unit>> registerWithEmailAndPassword({
@@ -13,6 +12,9 @@ abstract class AuthFacade {
     @required Password password,
     @required Username username,
     @required SecretAnswer secretAnswer,
+    @required Age age,
+    @required Height height,
+    @required Weight weight,
   });
   Future<Either<AuthFailure, Unit>> signInWithEmailAndPassword({
     @required EmailAddress emailAddress,
@@ -23,11 +25,5 @@ abstract class AuthFacade {
     @required EmailAddress emailAddress,
     @required SecretAnswer secretAnswer,
     @required Password password,
-  });
-  Future<Either<AuthFailure, Unit>> updateProfile({
-    @required Username username,
-    @required Age age,
-    @required Height height,
-    @required Weight weight,
   });
 }

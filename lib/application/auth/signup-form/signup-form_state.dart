@@ -10,6 +10,7 @@ abstract class SignupFormState with _$SignupFormState {
     @required SecretAnswer secretAnswer,
     @required bool showErrorMessages,
     @required bool isSubmitting,
+    @required bool nextPage,
     @required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
   }) = _SignupFormState;
 
@@ -21,6 +22,7 @@ abstract class SignupFormState with _$SignupFormState {
         secretAnswer: SecretAnswer(''),
         showErrorMessages: false,
         isSubmitting: false,
+        nextPage: false,
         authFailureOrSuccessOption: none(),
       );
 }

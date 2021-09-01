@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:fitnation_frontend/domain/auth/value_objects.dart';
+import 'package:fitnation_frontend/domain/core/value_objects/value_objects.dart';
 
 part 'user.freezed.dart';
 
@@ -7,7 +7,10 @@ part 'user.freezed.dart';
 abstract class User with _$User {
   const factory User({
     @required EmailAddress emailAddress,
-    @required Password password,
+    Password password,
+    Question question,
+    SecretAnswer secretAnswer,
+    @required Sex sex,
     @required Username username,
     @required Age age,
     @required Height height,

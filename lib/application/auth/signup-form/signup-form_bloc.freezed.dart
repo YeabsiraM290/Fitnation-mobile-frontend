@@ -49,6 +49,16 @@ class _$SignupFormEventTearOff {
   }
 
 // ignore: unused_element
+  NextPressed nextPressed() {
+    return const NextPressed();
+  }
+
+// ignore: unused_element
+  BackPressed backPressed() {
+    return const BackPressed();
+  }
+
+// ignore: unused_element
   RegisterWithEmailAndPasswordPressed registerWithEmailAndPasswordPressed() {
     return const RegisterWithEmailAndPasswordPressed();
   }
@@ -67,6 +77,8 @@ mixin _$SignupFormEvent {
     @required TResult rePasswordChanged(String rePasswordStr),
     @required TResult usernameChanged(String usernameStr),
     @required TResult secretAnswerChanged(String secretAnswerStr),
+    @required TResult nextPressed(),
+    @required TResult backPressed(),
     @required TResult registerWithEmailAndPasswordPressed(),
   });
   @optionalTypeArgs
@@ -76,6 +88,8 @@ mixin _$SignupFormEvent {
     TResult rePasswordChanged(String rePasswordStr),
     TResult usernameChanged(String usernameStr),
     TResult secretAnswerChanged(String secretAnswerStr),
+    TResult nextPressed(),
+    TResult backPressed(),
     TResult registerWithEmailAndPasswordPressed(),
     @required TResult orElse(),
   });
@@ -86,6 +100,8 @@ mixin _$SignupFormEvent {
     @required TResult rePasswordChanged(RePasswordChanged value),
     @required TResult usernameChanged(UsernameChanged value),
     @required TResult secretAnswerChanged(SecretAnswerChanged value),
+    @required TResult nextPressed(NextPressed value),
+    @required TResult backPressed(BackPressed value),
     @required
         TResult registerWithEmailAndPasswordPressed(
             RegisterWithEmailAndPasswordPressed value),
@@ -97,6 +113,8 @@ mixin _$SignupFormEvent {
     TResult rePasswordChanged(RePasswordChanged value),
     TResult usernameChanged(UsernameChanged value),
     TResult secretAnswerChanged(SecretAnswerChanged value),
+    TResult nextPressed(NextPressed value),
+    TResult backPressed(BackPressed value),
     TResult registerWithEmailAndPasswordPressed(
         RegisterWithEmailAndPasswordPressed value),
     @required TResult orElse(),
@@ -195,6 +213,8 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
     @required TResult rePasswordChanged(String rePasswordStr),
     @required TResult usernameChanged(String usernameStr),
     @required TResult secretAnswerChanged(String secretAnswerStr),
+    @required TResult nextPressed(),
+    @required TResult backPressed(),
     @required TResult registerWithEmailAndPasswordPressed(),
   }) {
     assert(emailChanged != null);
@@ -202,6 +222,8 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
     assert(rePasswordChanged != null);
     assert(usernameChanged != null);
     assert(secretAnswerChanged != null);
+    assert(nextPressed != null);
+    assert(backPressed != null);
     assert(registerWithEmailAndPasswordPressed != null);
     return emailChanged(emailStr);
   }
@@ -214,6 +236,8 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
     TResult rePasswordChanged(String rePasswordStr),
     TResult usernameChanged(String usernameStr),
     TResult secretAnswerChanged(String secretAnswerStr),
+    TResult nextPressed(),
+    TResult backPressed(),
     TResult registerWithEmailAndPasswordPressed(),
     @required TResult orElse(),
   }) {
@@ -232,6 +256,8 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
     @required TResult rePasswordChanged(RePasswordChanged value),
     @required TResult usernameChanged(UsernameChanged value),
     @required TResult secretAnswerChanged(SecretAnswerChanged value),
+    @required TResult nextPressed(NextPressed value),
+    @required TResult backPressed(BackPressed value),
     @required
         TResult registerWithEmailAndPasswordPressed(
             RegisterWithEmailAndPasswordPressed value),
@@ -241,6 +267,8 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
     assert(rePasswordChanged != null);
     assert(usernameChanged != null);
     assert(secretAnswerChanged != null);
+    assert(nextPressed != null);
+    assert(backPressed != null);
     assert(registerWithEmailAndPasswordPressed != null);
     return emailChanged(this);
   }
@@ -253,6 +281,8 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
     TResult rePasswordChanged(RePasswordChanged value),
     TResult usernameChanged(UsernameChanged value),
     TResult secretAnswerChanged(SecretAnswerChanged value),
+    TResult nextPressed(NextPressed value),
+    TResult backPressed(BackPressed value),
     TResult registerWithEmailAndPasswordPressed(
         RegisterWithEmailAndPasswordPressed value),
     @required TResult orElse(),
@@ -350,6 +380,8 @@ class _$PasswordChanged
     @required TResult rePasswordChanged(String rePasswordStr),
     @required TResult usernameChanged(String usernameStr),
     @required TResult secretAnswerChanged(String secretAnswerStr),
+    @required TResult nextPressed(),
+    @required TResult backPressed(),
     @required TResult registerWithEmailAndPasswordPressed(),
   }) {
     assert(emailChanged != null);
@@ -357,6 +389,8 @@ class _$PasswordChanged
     assert(rePasswordChanged != null);
     assert(usernameChanged != null);
     assert(secretAnswerChanged != null);
+    assert(nextPressed != null);
+    assert(backPressed != null);
     assert(registerWithEmailAndPasswordPressed != null);
     return passwordChanged(passwordStr);
   }
@@ -369,6 +403,8 @@ class _$PasswordChanged
     TResult rePasswordChanged(String rePasswordStr),
     TResult usernameChanged(String usernameStr),
     TResult secretAnswerChanged(String secretAnswerStr),
+    TResult nextPressed(),
+    TResult backPressed(),
     TResult registerWithEmailAndPasswordPressed(),
     @required TResult orElse(),
   }) {
@@ -387,6 +423,8 @@ class _$PasswordChanged
     @required TResult rePasswordChanged(RePasswordChanged value),
     @required TResult usernameChanged(UsernameChanged value),
     @required TResult secretAnswerChanged(SecretAnswerChanged value),
+    @required TResult nextPressed(NextPressed value),
+    @required TResult backPressed(BackPressed value),
     @required
         TResult registerWithEmailAndPasswordPressed(
             RegisterWithEmailAndPasswordPressed value),
@@ -396,6 +434,8 @@ class _$PasswordChanged
     assert(rePasswordChanged != null);
     assert(usernameChanged != null);
     assert(secretAnswerChanged != null);
+    assert(nextPressed != null);
+    assert(backPressed != null);
     assert(registerWithEmailAndPasswordPressed != null);
     return passwordChanged(this);
   }
@@ -408,6 +448,8 @@ class _$PasswordChanged
     TResult rePasswordChanged(RePasswordChanged value),
     TResult usernameChanged(UsernameChanged value),
     TResult secretAnswerChanged(SecretAnswerChanged value),
+    TResult nextPressed(NextPressed value),
+    TResult backPressed(BackPressed value),
     TResult registerWithEmailAndPasswordPressed(
         RegisterWithEmailAndPasswordPressed value),
     @required TResult orElse(),
@@ -505,6 +547,8 @@ class _$RePasswordChanged
     @required TResult rePasswordChanged(String rePasswordStr),
     @required TResult usernameChanged(String usernameStr),
     @required TResult secretAnswerChanged(String secretAnswerStr),
+    @required TResult nextPressed(),
+    @required TResult backPressed(),
     @required TResult registerWithEmailAndPasswordPressed(),
   }) {
     assert(emailChanged != null);
@@ -512,6 +556,8 @@ class _$RePasswordChanged
     assert(rePasswordChanged != null);
     assert(usernameChanged != null);
     assert(secretAnswerChanged != null);
+    assert(nextPressed != null);
+    assert(backPressed != null);
     assert(registerWithEmailAndPasswordPressed != null);
     return rePasswordChanged(rePasswordStr);
   }
@@ -524,6 +570,8 @@ class _$RePasswordChanged
     TResult rePasswordChanged(String rePasswordStr),
     TResult usernameChanged(String usernameStr),
     TResult secretAnswerChanged(String secretAnswerStr),
+    TResult nextPressed(),
+    TResult backPressed(),
     TResult registerWithEmailAndPasswordPressed(),
     @required TResult orElse(),
   }) {
@@ -542,6 +590,8 @@ class _$RePasswordChanged
     @required TResult rePasswordChanged(RePasswordChanged value),
     @required TResult usernameChanged(UsernameChanged value),
     @required TResult secretAnswerChanged(SecretAnswerChanged value),
+    @required TResult nextPressed(NextPressed value),
+    @required TResult backPressed(BackPressed value),
     @required
         TResult registerWithEmailAndPasswordPressed(
             RegisterWithEmailAndPasswordPressed value),
@@ -551,6 +601,8 @@ class _$RePasswordChanged
     assert(rePasswordChanged != null);
     assert(usernameChanged != null);
     assert(secretAnswerChanged != null);
+    assert(nextPressed != null);
+    assert(backPressed != null);
     assert(registerWithEmailAndPasswordPressed != null);
     return rePasswordChanged(this);
   }
@@ -563,6 +615,8 @@ class _$RePasswordChanged
     TResult rePasswordChanged(RePasswordChanged value),
     TResult usernameChanged(UsernameChanged value),
     TResult secretAnswerChanged(SecretAnswerChanged value),
+    TResult nextPressed(NextPressed value),
+    TResult backPressed(BackPressed value),
     TResult registerWithEmailAndPasswordPressed(
         RegisterWithEmailAndPasswordPressed value),
     @required TResult orElse(),
@@ -660,6 +714,8 @@ class _$UsernameChanged
     @required TResult rePasswordChanged(String rePasswordStr),
     @required TResult usernameChanged(String usernameStr),
     @required TResult secretAnswerChanged(String secretAnswerStr),
+    @required TResult nextPressed(),
+    @required TResult backPressed(),
     @required TResult registerWithEmailAndPasswordPressed(),
   }) {
     assert(emailChanged != null);
@@ -667,6 +723,8 @@ class _$UsernameChanged
     assert(rePasswordChanged != null);
     assert(usernameChanged != null);
     assert(secretAnswerChanged != null);
+    assert(nextPressed != null);
+    assert(backPressed != null);
     assert(registerWithEmailAndPasswordPressed != null);
     return usernameChanged(usernameStr);
   }
@@ -679,6 +737,8 @@ class _$UsernameChanged
     TResult rePasswordChanged(String rePasswordStr),
     TResult usernameChanged(String usernameStr),
     TResult secretAnswerChanged(String secretAnswerStr),
+    TResult nextPressed(),
+    TResult backPressed(),
     TResult registerWithEmailAndPasswordPressed(),
     @required TResult orElse(),
   }) {
@@ -697,6 +757,8 @@ class _$UsernameChanged
     @required TResult rePasswordChanged(RePasswordChanged value),
     @required TResult usernameChanged(UsernameChanged value),
     @required TResult secretAnswerChanged(SecretAnswerChanged value),
+    @required TResult nextPressed(NextPressed value),
+    @required TResult backPressed(BackPressed value),
     @required
         TResult registerWithEmailAndPasswordPressed(
             RegisterWithEmailAndPasswordPressed value),
@@ -706,6 +768,8 @@ class _$UsernameChanged
     assert(rePasswordChanged != null);
     assert(usernameChanged != null);
     assert(secretAnswerChanged != null);
+    assert(nextPressed != null);
+    assert(backPressed != null);
     assert(registerWithEmailAndPasswordPressed != null);
     return usernameChanged(this);
   }
@@ -718,6 +782,8 @@ class _$UsernameChanged
     TResult rePasswordChanged(RePasswordChanged value),
     TResult usernameChanged(UsernameChanged value),
     TResult secretAnswerChanged(SecretAnswerChanged value),
+    TResult nextPressed(NextPressed value),
+    TResult backPressed(BackPressed value),
     TResult registerWithEmailAndPasswordPressed(
         RegisterWithEmailAndPasswordPressed value),
     @required TResult orElse(),
@@ -819,6 +885,8 @@ class _$SecretAnswerChanged
     @required TResult rePasswordChanged(String rePasswordStr),
     @required TResult usernameChanged(String usernameStr),
     @required TResult secretAnswerChanged(String secretAnswerStr),
+    @required TResult nextPressed(),
+    @required TResult backPressed(),
     @required TResult registerWithEmailAndPasswordPressed(),
   }) {
     assert(emailChanged != null);
@@ -826,6 +894,8 @@ class _$SecretAnswerChanged
     assert(rePasswordChanged != null);
     assert(usernameChanged != null);
     assert(secretAnswerChanged != null);
+    assert(nextPressed != null);
+    assert(backPressed != null);
     assert(registerWithEmailAndPasswordPressed != null);
     return secretAnswerChanged(secretAnswerStr);
   }
@@ -838,6 +908,8 @@ class _$SecretAnswerChanged
     TResult rePasswordChanged(String rePasswordStr),
     TResult usernameChanged(String usernameStr),
     TResult secretAnswerChanged(String secretAnswerStr),
+    TResult nextPressed(),
+    TResult backPressed(),
     TResult registerWithEmailAndPasswordPressed(),
     @required TResult orElse(),
   }) {
@@ -856,6 +928,8 @@ class _$SecretAnswerChanged
     @required TResult rePasswordChanged(RePasswordChanged value),
     @required TResult usernameChanged(UsernameChanged value),
     @required TResult secretAnswerChanged(SecretAnswerChanged value),
+    @required TResult nextPressed(NextPressed value),
+    @required TResult backPressed(BackPressed value),
     @required
         TResult registerWithEmailAndPasswordPressed(
             RegisterWithEmailAndPasswordPressed value),
@@ -865,6 +939,8 @@ class _$SecretAnswerChanged
     assert(rePasswordChanged != null);
     assert(usernameChanged != null);
     assert(secretAnswerChanged != null);
+    assert(nextPressed != null);
+    assert(backPressed != null);
     assert(registerWithEmailAndPasswordPressed != null);
     return secretAnswerChanged(this);
   }
@@ -877,6 +953,8 @@ class _$SecretAnswerChanged
     TResult rePasswordChanged(RePasswordChanged value),
     TResult usernameChanged(UsernameChanged value),
     TResult secretAnswerChanged(SecretAnswerChanged value),
+    TResult nextPressed(NextPressed value),
+    TResult backPressed(BackPressed value),
     TResult registerWithEmailAndPasswordPressed(
         RegisterWithEmailAndPasswordPressed value),
     @required TResult orElse(),
@@ -896,6 +974,278 @@ abstract class SecretAnswerChanged implements SignupFormEvent {
   String get secretAnswerStr;
   @JsonKey(ignore: true)
   $SecretAnswerChangedCopyWith<SecretAnswerChanged> get copyWith;
+}
+
+/// @nodoc
+abstract class $NextPressedCopyWith<$Res> {
+  factory $NextPressedCopyWith(
+          NextPressed value, $Res Function(NextPressed) then) =
+      _$NextPressedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$NextPressedCopyWithImpl<$Res>
+    extends _$SignupFormEventCopyWithImpl<$Res>
+    implements $NextPressedCopyWith<$Res> {
+  _$NextPressedCopyWithImpl(
+      NextPressed _value, $Res Function(NextPressed) _then)
+      : super(_value, (v) => _then(v as NextPressed));
+
+  @override
+  NextPressed get _value => super._value as NextPressed;
+}
+
+/// @nodoc
+class _$NextPressed with DiagnosticableTreeMixin implements NextPressed {
+  const _$NextPressed();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'SignupFormEvent.nextPressed()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'SignupFormEvent.nextPressed'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is NextPressed);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult emailChanged(String emailStr),
+    @required TResult passwordChanged(String passwordStr),
+    @required TResult rePasswordChanged(String rePasswordStr),
+    @required TResult usernameChanged(String usernameStr),
+    @required TResult secretAnswerChanged(String secretAnswerStr),
+    @required TResult nextPressed(),
+    @required TResult backPressed(),
+    @required TResult registerWithEmailAndPasswordPressed(),
+  }) {
+    assert(emailChanged != null);
+    assert(passwordChanged != null);
+    assert(rePasswordChanged != null);
+    assert(usernameChanged != null);
+    assert(secretAnswerChanged != null);
+    assert(nextPressed != null);
+    assert(backPressed != null);
+    assert(registerWithEmailAndPasswordPressed != null);
+    return nextPressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult emailChanged(String emailStr),
+    TResult passwordChanged(String passwordStr),
+    TResult rePasswordChanged(String rePasswordStr),
+    TResult usernameChanged(String usernameStr),
+    TResult secretAnswerChanged(String secretAnswerStr),
+    TResult nextPressed(),
+    TResult backPressed(),
+    TResult registerWithEmailAndPasswordPressed(),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (nextPressed != null) {
+      return nextPressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult passwordChanged(PasswordChanged value),
+    @required TResult rePasswordChanged(RePasswordChanged value),
+    @required TResult usernameChanged(UsernameChanged value),
+    @required TResult secretAnswerChanged(SecretAnswerChanged value),
+    @required TResult nextPressed(NextPressed value),
+    @required TResult backPressed(BackPressed value),
+    @required
+        TResult registerWithEmailAndPasswordPressed(
+            RegisterWithEmailAndPasswordPressed value),
+  }) {
+    assert(emailChanged != null);
+    assert(passwordChanged != null);
+    assert(rePasswordChanged != null);
+    assert(usernameChanged != null);
+    assert(secretAnswerChanged != null);
+    assert(nextPressed != null);
+    assert(backPressed != null);
+    assert(registerWithEmailAndPasswordPressed != null);
+    return nextPressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult emailChanged(EmailChanged value),
+    TResult passwordChanged(PasswordChanged value),
+    TResult rePasswordChanged(RePasswordChanged value),
+    TResult usernameChanged(UsernameChanged value),
+    TResult secretAnswerChanged(SecretAnswerChanged value),
+    TResult nextPressed(NextPressed value),
+    TResult backPressed(BackPressed value),
+    TResult registerWithEmailAndPasswordPressed(
+        RegisterWithEmailAndPasswordPressed value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (nextPressed != null) {
+      return nextPressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class NextPressed implements SignupFormEvent {
+  const factory NextPressed() = _$NextPressed;
+}
+
+/// @nodoc
+abstract class $BackPressedCopyWith<$Res> {
+  factory $BackPressedCopyWith(
+          BackPressed value, $Res Function(BackPressed) then) =
+      _$BackPressedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$BackPressedCopyWithImpl<$Res>
+    extends _$SignupFormEventCopyWithImpl<$Res>
+    implements $BackPressedCopyWith<$Res> {
+  _$BackPressedCopyWithImpl(
+      BackPressed _value, $Res Function(BackPressed) _then)
+      : super(_value, (v) => _then(v as BackPressed));
+
+  @override
+  BackPressed get _value => super._value as BackPressed;
+}
+
+/// @nodoc
+class _$BackPressed with DiagnosticableTreeMixin implements BackPressed {
+  const _$BackPressed();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'SignupFormEvent.backPressed()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'SignupFormEvent.backPressed'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is BackPressed);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult emailChanged(String emailStr),
+    @required TResult passwordChanged(String passwordStr),
+    @required TResult rePasswordChanged(String rePasswordStr),
+    @required TResult usernameChanged(String usernameStr),
+    @required TResult secretAnswerChanged(String secretAnswerStr),
+    @required TResult nextPressed(),
+    @required TResult backPressed(),
+    @required TResult registerWithEmailAndPasswordPressed(),
+  }) {
+    assert(emailChanged != null);
+    assert(passwordChanged != null);
+    assert(rePasswordChanged != null);
+    assert(usernameChanged != null);
+    assert(secretAnswerChanged != null);
+    assert(nextPressed != null);
+    assert(backPressed != null);
+    assert(registerWithEmailAndPasswordPressed != null);
+    return backPressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult emailChanged(String emailStr),
+    TResult passwordChanged(String passwordStr),
+    TResult rePasswordChanged(String rePasswordStr),
+    TResult usernameChanged(String usernameStr),
+    TResult secretAnswerChanged(String secretAnswerStr),
+    TResult nextPressed(),
+    TResult backPressed(),
+    TResult registerWithEmailAndPasswordPressed(),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (backPressed != null) {
+      return backPressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult passwordChanged(PasswordChanged value),
+    @required TResult rePasswordChanged(RePasswordChanged value),
+    @required TResult usernameChanged(UsernameChanged value),
+    @required TResult secretAnswerChanged(SecretAnswerChanged value),
+    @required TResult nextPressed(NextPressed value),
+    @required TResult backPressed(BackPressed value),
+    @required
+        TResult registerWithEmailAndPasswordPressed(
+            RegisterWithEmailAndPasswordPressed value),
+  }) {
+    assert(emailChanged != null);
+    assert(passwordChanged != null);
+    assert(rePasswordChanged != null);
+    assert(usernameChanged != null);
+    assert(secretAnswerChanged != null);
+    assert(nextPressed != null);
+    assert(backPressed != null);
+    assert(registerWithEmailAndPasswordPressed != null);
+    return backPressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult emailChanged(EmailChanged value),
+    TResult passwordChanged(PasswordChanged value),
+    TResult rePasswordChanged(RePasswordChanged value),
+    TResult usernameChanged(UsernameChanged value),
+    TResult secretAnswerChanged(SecretAnswerChanged value),
+    TResult nextPressed(NextPressed value),
+    TResult backPressed(BackPressed value),
+    TResult registerWithEmailAndPasswordPressed(
+        RegisterWithEmailAndPasswordPressed value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (backPressed != null) {
+      return backPressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class BackPressed implements SignupFormEvent {
+  const factory BackPressed() = _$BackPressed;
 }
 
 /// @nodoc
@@ -956,6 +1306,8 @@ class _$RegisterWithEmailAndPasswordPressed
     @required TResult rePasswordChanged(String rePasswordStr),
     @required TResult usernameChanged(String usernameStr),
     @required TResult secretAnswerChanged(String secretAnswerStr),
+    @required TResult nextPressed(),
+    @required TResult backPressed(),
     @required TResult registerWithEmailAndPasswordPressed(),
   }) {
     assert(emailChanged != null);
@@ -963,6 +1315,8 @@ class _$RegisterWithEmailAndPasswordPressed
     assert(rePasswordChanged != null);
     assert(usernameChanged != null);
     assert(secretAnswerChanged != null);
+    assert(nextPressed != null);
+    assert(backPressed != null);
     assert(registerWithEmailAndPasswordPressed != null);
     return registerWithEmailAndPasswordPressed();
   }
@@ -975,6 +1329,8 @@ class _$RegisterWithEmailAndPasswordPressed
     TResult rePasswordChanged(String rePasswordStr),
     TResult usernameChanged(String usernameStr),
     TResult secretAnswerChanged(String secretAnswerStr),
+    TResult nextPressed(),
+    TResult backPressed(),
     TResult registerWithEmailAndPasswordPressed(),
     @required TResult orElse(),
   }) {
@@ -993,6 +1349,8 @@ class _$RegisterWithEmailAndPasswordPressed
     @required TResult rePasswordChanged(RePasswordChanged value),
     @required TResult usernameChanged(UsernameChanged value),
     @required TResult secretAnswerChanged(SecretAnswerChanged value),
+    @required TResult nextPressed(NextPressed value),
+    @required TResult backPressed(BackPressed value),
     @required
         TResult registerWithEmailAndPasswordPressed(
             RegisterWithEmailAndPasswordPressed value),
@@ -1002,6 +1360,8 @@ class _$RegisterWithEmailAndPasswordPressed
     assert(rePasswordChanged != null);
     assert(usernameChanged != null);
     assert(secretAnswerChanged != null);
+    assert(nextPressed != null);
+    assert(backPressed != null);
     assert(registerWithEmailAndPasswordPressed != null);
     return registerWithEmailAndPasswordPressed(this);
   }
@@ -1014,6 +1374,8 @@ class _$RegisterWithEmailAndPasswordPressed
     TResult rePasswordChanged(RePasswordChanged value),
     TResult usernameChanged(UsernameChanged value),
     TResult secretAnswerChanged(SecretAnswerChanged value),
+    TResult nextPressed(NextPressed value),
+    TResult backPressed(BackPressed value),
     TResult registerWithEmailAndPasswordPressed(
         RegisterWithEmailAndPasswordPressed value),
     @required TResult orElse(),
@@ -1044,6 +1406,7 @@ class _$SignupFormStateTearOff {
       @required SecretAnswer secretAnswer,
       @required bool showErrorMessages,
       @required bool isSubmitting,
+      @required bool nextPage,
       @required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption}) {
     return _SignupFormState(
       emailAddress: emailAddress,
@@ -1053,6 +1416,7 @@ class _$SignupFormStateTearOff {
       secretAnswer: secretAnswer,
       showErrorMessages: showErrorMessages,
       isSubmitting: isSubmitting,
+      nextPage: nextPage,
       authFailureOrSuccessOption: authFailureOrSuccessOption,
     );
   }
@@ -1071,6 +1435,7 @@ mixin _$SignupFormState {
   SecretAnswer get secretAnswer;
   bool get showErrorMessages;
   bool get isSubmitting;
+  bool get nextPage;
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption;
 
   @JsonKey(ignore: true)
@@ -1090,6 +1455,7 @@ abstract class $SignupFormStateCopyWith<$Res> {
       SecretAnswer secretAnswer,
       bool showErrorMessages,
       bool isSubmitting,
+      bool nextPage,
       Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
 }
 
@@ -1111,6 +1477,7 @@ class _$SignupFormStateCopyWithImpl<$Res>
     Object secretAnswer = freezed,
     Object showErrorMessages = freezed,
     Object isSubmitting = freezed,
+    Object nextPage = freezed,
     Object authFailureOrSuccessOption = freezed,
   }) {
     return _then(_value.copyWith(
@@ -1129,6 +1496,7 @@ class _$SignupFormStateCopyWithImpl<$Res>
           : showErrorMessages as bool,
       isSubmitting:
           isSubmitting == freezed ? _value.isSubmitting : isSubmitting as bool,
+      nextPage: nextPage == freezed ? _value.nextPage : nextPage as bool,
       authFailureOrSuccessOption: authFailureOrSuccessOption == freezed
           ? _value.authFailureOrSuccessOption
           : authFailureOrSuccessOption as Option<Either<AuthFailure, Unit>>,
@@ -1151,6 +1519,7 @@ abstract class _$SignupFormStateCopyWith<$Res>
       SecretAnswer secretAnswer,
       bool showErrorMessages,
       bool isSubmitting,
+      bool nextPage,
       Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
 }
 
@@ -1174,6 +1543,7 @@ class __$SignupFormStateCopyWithImpl<$Res>
     Object secretAnswer = freezed,
     Object showErrorMessages = freezed,
     Object isSubmitting = freezed,
+    Object nextPage = freezed,
     Object authFailureOrSuccessOption = freezed,
   }) {
     return _then(_SignupFormState(
@@ -1192,6 +1562,7 @@ class __$SignupFormStateCopyWithImpl<$Res>
           : showErrorMessages as bool,
       isSubmitting:
           isSubmitting == freezed ? _value.isSubmitting : isSubmitting as bool,
+      nextPage: nextPage == freezed ? _value.nextPage : nextPage as bool,
       authFailureOrSuccessOption: authFailureOrSuccessOption == freezed
           ? _value.authFailureOrSuccessOption
           : authFailureOrSuccessOption as Option<Either<AuthFailure, Unit>>,
@@ -1211,6 +1582,7 @@ class _$_SignupFormState
       @required this.secretAnswer,
       @required this.showErrorMessages,
       @required this.isSubmitting,
+      @required this.nextPage,
       @required this.authFailureOrSuccessOption})
       : assert(emailAddress != null),
         assert(password != null),
@@ -1219,6 +1591,7 @@ class _$_SignupFormState
         assert(secretAnswer != null),
         assert(showErrorMessages != null),
         assert(isSubmitting != null),
+        assert(nextPage != null),
         assert(authFailureOrSuccessOption != null);
 
   @override
@@ -1236,11 +1609,13 @@ class _$_SignupFormState
   @override
   final bool isSubmitting;
   @override
+  final bool nextPage;
+  @override
   final Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SignupFormState(emailAddress: $emailAddress, password: $password, rePassword: $rePassword, username: $username, secretAnswer: $secretAnswer, showErrorMessages: $showErrorMessages, isSubmitting: $isSubmitting, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
+    return 'SignupFormState(emailAddress: $emailAddress, password: $password, rePassword: $rePassword, username: $username, secretAnswer: $secretAnswer, showErrorMessages: $showErrorMessages, isSubmitting: $isSubmitting, nextPage: $nextPage, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
   }
 
   @override
@@ -1255,6 +1630,7 @@ class _$_SignupFormState
       ..add(DiagnosticsProperty('secretAnswer', secretAnswer))
       ..add(DiagnosticsProperty('showErrorMessages', showErrorMessages))
       ..add(DiagnosticsProperty('isSubmitting', isSubmitting))
+      ..add(DiagnosticsProperty('nextPage', nextPage))
       ..add(DiagnosticsProperty(
           'authFailureOrSuccessOption', authFailureOrSuccessOption));
   }
@@ -1284,6 +1660,9 @@ class _$_SignupFormState
             (identical(other.isSubmitting, isSubmitting) ||
                 const DeepCollectionEquality()
                     .equals(other.isSubmitting, isSubmitting)) &&
+            (identical(other.nextPage, nextPage) ||
+                const DeepCollectionEquality()
+                    .equals(other.nextPage, nextPage)) &&
             (identical(other.authFailureOrSuccessOption,
                     authFailureOrSuccessOption) ||
                 const DeepCollectionEquality().equals(
@@ -1301,6 +1680,7 @@ class _$_SignupFormState
       const DeepCollectionEquality().hash(secretAnswer) ^
       const DeepCollectionEquality().hash(showErrorMessages) ^
       const DeepCollectionEquality().hash(isSubmitting) ^
+      const DeepCollectionEquality().hash(nextPage) ^
       const DeepCollectionEquality().hash(authFailureOrSuccessOption);
 
   @JsonKey(ignore: true)
@@ -1326,6 +1706,8 @@ abstract class _SignupFormState implements SignupFormState {
           @required
               bool isSubmitting,
           @required
+              bool nextPage,
+          @required
               Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption}) =
       _$_SignupFormState;
 
@@ -1343,6 +1725,8 @@ abstract class _SignupFormState implements SignupFormState {
   bool get showErrorMessages;
   @override
   bool get isSubmitting;
+  @override
+  bool get nextPage;
   @override
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption;
   @override

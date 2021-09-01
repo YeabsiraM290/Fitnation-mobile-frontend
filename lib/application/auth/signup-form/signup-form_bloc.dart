@@ -8,7 +8,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
 import 'package:fitnation_frontend/domain/auth/auth_facade.dart';
 import 'package:fitnation_frontend/domain/auth/auth_failure.dart';
-import 'package:fitnation_frontend/domain/auth/value_objects.dart';
+import 'package:fitnation_frontend/domain/core/value_objects/value_objects.dart';
 
 part 'signup-form_event.dart';
 part 'signup-form_state.dart';
@@ -55,11 +55,29 @@ class SignupFormBloc extends Bloc<SignupFormEvent, SignupFormState> {
           authFailureOrSuccessOption: none(),
         );
       },
+      nextPressed: (e) async* {
+        yield* _performActionOnAuthFacadeNextPressed();
+      },
+      backPressed: (e) async* {
+        yield* _performActionOnAuthFacadeBackPressed();
+      },
       registerWithEmailAndPasswordPressed: (e) async* {
         yield* _performActionOnAuthFacadeWithEmailAndPassword(
           _authFacade.registerWithEmailAndPassword,
         );
       },
+    );
+  }
+
+  Stream<SignupFormState> _performActionOnAuthFacadeNextPressed() async* {
+    yield state.copyWith(
+      nextPage: true,
+    );
+  }
+
+  Stream<SignupFormState> _performActionOnAuthFacadeBackPressed() async* {
+    yield state.copyWith(
+      nextPage: false,
     );
   }
 

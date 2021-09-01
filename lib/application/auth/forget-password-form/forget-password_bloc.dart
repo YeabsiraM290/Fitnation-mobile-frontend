@@ -8,7 +8,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
 import 'package:fitnation_frontend/domain/auth/auth_facade.dart';
 import 'package:fitnation_frontend/domain/auth/auth_failure.dart';
-import 'package:fitnation_frontend/domain/auth/value_objects.dart';
+import 'package:fitnation_frontend/domain/core/value_objects/value_objects.dart';
 
 part 'forget-password_event.dart';
 part 'forget-password_state.dart';

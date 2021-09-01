@@ -16,7 +16,10 @@ class _$UserTearOff {
 // ignore: unused_element
   _User call(
       {@required EmailAddress emailAddress,
-      @required Password password,
+      Password password,
+      Question question,
+      SecretAnswer secretAnswer,
+      @required Sex sex,
       @required Username username,
       @required Age age,
       @required Height height,
@@ -24,6 +27,9 @@ class _$UserTearOff {
     return _User(
       emailAddress: emailAddress,
       password: password,
+      question: question,
+      secretAnswer: secretAnswer,
+      sex: sex,
       username: username,
       age: age,
       height: height,
@@ -40,6 +46,9 @@ const $User = _$UserTearOff();
 mixin _$User {
   EmailAddress get emailAddress;
   Password get password;
+  Question get question;
+  SecretAnswer get secretAnswer;
+  Sex get sex;
   Username get username;
   Age get age;
   Height get height;
@@ -56,6 +65,9 @@ abstract class $UserCopyWith<$Res> {
   $Res call(
       {EmailAddress emailAddress,
       Password password,
+      Question question,
+      SecretAnswer secretAnswer,
+      Sex sex,
       Username username,
       Age age,
       Height height,
@@ -74,6 +86,9 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
   $Res call({
     Object emailAddress = freezed,
     Object password = freezed,
+    Object question = freezed,
+    Object secretAnswer = freezed,
+    Object sex = freezed,
     Object username = freezed,
     Object age = freezed,
     Object height = freezed,
@@ -84,6 +99,11 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
           ? _value.emailAddress
           : emailAddress as EmailAddress,
       password: password == freezed ? _value.password : password as Password,
+      question: question == freezed ? _value.question : question as Question,
+      secretAnswer: secretAnswer == freezed
+          ? _value.secretAnswer
+          : secretAnswer as SecretAnswer,
+      sex: sex == freezed ? _value.sex : sex as Sex,
       username: username == freezed ? _value.username : username as Username,
       age: age == freezed ? _value.age : age as Age,
       height: height == freezed ? _value.height : height as Height,
@@ -100,6 +120,9 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   $Res call(
       {EmailAddress emailAddress,
       Password password,
+      Question question,
+      SecretAnswer secretAnswer,
+      Sex sex,
       Username username,
       Age age,
       Height height,
@@ -119,6 +142,9 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
   $Res call({
     Object emailAddress = freezed,
     Object password = freezed,
+    Object question = freezed,
+    Object secretAnswer = freezed,
+    Object sex = freezed,
     Object username = freezed,
     Object age = freezed,
     Object height = freezed,
@@ -129,6 +155,11 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
           ? _value.emailAddress
           : emailAddress as EmailAddress,
       password: password == freezed ? _value.password : password as Password,
+      question: question == freezed ? _value.question : question as Question,
+      secretAnswer: secretAnswer == freezed
+          ? _value.secretAnswer
+          : secretAnswer as SecretAnswer,
+      sex: sex == freezed ? _value.sex : sex as Sex,
       username: username == freezed ? _value.username : username as Username,
       age: age == freezed ? _value.age : age as Age,
       height: height == freezed ? _value.height : height as Height,
@@ -141,13 +172,16 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 class _$_User implements _User {
   const _$_User(
       {@required this.emailAddress,
-      @required this.password,
+      this.password,
+      this.question,
+      this.secretAnswer,
+      @required this.sex,
       @required this.username,
       @required this.age,
       @required this.height,
       @required this.weight})
       : assert(emailAddress != null),
-        assert(password != null),
+        assert(sex != null),
         assert(username != null),
         assert(age != null),
         assert(height != null),
@@ -157,6 +191,12 @@ class _$_User implements _User {
   final EmailAddress emailAddress;
   @override
   final Password password;
+  @override
+  final Question question;
+  @override
+  final SecretAnswer secretAnswer;
+  @override
+  final Sex sex;
   @override
   final Username username;
   @override
@@ -168,7 +208,7 @@ class _$_User implements _User {
 
   @override
   String toString() {
-    return 'User(emailAddress: $emailAddress, password: $password, username: $username, age: $age, height: $height, weight: $weight)';
+    return 'User(emailAddress: $emailAddress, password: $password, question: $question, secretAnswer: $secretAnswer, sex: $sex, username: $username, age: $age, height: $height, weight: $weight)';
   }
 
   @override
@@ -181,6 +221,14 @@ class _$_User implements _User {
             (identical(other.password, password) ||
                 const DeepCollectionEquality()
                     .equals(other.password, password)) &&
+            (identical(other.question, question) ||
+                const DeepCollectionEquality()
+                    .equals(other.question, question)) &&
+            (identical(other.secretAnswer, secretAnswer) ||
+                const DeepCollectionEquality()
+                    .equals(other.secretAnswer, secretAnswer)) &&
+            (identical(other.sex, sex) ||
+                const DeepCollectionEquality().equals(other.sex, sex)) &&
             (identical(other.username, username) ||
                 const DeepCollectionEquality()
                     .equals(other.username, username)) &&
@@ -197,6 +245,9 @@ class _$_User implements _User {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(emailAddress) ^
       const DeepCollectionEquality().hash(password) ^
+      const DeepCollectionEquality().hash(question) ^
+      const DeepCollectionEquality().hash(secretAnswer) ^
+      const DeepCollectionEquality().hash(sex) ^
       const DeepCollectionEquality().hash(username) ^
       const DeepCollectionEquality().hash(age) ^
       const DeepCollectionEquality().hash(height) ^
@@ -211,7 +262,10 @@ class _$_User implements _User {
 abstract class _User implements User {
   const factory _User(
       {@required EmailAddress emailAddress,
-      @required Password password,
+      Password password,
+      Question question,
+      SecretAnswer secretAnswer,
+      @required Sex sex,
       @required Username username,
       @required Age age,
       @required Height height,
@@ -221,6 +275,12 @@ abstract class _User implements User {
   EmailAddress get emailAddress;
   @override
   Password get password;
+  @override
+  Question get question;
+  @override
+  SecretAnswer get secretAnswer;
+  @override
+  Sex get sex;
   @override
   Username get username;
   @override

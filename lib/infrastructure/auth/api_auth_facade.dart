@@ -3,21 +3,13 @@ import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:fitnation_frontend/domain/auth/auth_failure.dart';
 import 'package:fitnation_frontend/domain/auth/auth_facade.dart';
-import 'package:fitnation_frontend/domain/auth/user.dart';
-
-import 'package:fitnation_frontend/domain/auth/value_objects.dart';
+import 'package:http/http.dart' as http;
+import 'package:meta/meta.dart';
+import 'package:fitnation_frontend/domain/core/value_objects/value_objects.dart';
 
 @LazySingleton(as: AuthFacade)
 class ApiAuthFacade implements AuthFacade {
-  User user = User(
-      emailAddress: EmailAddress("q@dc.com"),
-      password: Password("weerrtu"),
-      username: Username('sdasdsa'),
-      age: Age(23),
-      height: Height(1.56),
-      weight: Weight(45));
-  @override
-  Future<Option<User>> getSignedInUser() async => optionOf(user);
+  final _baseUrl = 'http://10.0.2.2:5000/api';
 
   @override
   Future<Either<AuthFailure, Unit>> registerWithEmailAndPassword({
@@ -25,11 +17,25 @@ class ApiAuthFacade implements AuthFacade {
     @required Password password,
     @required Username username,
     @required SecretAnswer secretAnswer,
+    @required Age age,
+    @required Height height,
+    @required Weight weight,
   }) async {
     if (emailAddress.toString() == "w@y.com") {
       return right(unit);
     } else {
       return left(const AuthFailure.emailAlreadyInUse());
+    }
+  }
+
+  @override
+  Future<Option<bool>> getSignedInUser() async {
+    final response = 200;
+
+    if (response == 200) {
+      return optionOf(true);
+    } else {
+      return optionOf(null);
     }
   }
 
@@ -59,19 +65,5 @@ class ApiAuthFacade implements AuthFacade {
       return right(unit);
     }
     return left(const AuthFailure.invalidCredentials());
-  }
-
-  @override
-  Future<Either<AuthFailure, Unit>> updateProfile({
-    @required Username username,
-    @required Age age,
-    @required Height height,
-    @required Weight weight,
-  }) async {
-    if (username.isValid()) {
-      print(age);
-      return right(unit);
-    }
-    return left(const AuthFailure.usernameInUse());
   }
 }

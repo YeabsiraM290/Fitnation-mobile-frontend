@@ -11,6 +11,8 @@ abstract class SignupFormEvent with _$SignupFormEvent {
       UsernameChanged;
   const factory SignupFormEvent.secretAnswerChanged(String secretAnswerStr) =
       SecretAnswerChanged;
+  const factory SignupFormEvent.nextPressed() = NextPressed;
+  const factory SignupFormEvent.backPressed() = BackPressed;
   const factory SignupFormEvent.registerWithEmailAndPasswordPressed() =
       RegisterWithEmailAndPasswordPressed;
 }

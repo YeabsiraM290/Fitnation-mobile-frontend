@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fitnation_frontend/presentation/routes/router.gr.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:fitnation_frontend/application/auth/signup-form/signup-form_bloc.dart';
 
@@ -192,162 +194,6 @@ class SignupForm extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const SizedBox(
-                          height: 18,
-                        ),
-                        TextFormField(
-                          style: const TextStyle(
-                              color: Colors.white, fontSize: 15),
-                          autocorrect: false,
-                          onChanged: (value) => context
-                              .read<SignupFormBloc>()
-                              .add(SignupFormEvent.passwordChanged(value)),
-                          validator: (_) => context
-                              .read<SignupFormBloc>()
-                              .state
-                              .password
-                              .value
-                              .fold(
-                                  (f) => f.maybeMap(
-                                      shortPassword: (_) => 'Invalid Password',
-                                      orElse: () => null),
-                                  (_) => null),
-                          decoration: const InputDecoration(
-                            icon: Icon(
-                              Icons.refresh,
-                              color: Colors.orange,
-                            ),
-                            hintText: 'Re-type password',
-                            labelText: 'Conform password',
-                            focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Colors.orange,
-                              ),
-                            ),
-                            enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 18,
-                        ),
-                        TextFormField(
-                          style: const TextStyle(
-                              color: Colors.white, fontSize: 15),
-                          autocorrect: false,
-                          onChanged: (value) => context
-                              .read<SignupFormBloc>()
-                              .add(SignupFormEvent.passwordChanged(value)),
-                          validator: (_) => context
-                              .read<SignupFormBloc>()
-                              .state
-                              .emailAddress
-                              .value
-                              .fold(
-                                  (f) => f.maybeMap(
-                                      invalidEmail: (_) => 'Invalid Password',
-                                      orElse: () => null),
-                                  (_) => null),
-                          decoration: const InputDecoration(
-                            icon: Icon(
-                              Icons.refresh,
-                              color: Colors.orange,
-                            ),
-                            hintText: 'Age',
-                            labelText: 'Enter age',
-                            focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Colors.orange,
-                              ),
-                            ),
-                            enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 18,
-                        ),
-                        TextFormField(
-                          style: const TextStyle(
-                              color: Colors.white, fontSize: 15),
-                          autocorrect: false,
-                          onChanged: (value) => context
-                              .read<SignupFormBloc>()
-                              .add(SignupFormEvent.passwordChanged(value)),
-                          validator: (_) => context
-                              .read<SignupFormBloc>()
-                              .state
-                              .emailAddress
-                              .value
-                              .fold(
-                                  (f) => f.maybeMap(
-                                      invalidEmail: (_) => 'Invalid Password',
-                                      orElse: () => null),
-                                  (_) => null),
-                          decoration: const InputDecoration(
-                            icon: Icon(
-                              Icons.refresh,
-                              color: Colors.orange,
-                            ),
-                            hintText: 'Re-type password',
-                            labelText: 'Enter height',
-                            focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Colors.orange,
-                              ),
-                            ),
-                            enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 18,
-                        ),
-                        TextFormField(
-                          style: const TextStyle(
-                              color: Colors.white, fontSize: 15),
-                          autocorrect: false,
-                          onChanged: (value) => context
-                              .read<SignupFormBloc>()
-                              .add(SignupFormEvent.passwordChanged(value)),
-                          validator: (_) => context
-                              .read<SignupFormBloc>()
-                              .state
-                              .emailAddress
-                              .value
-                              .fold(
-                                  (f) => f.maybeMap(
-                                      invalidEmail: (_) => 'Invalid Password',
-                                      orElse: () => null),
-                                  (_) => null),
-                          decoration: const InputDecoration(
-                            icon: Icon(
-                              Icons.line_weight,
-                              color: Colors.orange,
-                            ),
-                            hintText: 'Re-type password',
-                            labelText: 'Enter weight',
-                            focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Colors.orange,
-                              ),
-                            ),
-                            enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        ),
                       ],
                     ),
                   ),
@@ -377,7 +223,9 @@ class SignupForm extends StatelessWidget {
                       ),
                       TextButton(
                         onPressed: () {
-                          //signup screen
+                          ExtendedNavigator.of(context).replace(
+                            Routes.loginFormContainer,
+                          );
                         },
                         child: const Text(
                           'Sign in',
@@ -386,6 +234,10 @@ class SignupForm extends StatelessWidget {
                       ),
                     ],
                   ),
+                  if (state.isSubmitting) ...[
+                    const SizedBox(height: 8),
+                    const LinearProgressIndicator(value: null),
+                  ]
                 ],
               ));
         });

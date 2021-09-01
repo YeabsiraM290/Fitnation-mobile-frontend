@@ -12,6 +12,10 @@ abstract class ValueFailure<T> with _$ValueFailure<T> {
     @required T failedValue,
   }) = ShortPassword<T>;
 
+  const factory ValueFailure.shortQuestion({
+    @required T failedValue,
+  }) = ShortQuestion<T>;
+
   const factory ValueFailure.shortUsername({
     @required T failedValue,
   }) = ShortUsername<T>;
@@ -31,6 +35,10 @@ abstract class ValueFailure<T> with _$ValueFailure<T> {
   const factory ValueFailure.invalidHeight({
     @required T failedValue,
   }) = InvalidHeight<T>;
+
+  const factory ValueFailure.invalidSex({
+    @required T failedValue,
+  }) = InvalidSex<T>;
 
   const factory ValueFailure.invalidWeight({
     @required T failedValue,

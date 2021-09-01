@@ -37,6 +37,16 @@ class _$AuthFailureTearOff {
   InvalidCredentials invalidCredentials() {
     return const InvalidCredentials();
   }
+
+// ignore: unused_element
+  InvalidPassword invalidPassword() {
+    return const InvalidPassword();
+  }
+
+// ignore: unused_element
+  NoUser noUser() {
+    return const NoUser();
+  }
 }
 
 /// @nodoc
@@ -52,6 +62,8 @@ mixin _$AuthFailure {
     @required TResult usernameInUse(),
     @required TResult invalidEmailAndPassword(),
     @required TResult invalidCredentials(),
+    @required TResult invalidPassword(),
+    @required TResult noUser(),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
@@ -60,6 +72,8 @@ mixin _$AuthFailure {
     TResult usernameInUse(),
     TResult invalidEmailAndPassword(),
     TResult invalidCredentials(),
+    TResult invalidPassword(),
+    TResult noUser(),
     @required TResult orElse(),
   });
   @optionalTypeArgs
@@ -69,6 +83,8 @@ mixin _$AuthFailure {
     @required TResult usernameInUse(UsernameAlreadyInUse value),
     @required TResult invalidEmailAndPassword(InvalidEmailAndPassword value),
     @required TResult invalidCredentials(InvalidCredentials value),
+    @required TResult invalidPassword(InvalidPassword value),
+    @required TResult noUser(NoUser value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
@@ -77,6 +93,8 @@ mixin _$AuthFailure {
     TResult usernameInUse(UsernameAlreadyInUse value),
     TResult invalidEmailAndPassword(InvalidEmailAndPassword value),
     TResult invalidCredentials(InvalidCredentials value),
+    TResult invalidPassword(InvalidPassword value),
+    TResult noUser(NoUser value),
     @required TResult orElse(),
   });
 }
@@ -146,12 +164,16 @@ class _$ServerError with DiagnosticableTreeMixin implements ServerError {
     @required TResult usernameInUse(),
     @required TResult invalidEmailAndPassword(),
     @required TResult invalidCredentials(),
+    @required TResult invalidPassword(),
+    @required TResult noUser(),
   }) {
     assert(serverError != null);
     assert(emailAlreadyInUse != null);
     assert(usernameInUse != null);
     assert(invalidEmailAndPassword != null);
     assert(invalidCredentials != null);
+    assert(invalidPassword != null);
+    assert(noUser != null);
     return serverError();
   }
 
@@ -163,6 +185,8 @@ class _$ServerError with DiagnosticableTreeMixin implements ServerError {
     TResult usernameInUse(),
     TResult invalidEmailAndPassword(),
     TResult invalidCredentials(),
+    TResult invalidPassword(),
+    TResult noUser(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -180,12 +204,16 @@ class _$ServerError with DiagnosticableTreeMixin implements ServerError {
     @required TResult usernameInUse(UsernameAlreadyInUse value),
     @required TResult invalidEmailAndPassword(InvalidEmailAndPassword value),
     @required TResult invalidCredentials(InvalidCredentials value),
+    @required TResult invalidPassword(InvalidPassword value),
+    @required TResult noUser(NoUser value),
   }) {
     assert(serverError != null);
     assert(emailAlreadyInUse != null);
     assert(usernameInUse != null);
     assert(invalidEmailAndPassword != null);
     assert(invalidCredentials != null);
+    assert(invalidPassword != null);
+    assert(noUser != null);
     return serverError(this);
   }
 
@@ -197,6 +225,8 @@ class _$ServerError with DiagnosticableTreeMixin implements ServerError {
     TResult usernameInUse(UsernameAlreadyInUse value),
     TResult invalidEmailAndPassword(InvalidEmailAndPassword value),
     TResult invalidCredentials(InvalidCredentials value),
+    TResult invalidPassword(InvalidPassword value),
+    TResult noUser(NoUser value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -264,12 +294,16 @@ class _$EmailAlreadyInUse
     @required TResult usernameInUse(),
     @required TResult invalidEmailAndPassword(),
     @required TResult invalidCredentials(),
+    @required TResult invalidPassword(),
+    @required TResult noUser(),
   }) {
     assert(serverError != null);
     assert(emailAlreadyInUse != null);
     assert(usernameInUse != null);
     assert(invalidEmailAndPassword != null);
     assert(invalidCredentials != null);
+    assert(invalidPassword != null);
+    assert(noUser != null);
     return emailAlreadyInUse();
   }
 
@@ -281,6 +315,8 @@ class _$EmailAlreadyInUse
     TResult usernameInUse(),
     TResult invalidEmailAndPassword(),
     TResult invalidCredentials(),
+    TResult invalidPassword(),
+    TResult noUser(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -298,12 +334,16 @@ class _$EmailAlreadyInUse
     @required TResult usernameInUse(UsernameAlreadyInUse value),
     @required TResult invalidEmailAndPassword(InvalidEmailAndPassword value),
     @required TResult invalidCredentials(InvalidCredentials value),
+    @required TResult invalidPassword(InvalidPassword value),
+    @required TResult noUser(NoUser value),
   }) {
     assert(serverError != null);
     assert(emailAlreadyInUse != null);
     assert(usernameInUse != null);
     assert(invalidEmailAndPassword != null);
     assert(invalidCredentials != null);
+    assert(invalidPassword != null);
+    assert(noUser != null);
     return emailAlreadyInUse(this);
   }
 
@@ -315,6 +355,8 @@ class _$EmailAlreadyInUse
     TResult usernameInUse(UsernameAlreadyInUse value),
     TResult invalidEmailAndPassword(InvalidEmailAndPassword value),
     TResult invalidCredentials(InvalidCredentials value),
+    TResult invalidPassword(InvalidPassword value),
+    TResult noUser(NoUser value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -381,12 +423,16 @@ class _$UsernameAlreadyInUse
     @required TResult usernameInUse(),
     @required TResult invalidEmailAndPassword(),
     @required TResult invalidCredentials(),
+    @required TResult invalidPassword(),
+    @required TResult noUser(),
   }) {
     assert(serverError != null);
     assert(emailAlreadyInUse != null);
     assert(usernameInUse != null);
     assert(invalidEmailAndPassword != null);
     assert(invalidCredentials != null);
+    assert(invalidPassword != null);
+    assert(noUser != null);
     return usernameInUse();
   }
 
@@ -398,6 +444,8 @@ class _$UsernameAlreadyInUse
     TResult usernameInUse(),
     TResult invalidEmailAndPassword(),
     TResult invalidCredentials(),
+    TResult invalidPassword(),
+    TResult noUser(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -415,12 +463,16 @@ class _$UsernameAlreadyInUse
     @required TResult usernameInUse(UsernameAlreadyInUse value),
     @required TResult invalidEmailAndPassword(InvalidEmailAndPassword value),
     @required TResult invalidCredentials(InvalidCredentials value),
+    @required TResult invalidPassword(InvalidPassword value),
+    @required TResult noUser(NoUser value),
   }) {
     assert(serverError != null);
     assert(emailAlreadyInUse != null);
     assert(usernameInUse != null);
     assert(invalidEmailAndPassword != null);
     assert(invalidCredentials != null);
+    assert(invalidPassword != null);
+    assert(noUser != null);
     return usernameInUse(this);
   }
 
@@ -432,6 +484,8 @@ class _$UsernameAlreadyInUse
     TResult usernameInUse(UsernameAlreadyInUse value),
     TResult invalidEmailAndPassword(InvalidEmailAndPassword value),
     TResult invalidCredentials(InvalidCredentials value),
+    TResult invalidPassword(InvalidPassword value),
+    TResult noUser(NoUser value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -499,12 +553,16 @@ class _$InvalidEmailAndPassword
     @required TResult usernameInUse(),
     @required TResult invalidEmailAndPassword(),
     @required TResult invalidCredentials(),
+    @required TResult invalidPassword(),
+    @required TResult noUser(),
   }) {
     assert(serverError != null);
     assert(emailAlreadyInUse != null);
     assert(usernameInUse != null);
     assert(invalidEmailAndPassword != null);
     assert(invalidCredentials != null);
+    assert(invalidPassword != null);
+    assert(noUser != null);
     return invalidEmailAndPassword();
   }
 
@@ -516,6 +574,8 @@ class _$InvalidEmailAndPassword
     TResult usernameInUse(),
     TResult invalidEmailAndPassword(),
     TResult invalidCredentials(),
+    TResult invalidPassword(),
+    TResult noUser(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -533,12 +593,16 @@ class _$InvalidEmailAndPassword
     @required TResult usernameInUse(UsernameAlreadyInUse value),
     @required TResult invalidEmailAndPassword(InvalidEmailAndPassword value),
     @required TResult invalidCredentials(InvalidCredentials value),
+    @required TResult invalidPassword(InvalidPassword value),
+    @required TResult noUser(NoUser value),
   }) {
     assert(serverError != null);
     assert(emailAlreadyInUse != null);
     assert(usernameInUse != null);
     assert(invalidEmailAndPassword != null);
     assert(invalidCredentials != null);
+    assert(invalidPassword != null);
+    assert(noUser != null);
     return invalidEmailAndPassword(this);
   }
 
@@ -550,6 +614,8 @@ class _$InvalidEmailAndPassword
     TResult usernameInUse(UsernameAlreadyInUse value),
     TResult invalidEmailAndPassword(InvalidEmailAndPassword value),
     TResult invalidCredentials(InvalidCredentials value),
+    TResult invalidPassword(InvalidPassword value),
+    TResult noUser(NoUser value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -617,12 +683,16 @@ class _$InvalidCredentials
     @required TResult usernameInUse(),
     @required TResult invalidEmailAndPassword(),
     @required TResult invalidCredentials(),
+    @required TResult invalidPassword(),
+    @required TResult noUser(),
   }) {
     assert(serverError != null);
     assert(emailAlreadyInUse != null);
     assert(usernameInUse != null);
     assert(invalidEmailAndPassword != null);
     assert(invalidCredentials != null);
+    assert(invalidPassword != null);
+    assert(noUser != null);
     return invalidCredentials();
   }
 
@@ -634,6 +704,8 @@ class _$InvalidCredentials
     TResult usernameInUse(),
     TResult invalidEmailAndPassword(),
     TResult invalidCredentials(),
+    TResult invalidPassword(),
+    TResult noUser(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -651,12 +723,16 @@ class _$InvalidCredentials
     @required TResult usernameInUse(UsernameAlreadyInUse value),
     @required TResult invalidEmailAndPassword(InvalidEmailAndPassword value),
     @required TResult invalidCredentials(InvalidCredentials value),
+    @required TResult invalidPassword(InvalidPassword value),
+    @required TResult noUser(NoUser value),
   }) {
     assert(serverError != null);
     assert(emailAlreadyInUse != null);
     assert(usernameInUse != null);
     assert(invalidEmailAndPassword != null);
     assert(invalidCredentials != null);
+    assert(invalidPassword != null);
+    assert(noUser != null);
     return invalidCredentials(this);
   }
 
@@ -668,6 +744,8 @@ class _$InvalidCredentials
     TResult usernameInUse(UsernameAlreadyInUse value),
     TResult invalidEmailAndPassword(InvalidEmailAndPassword value),
     TResult invalidCredentials(InvalidCredentials value),
+    TResult invalidPassword(InvalidPassword value),
+    TResult noUser(NoUser value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -680,4 +758,257 @@ class _$InvalidCredentials
 
 abstract class InvalidCredentials implements AuthFailure {
   const factory InvalidCredentials() = _$InvalidCredentials;
+}
+
+/// @nodoc
+abstract class $InvalidPasswordCopyWith<$Res> {
+  factory $InvalidPasswordCopyWith(
+          InvalidPassword value, $Res Function(InvalidPassword) then) =
+      _$InvalidPasswordCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$InvalidPasswordCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res>
+    implements $InvalidPasswordCopyWith<$Res> {
+  _$InvalidPasswordCopyWithImpl(
+      InvalidPassword _value, $Res Function(InvalidPassword) _then)
+      : super(_value, (v) => _then(v as InvalidPassword));
+
+  @override
+  InvalidPassword get _value => super._value as InvalidPassword;
+}
+
+/// @nodoc
+class _$InvalidPassword
+    with DiagnosticableTreeMixin
+    implements InvalidPassword {
+  const _$InvalidPassword();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthFailure.invalidPassword()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'AuthFailure.invalidPassword'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is InvalidPassword);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult serverError(),
+    @required TResult emailAlreadyInUse(),
+    @required TResult usernameInUse(),
+    @required TResult invalidEmailAndPassword(),
+    @required TResult invalidCredentials(),
+    @required TResult invalidPassword(),
+    @required TResult noUser(),
+  }) {
+    assert(serverError != null);
+    assert(emailAlreadyInUse != null);
+    assert(usernameInUse != null);
+    assert(invalidEmailAndPassword != null);
+    assert(invalidCredentials != null);
+    assert(invalidPassword != null);
+    assert(noUser != null);
+    return invalidPassword();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult serverError(),
+    TResult emailAlreadyInUse(),
+    TResult usernameInUse(),
+    TResult invalidEmailAndPassword(),
+    TResult invalidCredentials(),
+    TResult invalidPassword(),
+    TResult noUser(),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (invalidPassword != null) {
+      return invalidPassword();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult serverError(ServerError value),
+    @required TResult emailAlreadyInUse(EmailAlreadyInUse value),
+    @required TResult usernameInUse(UsernameAlreadyInUse value),
+    @required TResult invalidEmailAndPassword(InvalidEmailAndPassword value),
+    @required TResult invalidCredentials(InvalidCredentials value),
+    @required TResult invalidPassword(InvalidPassword value),
+    @required TResult noUser(NoUser value),
+  }) {
+    assert(serverError != null);
+    assert(emailAlreadyInUse != null);
+    assert(usernameInUse != null);
+    assert(invalidEmailAndPassword != null);
+    assert(invalidCredentials != null);
+    assert(invalidPassword != null);
+    assert(noUser != null);
+    return invalidPassword(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult serverError(ServerError value),
+    TResult emailAlreadyInUse(EmailAlreadyInUse value),
+    TResult usernameInUse(UsernameAlreadyInUse value),
+    TResult invalidEmailAndPassword(InvalidEmailAndPassword value),
+    TResult invalidCredentials(InvalidCredentials value),
+    TResult invalidPassword(InvalidPassword value),
+    TResult noUser(NoUser value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (invalidPassword != null) {
+      return invalidPassword(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class InvalidPassword implements AuthFailure {
+  const factory InvalidPassword() = _$InvalidPassword;
+}
+
+/// @nodoc
+abstract class $NoUserCopyWith<$Res> {
+  factory $NoUserCopyWith(NoUser value, $Res Function(NoUser) then) =
+      _$NoUserCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$NoUserCopyWithImpl<$Res> extends _$AuthFailureCopyWithImpl<$Res>
+    implements $NoUserCopyWith<$Res> {
+  _$NoUserCopyWithImpl(NoUser _value, $Res Function(NoUser) _then)
+      : super(_value, (v) => _then(v as NoUser));
+
+  @override
+  NoUser get _value => super._value as NoUser;
+}
+
+/// @nodoc
+class _$NoUser with DiagnosticableTreeMixin implements NoUser {
+  const _$NoUser();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthFailure.noUser()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'AuthFailure.noUser'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is NoUser);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult serverError(),
+    @required TResult emailAlreadyInUse(),
+    @required TResult usernameInUse(),
+    @required TResult invalidEmailAndPassword(),
+    @required TResult invalidCredentials(),
+    @required TResult invalidPassword(),
+    @required TResult noUser(),
+  }) {
+    assert(serverError != null);
+    assert(emailAlreadyInUse != null);
+    assert(usernameInUse != null);
+    assert(invalidEmailAndPassword != null);
+    assert(invalidCredentials != null);
+    assert(invalidPassword != null);
+    assert(noUser != null);
+    return noUser();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult serverError(),
+    TResult emailAlreadyInUse(),
+    TResult usernameInUse(),
+    TResult invalidEmailAndPassword(),
+    TResult invalidCredentials(),
+    TResult invalidPassword(),
+    TResult noUser(),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (noUser != null) {
+      return noUser();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult serverError(ServerError value),
+    @required TResult emailAlreadyInUse(EmailAlreadyInUse value),
+    @required TResult usernameInUse(UsernameAlreadyInUse value),
+    @required TResult invalidEmailAndPassword(InvalidEmailAndPassword value),
+    @required TResult invalidCredentials(InvalidCredentials value),
+    @required TResult invalidPassword(InvalidPassword value),
+    @required TResult noUser(NoUser value),
+  }) {
+    assert(serverError != null);
+    assert(emailAlreadyInUse != null);
+    assert(usernameInUse != null);
+    assert(invalidEmailAndPassword != null);
+    assert(invalidCredentials != null);
+    assert(invalidPassword != null);
+    assert(noUser != null);
+    return noUser(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult serverError(ServerError value),
+    TResult emailAlreadyInUse(EmailAlreadyInUse value),
+    TResult usernameInUse(UsernameAlreadyInUse value),
+    TResult invalidEmailAndPassword(InvalidEmailAndPassword value),
+    TResult invalidCredentials(InvalidCredentials value),
+    TResult invalidPassword(InvalidPassword value),
+    TResult noUser(NoUser value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (noUser != null) {
+      return noUser(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class NoUser implements AuthFailure {
+  const factory NoUser() = _$NoUser;
 }

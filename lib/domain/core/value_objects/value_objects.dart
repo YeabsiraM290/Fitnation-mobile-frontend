@@ -29,6 +29,19 @@ class Password extends ValueObject<String> {
   const Password._(this.value);
 }
 
+class Question extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+
+  factory Question(String input) {
+    return Question._(
+      validateQuestion(input),
+    );
+  }
+
+  const Question._(this.value);
+}
+
 class PasswordEquality extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
@@ -66,6 +79,19 @@ class SecretAnswer extends ValueObject<String> {
   }
 
   const SecretAnswer._(this.value);
+}
+
+class Sex extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+
+  factory Sex(String input) {
+    return Sex._(
+      validateSex(input),
+    );
+  }
+
+  const Sex._(this.value);
 }
 
 class Age extends ValueObject<int> {
