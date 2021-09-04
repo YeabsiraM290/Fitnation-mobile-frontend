@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:temp_builder/presentation/core/custom_boxshadow.dart';
+import 'package:fitnation_frontend/presentation/core/custom_boxshadow.dart';
 
 Color loginbuttoncolor = HexColor("#a5140f");
 //c61812

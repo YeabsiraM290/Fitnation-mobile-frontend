@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:temp_builder/application/auth/profile-form/profile-form_bloc.dart';
-import 'package:temp_builder/presentation/Icons/bottom_nav_icons_icons.dart';
-import 'package:temp_builder/presentation/pages/diet_page.dart';
-import 'package:temp_builder/presentation/pages/exercise_page.dart';
-import 'package:temp_builder/presentation/pages/profile.dart';
-import 'package:temp_builder/presentation/pages/status.dart';
-import 'package:temp_builder/injection.dart';
-import 'package:temp_builder/presentation/pages/timeline_page.dart';
+import 'package:fitnation_frontend/application/auth/profile-form/profile-form_bloc.dart';
+import 'package:fitnation_frontend/presentation/Icons/bottom_nav_icons_icons.dart';
+import 'package:fitnation_frontend/presentation/pages/diet_page.dart';
+import 'package:fitnation_frontend/presentation/pages/exercise_page.dart';
+import 'package:fitnation_frontend/presentation/pages/profile.dart';
+import 'package:fitnation_frontend/presentation/pages/status.dart';
+import 'package:fitnation_frontend/injection.dart';
+import 'package:fitnation_frontend/presentation/pages/timeline_page.dart';
 
 //body colors
 Color gradientlighttop = HexColor("#1c2732");
