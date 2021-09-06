@@ -19,6 +19,11 @@ class _$ProfileFailureTearOff {
   }
 
 // ignore: unused_element
+  NoConnection noConnection() {
+    return const NoConnection();
+  }
+
+// ignore: unused_element
   UsernameAlreadyInUse usernameInUse() {
     return const UsernameAlreadyInUse();
   }
@@ -38,12 +43,14 @@ mixin _$ProfileFailure {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult serverError(),
+    @required TResult noConnection(),
     @required TResult usernameInUse(),
     @required TResult usetNotFound(),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult serverError(),
+    TResult noConnection(),
     TResult usernameInUse(),
     TResult usetNotFound(),
     @required TResult orElse(),
@@ -51,12 +58,14 @@ mixin _$ProfileFailure {
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult serverError(ServerError value),
+    @required TResult noConnection(NoConnection value),
     @required TResult usernameInUse(UsernameAlreadyInUse value),
     @required TResult usetNotFound(UsetNotFound value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult serverError(ServerError value),
+    TResult noConnection(NoConnection value),
     TResult usernameInUse(UsernameAlreadyInUse value),
     TResult usetNotFound(UsetNotFound value),
     @required TResult orElse(),
@@ -125,10 +134,12 @@ class _$ServerError with DiagnosticableTreeMixin implements ServerError {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult serverError(),
+    @required TResult noConnection(),
     @required TResult usernameInUse(),
     @required TResult usetNotFound(),
   }) {
     assert(serverError != null);
+    assert(noConnection != null);
     assert(usernameInUse != null);
     assert(usetNotFound != null);
     return serverError();
@@ -138,6 +149,7 @@ class _$ServerError with DiagnosticableTreeMixin implements ServerError {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult serverError(),
+    TResult noConnection(),
     TResult usernameInUse(),
     TResult usetNotFound(),
     @required TResult orElse(),
@@ -153,10 +165,12 @@ class _$ServerError with DiagnosticableTreeMixin implements ServerError {
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult serverError(ServerError value),
+    @required TResult noConnection(NoConnection value),
     @required TResult usernameInUse(UsernameAlreadyInUse value),
     @required TResult usetNotFound(UsetNotFound value),
   }) {
     assert(serverError != null);
+    assert(noConnection != null);
     assert(usernameInUse != null);
     assert(usetNotFound != null);
     return serverError(this);
@@ -166,6 +180,7 @@ class _$ServerError with DiagnosticableTreeMixin implements ServerError {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult serverError(ServerError value),
+    TResult noConnection(NoConnection value),
     TResult usernameInUse(UsernameAlreadyInUse value),
     TResult usetNotFound(UsetNotFound value),
     @required TResult orElse(),
@@ -180,6 +195,115 @@ class _$ServerError with DiagnosticableTreeMixin implements ServerError {
 
 abstract class ServerError implements ProfileFailure {
   const factory ServerError() = _$ServerError;
+}
+
+/// @nodoc
+abstract class $NoConnectionCopyWith<$Res> {
+  factory $NoConnectionCopyWith(
+          NoConnection value, $Res Function(NoConnection) then) =
+      _$NoConnectionCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$NoConnectionCopyWithImpl<$Res>
+    extends _$ProfileFailureCopyWithImpl<$Res>
+    implements $NoConnectionCopyWith<$Res> {
+  _$NoConnectionCopyWithImpl(
+      NoConnection _value, $Res Function(NoConnection) _then)
+      : super(_value, (v) => _then(v as NoConnection));
+
+  @override
+  NoConnection get _value => super._value as NoConnection;
+}
+
+/// @nodoc
+class _$NoConnection with DiagnosticableTreeMixin implements NoConnection {
+  const _$NoConnection();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'ProfileFailure.noConnection()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'ProfileFailure.noConnection'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is NoConnection);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult serverError(),
+    @required TResult noConnection(),
+    @required TResult usernameInUse(),
+    @required TResult usetNotFound(),
+  }) {
+    assert(serverError != null);
+    assert(noConnection != null);
+    assert(usernameInUse != null);
+    assert(usetNotFound != null);
+    return noConnection();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult serverError(),
+    TResult noConnection(),
+    TResult usernameInUse(),
+    TResult usetNotFound(),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (noConnection != null) {
+      return noConnection();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult serverError(ServerError value),
+    @required TResult noConnection(NoConnection value),
+    @required TResult usernameInUse(UsernameAlreadyInUse value),
+    @required TResult usetNotFound(UsetNotFound value),
+  }) {
+    assert(serverError != null);
+    assert(noConnection != null);
+    assert(usernameInUse != null);
+    assert(usetNotFound != null);
+    return noConnection(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult serverError(ServerError value),
+    TResult noConnection(NoConnection value),
+    TResult usernameInUse(UsernameAlreadyInUse value),
+    TResult usetNotFound(UsetNotFound value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (noConnection != null) {
+      return noConnection(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class NoConnection implements ProfileFailure {
+  const factory NoConnection() = _$NoConnection;
 }
 
 /// @nodoc
@@ -231,10 +355,12 @@ class _$UsernameAlreadyInUse
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult serverError(),
+    @required TResult noConnection(),
     @required TResult usernameInUse(),
     @required TResult usetNotFound(),
   }) {
     assert(serverError != null);
+    assert(noConnection != null);
     assert(usernameInUse != null);
     assert(usetNotFound != null);
     return usernameInUse();
@@ -244,6 +370,7 @@ class _$UsernameAlreadyInUse
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult serverError(),
+    TResult noConnection(),
     TResult usernameInUse(),
     TResult usetNotFound(),
     @required TResult orElse(),
@@ -259,10 +386,12 @@ class _$UsernameAlreadyInUse
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult serverError(ServerError value),
+    @required TResult noConnection(NoConnection value),
     @required TResult usernameInUse(UsernameAlreadyInUse value),
     @required TResult usetNotFound(UsetNotFound value),
   }) {
     assert(serverError != null);
+    assert(noConnection != null);
     assert(usernameInUse != null);
     assert(usetNotFound != null);
     return usernameInUse(this);
@@ -272,6 +401,7 @@ class _$UsernameAlreadyInUse
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult serverError(ServerError value),
+    TResult noConnection(NoConnection value),
     TResult usernameInUse(UsernameAlreadyInUse value),
     TResult usetNotFound(UsetNotFound value),
     @required TResult orElse(),
@@ -334,10 +464,12 @@ class _$UsetNotFound with DiagnosticableTreeMixin implements UsetNotFound {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult serverError(),
+    @required TResult noConnection(),
     @required TResult usernameInUse(),
     @required TResult usetNotFound(),
   }) {
     assert(serverError != null);
+    assert(noConnection != null);
     assert(usernameInUse != null);
     assert(usetNotFound != null);
     return usetNotFound();
@@ -347,6 +479,7 @@ class _$UsetNotFound with DiagnosticableTreeMixin implements UsetNotFound {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult serverError(),
+    TResult noConnection(),
     TResult usernameInUse(),
     TResult usetNotFound(),
     @required TResult orElse(),
@@ -362,10 +495,12 @@ class _$UsetNotFound with DiagnosticableTreeMixin implements UsetNotFound {
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult serverError(ServerError value),
+    @required TResult noConnection(NoConnection value),
     @required TResult usernameInUse(UsernameAlreadyInUse value),
     @required TResult usetNotFound(UsetNotFound value),
   }) {
     assert(serverError != null);
+    assert(noConnection != null);
     assert(usernameInUse != null);
     assert(usetNotFound != null);
     return usetNotFound(this);
@@ -375,6 +510,7 @@ class _$UsetNotFound with DiagnosticableTreeMixin implements UsetNotFound {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult serverError(ServerError value),
+    TResult noConnection(NoConnection value),
     TResult usernameInUse(UsernameAlreadyInUse value),
     TResult usetNotFound(UsetNotFound value),
     @required TResult orElse(),

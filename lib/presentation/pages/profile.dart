@@ -58,6 +58,7 @@ class ProfilePage extends StatelessWidget {
                   usetNotFound: (_) => 'User not found',
                   serverError: (_) => 'Server error',
                   usernameInUse: (_) => 'Username in use',
+                  noConnection: (_) => 'No internet connection',
                   orElse: () => null),
             ).show(context);
           }, (_) {
