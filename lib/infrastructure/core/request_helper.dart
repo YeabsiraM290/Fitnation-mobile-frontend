@@ -15,37 +15,40 @@ const _baseUrl = 'http://10.0.2.2:5000/api';
 Future<Either<ProfileFailure, Unit>> putPassword({
   @required Password password,
 }) async {
-  try {
-    final userDto = password.toString();
-    await http.put(
-      '$_baseUrl/password/',
-      headers: <String, String>{
-        'Content-Type': 'application/json; charset=UTF-8',
-        'token': 'token',
-      },
-      body: {'password': password},
-    );
+  final http.Response response = await http.put(
+    '$_baseUrl/Password/',
+    headers: <String, String>{
+      'Content-Type': 'application/json; charset=UTF-8',
+      'id': '1',
+    },
+    body: jsonEncode({'password': password.getOrCrash().toString()}),
+  );
 
+  if (response.statusCode == 200) {
     return right(unit);
-  } catch (_) {
+  } else if (response.statusCode == 404) {
     return left(const ProfileFailure.usetNotFound());
+  } else {
+    return left(const ProfileFailure.serverError());
   }
 }
 
 @override
 Future<Either<ProfileFailure, Unit>> deleteUser() async {
-  try {
-    await http.delete(
-      '$_baseUrl/User/',
-      headers: <String, String>{
-        'Content-Type': 'application/json; charset=UTF-8',
-        'token': 'token',
-      },
-    );
+  final http.Response response = await http.delete(
+    '$_baseUrl/User/',
+    headers: <String, String>{
+      'Content-Type': 'application/json; charset=UTF-8',
+      'id': '1',
+    },
+  );
 
+  if (response.statusCode == 200) {
     return right(unit);
-  } catch (_) {
+  } else if (response.statusCode == 404) {
     return left(const ProfileFailure.usetNotFound());
+  } else {
+    return left(const ProfileFailure.serverError());
   }
 }
 
@@ -53,13 +56,6 @@ Future<Either<ProfileFailure, Unit>> deleteUser() async {
 Future<Either<ProfileFailure, Unit>> putProfile({
   @required User user,
 }) async {
-  print(user.emailAddress.toString());
-  print(user.username.toString());
-  print(user.sex.toString());
-  print(user.age.toString());
-  print(user.height.toString());
-  print(user.weight.toString());
-
   final http.Response response = await http.put(
     '$_baseUrl/User/',
     headers: <String, String>{
@@ -70,12 +66,13 @@ Future<Either<ProfileFailure, Unit>> putProfile({
   );
 
   if (response.statusCode == 200) {
-    final result = jsonDecode(response.body);
-    final user = UserDto.fromJson(result).toDomain();
-
     return right(unit);
-  } else {
+  } else if (response.statusCode == 401) {
     return left(const ProfileFailure.usernameInUse());
+  } else if (response.statusCode == 404) {
+    return left(const ProfileFailure.usetNotFound());
+  } else {
+    return left(const ProfileFailure.serverError());
   }
 }
 
@@ -87,7 +84,9 @@ Future<Either<ProfileFailure, User>> get_user() async {
     final user = UserDto.fromJson(result).toDomain();
 
     return right(user);
-  } else {
+  } else if (response.statusCode == 404) {
     return left(const ProfileFailure.usetNotFound());
+  } else {
+    return left(const ProfileFailure.serverError());
   }
 }

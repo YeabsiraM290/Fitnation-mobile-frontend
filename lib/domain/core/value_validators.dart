@@ -15,7 +15,7 @@ Either<ValueFailure<String>, String> validateEmailAddress(String input) {
 
 Either<ValueFailure<String>, String> validatePassword(String input) {
   // You can also add some advanced password checks (uppercase/lowercase, at least 1 number, ...)
-  if (input.length >= 6) {
+  if (input.length >= 8) {
     return right(input);
   } else {
     return left(ValueFailure.shortPassword(failedValue: input));

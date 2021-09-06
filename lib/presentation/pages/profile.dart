@@ -35,22 +35,21 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screen_size = MediaQuery.of(context).size;
-
+    context.read<ProfileFormBloc>().add(ProfileFormEvent.usernameChanged(
+        user.username.getOrCrash().toString()));
+    context
+        .read<ProfileFormBloc>()
+        .add(ProfileFormEvent.sexChanged(user.sex.getOrCrash().toString()));
+    context.read<ProfileFormBloc>().add(ProfileFormEvent.emailChanged(
+        user.emailAddress.getOrCrash().toString()));
+    context.read<ProfileFormBloc>().add(ProfileFormEvent.heightChanged(
+        double.parse(user.height.getOrCrash().toString())));
+    context.read<ProfileFormBloc>().add(ProfileFormEvent.weightChanged(
+        double.parse(user.weight.getOrCrash().toString())));
+    context.read<ProfileFormBloc>().add(ProfileFormEvent.ageChanged(
+        int.parse(user.age.getOrCrash().toString())));
     return BlocConsumer<ProfileFormBloc, ProfileFormState>(
       listener: (context, state) {
-        context.read<ProfileFormBloc>().add(ProfileFormEvent.usernameChanged(
-            user.username.getOrCrash().toString()));
-        context
-            .read<ProfileFormBloc>()
-            .add(ProfileFormEvent.sexChanged(user.sex.getOrCrash().toString()));
-        context.read<ProfileFormBloc>().add(ProfileFormEvent.emailChanged(
-            user.emailAddress.getOrCrash().toString()));
-        context.read<ProfileFormBloc>().add(ProfileFormEvent.heightChanged(
-            double.parse(user.height.getOrCrash().toString())));
-        context.read<ProfileFormBloc>().add(ProfileFormEvent.weightChanged(
-            double.parse(user.weight.getOrCrash().toString())));
-        context.read<ProfileFormBloc>().add(ProfileFormEvent.ageChanged(
-            int.parse(user.age.getOrCrash().toString())));
         state.actionFailureOrSuccessOption.fold(
           () {},
           (either) => either.fold((failure) {
@@ -62,11 +61,9 @@ class ProfilePage extends StatelessWidget {
                   orElse: () => null),
             ).show(context);
           }, (_) {
-            ExtendedNavigator.of(context).replace(
-              Routes.loginFormContainer,
-            );
-
-            context.read<AuthBloc>().add(const AuthEvent.authCheckRequested());
+            FlushbarHelper.createSuccess(
+              message: "Profile updated succesfuly",
+            ).show(context);
           }),
         );
       },
