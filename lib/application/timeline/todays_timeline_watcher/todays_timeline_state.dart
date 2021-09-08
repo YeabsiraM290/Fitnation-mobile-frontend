@@ -9,4 +9,4 @@ abstract class TodaysTimelineWatcherState with _$TodaysTimelineWatcherState {
       _LoadSuccess;
   const factory TodaysTimelineWatcherState.loadFailure(
       TimelineFailure actionFailure) = _LoadFailure;
-}s
+}
