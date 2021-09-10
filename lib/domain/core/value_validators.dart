@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-// import 'package:kt_dart/kt.dart';
-// import 'package:temp_builder/domain/auth/value_objects.dart';
+import 'package:kt_dart/collection.dart';
 import 'package:fitnation_frontend/domain/core/failures.dart';
 
+//Email validation
 Either<ValueFailure<String>, String> validateEmailAddress(String input) {
   const emailRegex =
       r"""^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+""";
@@ -13,26 +13,17 @@ Either<ValueFailure<String>, String> validateEmailAddress(String input) {
   }
 }
 
+//Password validation
 Either<ValueFailure<String>, String> validatePassword(String input) {
-  // You can also add some advanced password checks (uppercase/lowercase, at least 1 number, ...)
-  if (input.length >= 8) {
+  if (input.length >= 6) {
     return right(input);
   } else {
     return left(ValueFailure.shortPassword(failedValue: input));
   }
 }
 
-Either<ValueFailure<String>, String> validateQuestion(String input) {
-  // You can also add some advanced password checks (uppercase/lowercase, at least 1 number, ...)
-  if (input.length >= 20) {
-    return right(input);
-  } else {
-    return left(ValueFailure.shortQuestion(failedValue: input));
-  }
-}
-
+//Username validation
 Either<ValueFailure<String>, String> validateUsername(String input) {
-  // You can also add some advanced password checks (uppercase/lowercase, at least 1 number, ...)
   if (input.length >= 4) {
     return right(input);
   } else {
@@ -40,36 +31,17 @@ Either<ValueFailure<String>, String> validateUsername(String input) {
   }
 }
 
-Either<ValueFailure<String>, String> validateSecretAnswer(String input) {
-  // You can also add some advanced password checks (uppercase/lowercase, at least 1 number, ...)
-  if (input.length >= 4) {
-    return right(input);
-  } else {
-    return left(ValueFailure.shortSecretAnswer(failedValue: input));
-  }
-}
-
-Either<ValueFailure<String>, String> validatePasswordEquality(
-    String input1, String input2) {
-  // You can also add some advanced password checks (uppercase/lowercase, at least 1 number, ...)
-  if (input1 == input2) {
-    return right(input1);
-  } else {
-    return left(ValueFailure.unmatchedPassword(failedValue: input2));
-  }
-}
-
+//Age validation
 Either<ValueFailure<int>, int> validateAge(int age) {
-  // You can also add some advanced password checks (uppercase/lowercase, at least 1 number, ...)
-  if (age > 15 && age < 70) {
+  if (age > 10 && age < 80) {
     return right(age);
   } else {
     return left(ValueFailure.invalidAge(failedValue: age));
   }
 }
 
+//Height validation
 Either<ValueFailure<double>, double> validateHeight(double height) {
-  // You can also add some advanced password checks (uppercase/lowercase, at least 1 number, ...)
   if (height > 1.40 && height < 2.4) {
     return right(height);
   } else {
@@ -77,8 +49,8 @@ Either<ValueFailure<double>, double> validateHeight(double height) {
   }
 }
 
+//Weight validation
 Either<ValueFailure<double>, double> validateWeight(double weight) {
-  // You can also add some advanced password checks (uppercase/lowercase, at least 1 number, ...)
   if (weight > 25.0 && weight < 200.0) {
     return right(weight);
   } else {
@@ -86,13 +58,53 @@ Either<ValueFailure<double>, double> validateWeight(double weight) {
   }
 }
 
+//Sex validation
 Either<ValueFailure<String>, String> validateSex(String sex) {
-  // You can also add some advanced password checks (uppercase/lowercase, at least 1 number, ...)
   sex = sex.toLowerCase();
 
   if (sex == 'male' || sex == 'female') {
     return right(sex);
   } else {
     return left(ValueFailure.invalidSex(failedValue: sex));
+  }
+}
+
+//Exercise name validation
+Either<ValueFailure<String>, String> validateName(String input) {
+  if (input.length >= 5) {
+    return right(input);
+  } else {
+    return left(ValueFailure.shortName(failedValue: input));
+  }
+}
+
+//Tutorial video, cover picture url validation
+Either<ValueFailure<String>, String> validateUrl(String input) {
+  if (input.length >= 15) {
+    return right(input);
+  } else {
+    return left(ValueFailure.shortUrl(failedValue: input));
+  }
+}
+
+//Workout repetation validation
+Either<ValueFailure<int>, int> validateRepetation(int input) {
+  if (input >= 0) {
+    return right(input);
+  } else {
+    return left(ValueFailure.invalidRepetation(failedValue: input));
+  }
+}
+
+//Custom list  validation
+Either<ValueFailure<KtList<T>>, KtList<T>> validateListLength<T>(
+  KtList<T> input,
+) {
+  if (input.size >= 0) {
+    return right(input);
+  } else {
+    return left(ValueFailure.listEmpty(
+      failedValue: input,
+    ));
   }
 }

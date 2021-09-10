@@ -9,11 +9,12 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-import '../forget_password/forget_password_con.dart';
-import '../login/login_con.dart';
-import '../main_page/main_page.dart';
-import '../signup/signup_con.dart';
+import '../admin_pages/admin_main_page.dart';
+import '../auth/forget_password/forget_password_con.dart';
+import '../auth/login/login_con.dart';
+import '../auth/signup/signup_con.dart';
 import '../splash/splash_page.dart';
+import '../user_pages/main_page/main_page.dart';
 
 class Routes {
   static const String splashPage = '/';
@@ -21,12 +22,14 @@ class Routes {
   static const String signupFormContainer = '/signup-form-container';
   static const String forgetPasswordContainer = '/forget-password-container';
   static const String mainPageBlueprint = '/main-page-blueprint';
+  static const String adminPageBlueprint = '/admin-page-blueprint';
   static const all = <String>{
     splashPage,
     loginFormContainer,
     signupFormContainer,
     forgetPasswordContainer,
     mainPageBlueprint,
+    adminPageBlueprint,
   };
 }
 
@@ -39,6 +42,7 @@ class Router extends RouterBase {
     RouteDef(Routes.signupFormContainer, page: SignupFormContainer),
     RouteDef(Routes.forgetPasswordContainer, page: ForgetPasswordContainer),
     RouteDef(Routes.mainPageBlueprint, page: MainPageBlueprint),
+    RouteDef(Routes.adminPageBlueprint, page: AdminPageBlueprint),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -73,6 +77,12 @@ class Router extends RouterBase {
         settings: data,
       );
     },
+    AdminPageBlueprint: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => AdminPageBlueprint(),
+        settings: data,
+      );
+    },
   };
 }
 
@@ -94,4 +104,7 @@ extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
 
   Future<dynamic> pushMainPageBlueprint() =>
       push<dynamic>(Routes.mainPageBlueprint);
+
+  Future<dynamic> pushAdminPageBlueprint() =>
+      push<dynamic>(Routes.adminPageBlueprint);
 }

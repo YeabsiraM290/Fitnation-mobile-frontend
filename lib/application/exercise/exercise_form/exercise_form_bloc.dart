@@ -7,11 +7,11 @@ import 'package:injectable/injectable.dart';
 import 'package:kt_dart/kt.dart';
 import 'package:meta/meta.dart';
 
-import 'package:temp_builder/domain/exercise/exercise_failure.dart';
-import 'package:temp_builder/domain/exercise/exercise_plan.dart';
-import 'package:temp_builder/domain/exercise/exercise_repository.dart';
-import 'package:temp_builder/domain/exercise/value_objects.dart';
-import 'package:temp_builder/presentation/user_pages/exercise/exercise_misc/schedule_presentation_classes.dart';
+import 'package:fitnation_frontend/domain/exercise/exercise_failure.dart';
+import 'package:fitnation_frontend/domain/exercise/exercise_plan.dart';
+import 'package:fitnation_frontend/domain/exercise/exercise_repository.dart';
+import 'package:fitnation_frontend/domain/exercise/value_objects.dart';
+import 'package:fitnation_frontend/presentation/user_pages/exercise/exercise_misc/schedule_presentation_classes.dart';
 
 part 'exercise_form_event.dart';
 part 'exercise_form_state.dart';

@@ -468,11 +468,16 @@ class _$LoginFormStateTearOff {
 
 // ignore: unused_element
   _LoginFormState call(
-      {@required EmailAddress emailAddress,
-      @required Password password,
-      @required bool showErrorMessages,
-      @required bool isSubmitting,
-      @required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption}) {
+      {@required
+          EmailAddress emailAddress,
+      @required
+          Password password,
+      @required
+          bool showErrorMessages,
+      @required
+          bool isSubmitting,
+      @required
+          Option<Either<AuthFailure, String>> authFailureOrSuccessOption}) {
     return _LoginFormState(
       emailAddress: emailAddress,
       password: password,
@@ -493,7 +498,7 @@ mixin _$LoginFormState {
   Password get password;
   bool get showErrorMessages;
   bool get isSubmitting;
-  Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption;
+  Option<Either<AuthFailure, String>> get authFailureOrSuccessOption;
 
   @JsonKey(ignore: true)
   $LoginFormStateCopyWith<LoginFormState> get copyWith;
@@ -509,7 +514,7 @@ abstract class $LoginFormStateCopyWith<$Res> {
       Password password,
       bool showErrorMessages,
       bool isSubmitting,
-      Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
+      Option<Either<AuthFailure, String>> authFailureOrSuccessOption});
 }
 
 /// @nodoc
@@ -541,7 +546,7 @@ class _$LoginFormStateCopyWithImpl<$Res>
           isSubmitting == freezed ? _value.isSubmitting : isSubmitting as bool,
       authFailureOrSuccessOption: authFailureOrSuccessOption == freezed
           ? _value.authFailureOrSuccessOption
-          : authFailureOrSuccessOption as Option<Either<AuthFailure, Unit>>,
+          : authFailureOrSuccessOption as Option<Either<AuthFailure, String>>,
     ));
   }
 }
@@ -558,7 +563,7 @@ abstract class _$LoginFormStateCopyWith<$Res>
       Password password,
       bool showErrorMessages,
       bool isSubmitting,
-      Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
+      Option<Either<AuthFailure, String>> authFailureOrSuccessOption});
 }
 
 /// @nodoc
@@ -592,7 +597,7 @@ class __$LoginFormStateCopyWithImpl<$Res>
           isSubmitting == freezed ? _value.isSubmitting : isSubmitting as bool,
       authFailureOrSuccessOption: authFailureOrSuccessOption == freezed
           ? _value.authFailureOrSuccessOption
-          : authFailureOrSuccessOption as Option<Either<AuthFailure, Unit>>,
+          : authFailureOrSuccessOption as Option<Either<AuthFailure, String>>,
     ));
   }
 }
@@ -622,7 +627,7 @@ class _$_LoginFormState
   @override
   final bool isSubmitting;
   @override
-  final Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption;
+  final Option<Either<AuthFailure, String>> authFailureOrSuccessOption;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -691,7 +696,7 @@ abstract class _LoginFormState implements LoginFormState {
           @required
               bool isSubmitting,
           @required
-              Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption}) =
+              Option<Either<AuthFailure, String>> authFailureOrSuccessOption}) =
       _$_LoginFormState;
 
   @override
@@ -703,7 +708,7 @@ abstract class _LoginFormState implements LoginFormState {
   @override
   bool get isSubmitting;
   @override
-  Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption;
+  Option<Either<AuthFailure, String>> get authFailureOrSuccessOption;
   @override
   @JsonKey(ignore: true)
   _$LoginFormStateCopyWith<_LoginFormState> get copyWith;

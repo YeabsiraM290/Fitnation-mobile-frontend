@@ -1,9 +1,9 @@
 import 'package:kt_dart/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:temp_builder/domain/diet/diet_plan.dart';
-import 'package:temp_builder/domain/diet/schedule.dart';
-import 'package:temp_builder/domain/diet/value_objects.dart';
-import 'package:temp_builder/domain/exercise/value_objects.dart';
+import 'package:fitnation_frontend/domain/diet/diet_plan.dart';
+import 'package:fitnation_frontend/domain/diet/schedule.dart';
+import 'package:fitnation_frontend/domain/diet/value_objects.dart';
+import 'package:fitnation_frontend/domain/exercise/value_objects.dart';
 
 import 'package:kt_dart/kt.dart';
 

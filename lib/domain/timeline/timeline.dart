@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:kt_dart/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:temp_builder/domain/core/failures.dart';
-import 'package:temp_builder/domain/exercise/value_objects.dart';
-import 'package:temp_builder/domain/exercise/workout.dart';
+import 'package:fitnation_frontend/domain/core/failures.dart';
+import 'package:fitnation_frontend/domain/exercise/value_objects.dart';
+import 'package:fitnation_frontend/domain/exercise/workout.dart';
 
 part 'timeline.freezed.dart';
 

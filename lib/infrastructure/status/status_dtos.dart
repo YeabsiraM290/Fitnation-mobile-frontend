@@ -1,7 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:temp_builder/domain/core/value_objects/value_objects.dart';
-import 'package:temp_builder/domain/exercise/value_objects.dart';
-import 'package:temp_builder/domain/status/status.dart';
+import 'package:fitnation_frontend/domain/core/value_objects/value_objects.dart';
+import 'package:fitnation_frontend/domain/status/status.dart';
 
 part 'status_dtos.freezed.dart';
 part 'status_dtos.g.dart';
@@ -23,23 +22,24 @@ abstract class StatusDto implements _$StatusDto {
 
   factory StatusDto.fromDomain(Status status) {
     return StatusDto(
-      planName: status.planName.getOrCrash().toString(),
-      level: status.level.getOrCrash().toString(),
-      week: status.week.getOrCrash().toString(),
-      goal: status.goal.getOrCrash().toString(),
+      planName: status.planName,
+      level: status.level,
+      week: status.week,
+      goal: status.goal,
       bmi: status.bmi,
       fat: status.fat,
       calorie: status.calorie,
-      weight: double.parse(status.weight.getOrCrash().toString()),
+      weight:
+          double.parse(status.weight.value.getOrElse(() => null).toString()),
     );
   }
 
   Status toDomain() {
     return Status(
-        planName: Name(planName),
-        level: Name(level),
-        week: Name(week),
-        goal: Name(goal),
+        planName: planName,
+        level: level,
+        week: week,
+        goal: goal,
         bmi: bmi,
         fat: fat,
         calorie: calorie,

@@ -5,24 +5,26 @@ abstract class SignupFormState with _$SignupFormState {
   const factory SignupFormState({
     @required EmailAddress emailAddress,
     @required Password password,
-    @required Password rePassword,
     @required Username username,
-    @required SecretAnswer secretAnswer,
+    @required Sex sex,
+    @required Age age,
+    @required Height height,
+    @required Weight weight,
     @required bool showErrorMessages,
     @required bool isSubmitting,
-    @required bool nextPage,
     @required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
   }) = _SignupFormState;
 
   factory SignupFormState.initial() => SignupFormState(
         emailAddress: EmailAddress(''),
         password: Password(''),
-        rePassword: Password(''),
         username: Username(''),
-        secretAnswer: SecretAnswer(''),
+        sex: Sex(''),
+        age: Age(0),
+        height: Height(0),
+        weight: Weight(0),
         showErrorMessages: false,
         isSubmitting: false,
-        nextPage: false,
         authFailureOrSuccessOption: none(),
       );
 }

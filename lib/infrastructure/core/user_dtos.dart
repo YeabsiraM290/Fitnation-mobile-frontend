@@ -16,8 +16,6 @@ abstract class UserDto implements _$UserDto {
     @required int age,
     @required double height,
     @required double weight,
-    String answer,
-    String question,
     String password,
   }) = _UserDto;
 
@@ -30,9 +28,7 @@ abstract class UserDto implements _$UserDto {
         age: int.parse(user.age.getOrCrash().toString()),
         height: double.parse(user.height.getOrCrash().toString()),
         weight: double.parse(user.weight.getOrCrash().toString()),
-        answer: user.secretAnswer.getOrCrash().toString(),
         password: user.password.getOrCrash().toString(),
-        question: user.question.getOrCrash().toString(),
       );
     } else {
       return UserDto(

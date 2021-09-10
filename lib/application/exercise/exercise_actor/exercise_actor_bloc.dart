@@ -3,9 +3,9 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:temp_builder/domain/exercise/exercise_failure.dart';
-import 'package:temp_builder/domain/exercise/value_objects.dart';
-import 'package:temp_builder/domain/exercise/exercise_repository.dart';
+import 'package:fitnation_frontend/domain/exercise/exercise_failure.dart';
+import 'package:fitnation_frontend/domain/exercise/value_objects.dart';
+import 'package:fitnation_frontend/domain/exercise/exercise_repository.dart';
 
 part 'exercise_actor_event.dart';
 part 'exercise_actor_state.dart';

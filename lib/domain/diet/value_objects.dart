@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:temp_builder/domain/core/failures.dart';
-import 'package:temp_builder/domain/core/value_objects.dart';
-import 'package:temp_builder/domain/core/value_validators.dart';
+import 'package:fitnation_frontend/domain/core/failures.dart';
+import 'package:fitnation_frontend/domain/core/value_objects.dart';
+import 'package:fitnation_frontend/domain/core/value_validators.dart';
 
 class FoodName extends ValueObject<String> {
   @override

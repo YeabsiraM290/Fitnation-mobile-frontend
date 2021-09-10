@@ -2,14 +2,14 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:kt_dart/kt.dart';
-import 'package:temp_builder/domain/diet/diet_failure.dart';
-import 'package:temp_builder/domain/diet/diet_plan.dart';
-import 'package:temp_builder/domain/diet/diet_repository.dart';
-import 'package:temp_builder/domain/exercise/value_objects.dart';
+import 'package:fitnation_frontend/domain/diet/diet_failure.dart';
+import 'package:fitnation_frontend/domain/diet/diet_plan.dart';
+import 'package:fitnation_frontend/domain/diet/diet_repository.dart';
+import 'package:fitnation_frontend/domain/exercise/value_objects.dart';
 
 import 'package:meta/meta.dart';
 
-import 'package:temp_builder/infrastructure/core/request_helper.dart';
+import 'package:fitnation_frontend/infrastructure/core/request_helper.dart';
 
 @LazySingleton(as: DietRepository)
 class ApiDietRepository implements DietRepository {

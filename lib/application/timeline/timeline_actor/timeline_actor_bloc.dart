@@ -1,13 +1,12 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 
 import 'package:meta/meta.dart';
-import 'package:temp_builder/domain/timeline/timeline_failure.dart';
-import 'package:temp_builder/domain/timeline/timeline_repository.dart';
+import 'package:fitnation_frontend/domain/timeline/timeline_failure.dart';
+import 'package:fitnation_frontend/domain/timeline/timeline_repository.dart';
 
 part 'timeline_actor_event.dart';
 part 'timeline_actor_state.dart';

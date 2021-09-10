@@ -12,25 +12,29 @@ abstract class ValueFailure<T> with _$ValueFailure<T> {
     @required T failedValue,
   }) = ShortPassword<T>;
 
-  const factory ValueFailure.shortQuestion({
+  const factory ValueFailure.shortName({
     @required T failedValue,
-  }) = ShortQuestion<T>;
+  }) = ShortName<T>;
+
+  const factory ValueFailure.listEmpty({
+    @required T failedValue,
+  }) = ListEmpty<T>;
+
+  const factory ValueFailure.shortUrl({
+    @required T failedValue,
+  }) = ShortUrl<T>;
 
   const factory ValueFailure.shortUsername({
     @required T failedValue,
   }) = ShortUsername<T>;
 
-  const factory ValueFailure.unmatchedPassword({
-    @required T failedValue,
-  }) = UnmatchedPassword<T>;
-
-  const factory ValueFailure.shortSecretAnswer({
-    @required T failedValue,
-  }) = ShortSecretAnswer<T>;
-
   const factory ValueFailure.invalidAge({
     @required T failedValue,
   }) = InvalidAge<T>;
+
+  const factory ValueFailure.invalidRepetation({
+    @required T failedValue,
+  }) = InvalidRepetation<T>;
 
   const factory ValueFailure.invalidHeight({
     @required T failedValue,

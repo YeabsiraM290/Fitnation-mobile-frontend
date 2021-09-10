@@ -28,13 +28,6 @@ class _$SignupFormEventTearOff {
   }
 
 // ignore: unused_element
-  RePasswordChanged rePasswordChanged(String rePasswordStr) {
-    return RePasswordChanged(
-      rePasswordStr,
-    );
-  }
-
-// ignore: unused_element
   UsernameChanged usernameChanged(String usernameStr) {
     return UsernameChanged(
       usernameStr,
@@ -42,20 +35,31 @@ class _$SignupFormEventTearOff {
   }
 
 // ignore: unused_element
-  SecretAnswerChanged secretAnswerChanged(String secretAnswerStr) {
-    return SecretAnswerChanged(
-      secretAnswerStr,
+  SexChanged sexChanged(String sexStr) {
+    return SexChanged(
+      sexStr,
     );
   }
 
 // ignore: unused_element
-  NextPressed nextPressed() {
-    return const NextPressed();
+  AgeChanged ageChanged(int ageVal) {
+    return AgeChanged(
+      ageVal,
+    );
   }
 
 // ignore: unused_element
-  BackPressed backPressed() {
-    return const BackPressed();
+  HeightChanged heightChanged(double heightVal) {
+    return HeightChanged(
+      heightVal,
+    );
+  }
+
+// ignore: unused_element
+  WeightChanged weightChanged(double weightVal) {
+    return WeightChanged(
+      weightVal,
+    );
   }
 
 // ignore: unused_element
@@ -74,22 +78,22 @@ mixin _$SignupFormEvent {
   TResult when<TResult extends Object>({
     @required TResult emailChanged(String emailStr),
     @required TResult passwordChanged(String passwordStr),
-    @required TResult rePasswordChanged(String rePasswordStr),
     @required TResult usernameChanged(String usernameStr),
-    @required TResult secretAnswerChanged(String secretAnswerStr),
-    @required TResult nextPressed(),
-    @required TResult backPressed(),
+    @required TResult sexChanged(String sexStr),
+    @required TResult ageChanged(int ageVal),
+    @required TResult heightChanged(double heightVal),
+    @required TResult weightChanged(double weightVal),
     @required TResult registerWithEmailAndPasswordPressed(),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult emailChanged(String emailStr),
     TResult passwordChanged(String passwordStr),
-    TResult rePasswordChanged(String rePasswordStr),
     TResult usernameChanged(String usernameStr),
-    TResult secretAnswerChanged(String secretAnswerStr),
-    TResult nextPressed(),
-    TResult backPressed(),
+    TResult sexChanged(String sexStr),
+    TResult ageChanged(int ageVal),
+    TResult heightChanged(double heightVal),
+    TResult weightChanged(double weightVal),
     TResult registerWithEmailAndPasswordPressed(),
     @required TResult orElse(),
   });
@@ -97,11 +101,11 @@ mixin _$SignupFormEvent {
   TResult map<TResult extends Object>({
     @required TResult emailChanged(EmailChanged value),
     @required TResult passwordChanged(PasswordChanged value),
-    @required TResult rePasswordChanged(RePasswordChanged value),
     @required TResult usernameChanged(UsernameChanged value),
-    @required TResult secretAnswerChanged(SecretAnswerChanged value),
-    @required TResult nextPressed(NextPressed value),
-    @required TResult backPressed(BackPressed value),
+    @required TResult sexChanged(SexChanged value),
+    @required TResult ageChanged(AgeChanged value),
+    @required TResult heightChanged(HeightChanged value),
+    @required TResult weightChanged(WeightChanged value),
     @required
         TResult registerWithEmailAndPasswordPressed(
             RegisterWithEmailAndPasswordPressed value),
@@ -110,11 +114,11 @@ mixin _$SignupFormEvent {
   TResult maybeMap<TResult extends Object>({
     TResult emailChanged(EmailChanged value),
     TResult passwordChanged(PasswordChanged value),
-    TResult rePasswordChanged(RePasswordChanged value),
     TResult usernameChanged(UsernameChanged value),
-    TResult secretAnswerChanged(SecretAnswerChanged value),
-    TResult nextPressed(NextPressed value),
-    TResult backPressed(BackPressed value),
+    TResult sexChanged(SexChanged value),
+    TResult ageChanged(AgeChanged value),
+    TResult heightChanged(HeightChanged value),
+    TResult weightChanged(WeightChanged value),
     TResult registerWithEmailAndPasswordPressed(
         RegisterWithEmailAndPasswordPressed value),
     @required TResult orElse(),
@@ -210,20 +214,20 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
   TResult when<TResult extends Object>({
     @required TResult emailChanged(String emailStr),
     @required TResult passwordChanged(String passwordStr),
-    @required TResult rePasswordChanged(String rePasswordStr),
     @required TResult usernameChanged(String usernameStr),
-    @required TResult secretAnswerChanged(String secretAnswerStr),
-    @required TResult nextPressed(),
-    @required TResult backPressed(),
+    @required TResult sexChanged(String sexStr),
+    @required TResult ageChanged(int ageVal),
+    @required TResult heightChanged(double heightVal),
+    @required TResult weightChanged(double weightVal),
     @required TResult registerWithEmailAndPasswordPressed(),
   }) {
     assert(emailChanged != null);
     assert(passwordChanged != null);
-    assert(rePasswordChanged != null);
     assert(usernameChanged != null);
-    assert(secretAnswerChanged != null);
-    assert(nextPressed != null);
-    assert(backPressed != null);
+    assert(sexChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
     assert(registerWithEmailAndPasswordPressed != null);
     return emailChanged(emailStr);
   }
@@ -233,11 +237,11 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
   TResult maybeWhen<TResult extends Object>({
     TResult emailChanged(String emailStr),
     TResult passwordChanged(String passwordStr),
-    TResult rePasswordChanged(String rePasswordStr),
     TResult usernameChanged(String usernameStr),
-    TResult secretAnswerChanged(String secretAnswerStr),
-    TResult nextPressed(),
-    TResult backPressed(),
+    TResult sexChanged(String sexStr),
+    TResult ageChanged(int ageVal),
+    TResult heightChanged(double heightVal),
+    TResult weightChanged(double weightVal),
     TResult registerWithEmailAndPasswordPressed(),
     @required TResult orElse(),
   }) {
@@ -253,22 +257,22 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
   TResult map<TResult extends Object>({
     @required TResult emailChanged(EmailChanged value),
     @required TResult passwordChanged(PasswordChanged value),
-    @required TResult rePasswordChanged(RePasswordChanged value),
     @required TResult usernameChanged(UsernameChanged value),
-    @required TResult secretAnswerChanged(SecretAnswerChanged value),
-    @required TResult nextPressed(NextPressed value),
-    @required TResult backPressed(BackPressed value),
+    @required TResult sexChanged(SexChanged value),
+    @required TResult ageChanged(AgeChanged value),
+    @required TResult heightChanged(HeightChanged value),
+    @required TResult weightChanged(WeightChanged value),
     @required
         TResult registerWithEmailAndPasswordPressed(
             RegisterWithEmailAndPasswordPressed value),
   }) {
     assert(emailChanged != null);
     assert(passwordChanged != null);
-    assert(rePasswordChanged != null);
     assert(usernameChanged != null);
-    assert(secretAnswerChanged != null);
-    assert(nextPressed != null);
-    assert(backPressed != null);
+    assert(sexChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
     assert(registerWithEmailAndPasswordPressed != null);
     return emailChanged(this);
   }
@@ -278,11 +282,11 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
   TResult maybeMap<TResult extends Object>({
     TResult emailChanged(EmailChanged value),
     TResult passwordChanged(PasswordChanged value),
-    TResult rePasswordChanged(RePasswordChanged value),
     TResult usernameChanged(UsernameChanged value),
-    TResult secretAnswerChanged(SecretAnswerChanged value),
-    TResult nextPressed(NextPressed value),
-    TResult backPressed(BackPressed value),
+    TResult sexChanged(SexChanged value),
+    TResult ageChanged(AgeChanged value),
+    TResult heightChanged(HeightChanged value),
+    TResult weightChanged(WeightChanged value),
     TResult registerWithEmailAndPasswordPressed(
         RegisterWithEmailAndPasswordPressed value),
     @required TResult orElse(),
@@ -377,20 +381,20 @@ class _$PasswordChanged
   TResult when<TResult extends Object>({
     @required TResult emailChanged(String emailStr),
     @required TResult passwordChanged(String passwordStr),
-    @required TResult rePasswordChanged(String rePasswordStr),
     @required TResult usernameChanged(String usernameStr),
-    @required TResult secretAnswerChanged(String secretAnswerStr),
-    @required TResult nextPressed(),
-    @required TResult backPressed(),
+    @required TResult sexChanged(String sexStr),
+    @required TResult ageChanged(int ageVal),
+    @required TResult heightChanged(double heightVal),
+    @required TResult weightChanged(double weightVal),
     @required TResult registerWithEmailAndPasswordPressed(),
   }) {
     assert(emailChanged != null);
     assert(passwordChanged != null);
-    assert(rePasswordChanged != null);
     assert(usernameChanged != null);
-    assert(secretAnswerChanged != null);
-    assert(nextPressed != null);
-    assert(backPressed != null);
+    assert(sexChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
     assert(registerWithEmailAndPasswordPressed != null);
     return passwordChanged(passwordStr);
   }
@@ -400,11 +404,11 @@ class _$PasswordChanged
   TResult maybeWhen<TResult extends Object>({
     TResult emailChanged(String emailStr),
     TResult passwordChanged(String passwordStr),
-    TResult rePasswordChanged(String rePasswordStr),
     TResult usernameChanged(String usernameStr),
-    TResult secretAnswerChanged(String secretAnswerStr),
-    TResult nextPressed(),
-    TResult backPressed(),
+    TResult sexChanged(String sexStr),
+    TResult ageChanged(int ageVal),
+    TResult heightChanged(double heightVal),
+    TResult weightChanged(double weightVal),
     TResult registerWithEmailAndPasswordPressed(),
     @required TResult orElse(),
   }) {
@@ -420,22 +424,22 @@ class _$PasswordChanged
   TResult map<TResult extends Object>({
     @required TResult emailChanged(EmailChanged value),
     @required TResult passwordChanged(PasswordChanged value),
-    @required TResult rePasswordChanged(RePasswordChanged value),
     @required TResult usernameChanged(UsernameChanged value),
-    @required TResult secretAnswerChanged(SecretAnswerChanged value),
-    @required TResult nextPressed(NextPressed value),
-    @required TResult backPressed(BackPressed value),
+    @required TResult sexChanged(SexChanged value),
+    @required TResult ageChanged(AgeChanged value),
+    @required TResult heightChanged(HeightChanged value),
+    @required TResult weightChanged(WeightChanged value),
     @required
         TResult registerWithEmailAndPasswordPressed(
             RegisterWithEmailAndPasswordPressed value),
   }) {
     assert(emailChanged != null);
     assert(passwordChanged != null);
-    assert(rePasswordChanged != null);
     assert(usernameChanged != null);
-    assert(secretAnswerChanged != null);
-    assert(nextPressed != null);
-    assert(backPressed != null);
+    assert(sexChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
     assert(registerWithEmailAndPasswordPressed != null);
     return passwordChanged(this);
   }
@@ -445,11 +449,11 @@ class _$PasswordChanged
   TResult maybeMap<TResult extends Object>({
     TResult emailChanged(EmailChanged value),
     TResult passwordChanged(PasswordChanged value),
-    TResult rePasswordChanged(RePasswordChanged value),
     TResult usernameChanged(UsernameChanged value),
-    TResult secretAnswerChanged(SecretAnswerChanged value),
-    TResult nextPressed(NextPressed value),
-    TResult backPressed(BackPressed value),
+    TResult sexChanged(SexChanged value),
+    TResult ageChanged(AgeChanged value),
+    TResult heightChanged(HeightChanged value),
+    TResult weightChanged(WeightChanged value),
     TResult registerWithEmailAndPasswordPressed(
         RegisterWithEmailAndPasswordPressed value),
     @required TResult orElse(),
@@ -468,173 +472,6 @@ abstract class PasswordChanged implements SignupFormEvent {
   String get passwordStr;
   @JsonKey(ignore: true)
   $PasswordChangedCopyWith<PasswordChanged> get copyWith;
-}
-
-/// @nodoc
-abstract class $RePasswordChangedCopyWith<$Res> {
-  factory $RePasswordChangedCopyWith(
-          RePasswordChanged value, $Res Function(RePasswordChanged) then) =
-      _$RePasswordChangedCopyWithImpl<$Res>;
-  $Res call({String rePasswordStr});
-}
-
-/// @nodoc
-class _$RePasswordChangedCopyWithImpl<$Res>
-    extends _$SignupFormEventCopyWithImpl<$Res>
-    implements $RePasswordChangedCopyWith<$Res> {
-  _$RePasswordChangedCopyWithImpl(
-      RePasswordChanged _value, $Res Function(RePasswordChanged) _then)
-      : super(_value, (v) => _then(v as RePasswordChanged));
-
-  @override
-  RePasswordChanged get _value => super._value as RePasswordChanged;
-
-  @override
-  $Res call({
-    Object rePasswordStr = freezed,
-  }) {
-    return _then(RePasswordChanged(
-      rePasswordStr == freezed ? _value.rePasswordStr : rePasswordStr as String,
-    ));
-  }
-}
-
-/// @nodoc
-class _$RePasswordChanged
-    with DiagnosticableTreeMixin
-    implements RePasswordChanged {
-  const _$RePasswordChanged(this.rePasswordStr) : assert(rePasswordStr != null);
-
-  @override
-  final String rePasswordStr;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SignupFormEvent.rePasswordChanged(rePasswordStr: $rePasswordStr)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'SignupFormEvent.rePasswordChanged'))
-      ..add(DiagnosticsProperty('rePasswordStr', rePasswordStr));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is RePasswordChanged &&
-            (identical(other.rePasswordStr, rePasswordStr) ||
-                const DeepCollectionEquality()
-                    .equals(other.rePasswordStr, rePasswordStr)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(rePasswordStr);
-
-  @JsonKey(ignore: true)
-  @override
-  $RePasswordChangedCopyWith<RePasswordChanged> get copyWith =>
-      _$RePasswordChangedCopyWithImpl<RePasswordChanged>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult emailChanged(String emailStr),
-    @required TResult passwordChanged(String passwordStr),
-    @required TResult rePasswordChanged(String rePasswordStr),
-    @required TResult usernameChanged(String usernameStr),
-    @required TResult secretAnswerChanged(String secretAnswerStr),
-    @required TResult nextPressed(),
-    @required TResult backPressed(),
-    @required TResult registerWithEmailAndPasswordPressed(),
-  }) {
-    assert(emailChanged != null);
-    assert(passwordChanged != null);
-    assert(rePasswordChanged != null);
-    assert(usernameChanged != null);
-    assert(secretAnswerChanged != null);
-    assert(nextPressed != null);
-    assert(backPressed != null);
-    assert(registerWithEmailAndPasswordPressed != null);
-    return rePasswordChanged(rePasswordStr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult emailChanged(String emailStr),
-    TResult passwordChanged(String passwordStr),
-    TResult rePasswordChanged(String rePasswordStr),
-    TResult usernameChanged(String usernameStr),
-    TResult secretAnswerChanged(String secretAnswerStr),
-    TResult nextPressed(),
-    TResult backPressed(),
-    TResult registerWithEmailAndPasswordPressed(),
-    @required TResult orElse(),
-  }) {
-    assert(orElse != null);
-    if (rePasswordChanged != null) {
-      return rePasswordChanged(rePasswordStr);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult emailChanged(EmailChanged value),
-    @required TResult passwordChanged(PasswordChanged value),
-    @required TResult rePasswordChanged(RePasswordChanged value),
-    @required TResult usernameChanged(UsernameChanged value),
-    @required TResult secretAnswerChanged(SecretAnswerChanged value),
-    @required TResult nextPressed(NextPressed value),
-    @required TResult backPressed(BackPressed value),
-    @required
-        TResult registerWithEmailAndPasswordPressed(
-            RegisterWithEmailAndPasswordPressed value),
-  }) {
-    assert(emailChanged != null);
-    assert(passwordChanged != null);
-    assert(rePasswordChanged != null);
-    assert(usernameChanged != null);
-    assert(secretAnswerChanged != null);
-    assert(nextPressed != null);
-    assert(backPressed != null);
-    assert(registerWithEmailAndPasswordPressed != null);
-    return rePasswordChanged(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult emailChanged(EmailChanged value),
-    TResult passwordChanged(PasswordChanged value),
-    TResult rePasswordChanged(RePasswordChanged value),
-    TResult usernameChanged(UsernameChanged value),
-    TResult secretAnswerChanged(SecretAnswerChanged value),
-    TResult nextPressed(NextPressed value),
-    TResult backPressed(BackPressed value),
-    TResult registerWithEmailAndPasswordPressed(
-        RegisterWithEmailAndPasswordPressed value),
-    @required TResult orElse(),
-  }) {
-    assert(orElse != null);
-    if (rePasswordChanged != null) {
-      return rePasswordChanged(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class RePasswordChanged implements SignupFormEvent {
-  const factory RePasswordChanged(String rePasswordStr) = _$RePasswordChanged;
-
-  String get rePasswordStr;
-  @JsonKey(ignore: true)
-  $RePasswordChangedCopyWith<RePasswordChanged> get copyWith;
 }
 
 /// @nodoc
@@ -711,20 +548,20 @@ class _$UsernameChanged
   TResult when<TResult extends Object>({
     @required TResult emailChanged(String emailStr),
     @required TResult passwordChanged(String passwordStr),
-    @required TResult rePasswordChanged(String rePasswordStr),
     @required TResult usernameChanged(String usernameStr),
-    @required TResult secretAnswerChanged(String secretAnswerStr),
-    @required TResult nextPressed(),
-    @required TResult backPressed(),
+    @required TResult sexChanged(String sexStr),
+    @required TResult ageChanged(int ageVal),
+    @required TResult heightChanged(double heightVal),
+    @required TResult weightChanged(double weightVal),
     @required TResult registerWithEmailAndPasswordPressed(),
   }) {
     assert(emailChanged != null);
     assert(passwordChanged != null);
-    assert(rePasswordChanged != null);
     assert(usernameChanged != null);
-    assert(secretAnswerChanged != null);
-    assert(nextPressed != null);
-    assert(backPressed != null);
+    assert(sexChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
     assert(registerWithEmailAndPasswordPressed != null);
     return usernameChanged(usernameStr);
   }
@@ -734,11 +571,11 @@ class _$UsernameChanged
   TResult maybeWhen<TResult extends Object>({
     TResult emailChanged(String emailStr),
     TResult passwordChanged(String passwordStr),
-    TResult rePasswordChanged(String rePasswordStr),
     TResult usernameChanged(String usernameStr),
-    TResult secretAnswerChanged(String secretAnswerStr),
-    TResult nextPressed(),
-    TResult backPressed(),
+    TResult sexChanged(String sexStr),
+    TResult ageChanged(int ageVal),
+    TResult heightChanged(double heightVal),
+    TResult weightChanged(double weightVal),
     TResult registerWithEmailAndPasswordPressed(),
     @required TResult orElse(),
   }) {
@@ -754,22 +591,22 @@ class _$UsernameChanged
   TResult map<TResult extends Object>({
     @required TResult emailChanged(EmailChanged value),
     @required TResult passwordChanged(PasswordChanged value),
-    @required TResult rePasswordChanged(RePasswordChanged value),
     @required TResult usernameChanged(UsernameChanged value),
-    @required TResult secretAnswerChanged(SecretAnswerChanged value),
-    @required TResult nextPressed(NextPressed value),
-    @required TResult backPressed(BackPressed value),
+    @required TResult sexChanged(SexChanged value),
+    @required TResult ageChanged(AgeChanged value),
+    @required TResult heightChanged(HeightChanged value),
+    @required TResult weightChanged(WeightChanged value),
     @required
         TResult registerWithEmailAndPasswordPressed(
             RegisterWithEmailAndPasswordPressed value),
   }) {
     assert(emailChanged != null);
     assert(passwordChanged != null);
-    assert(rePasswordChanged != null);
     assert(usernameChanged != null);
-    assert(secretAnswerChanged != null);
-    assert(nextPressed != null);
-    assert(backPressed != null);
+    assert(sexChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
     assert(registerWithEmailAndPasswordPressed != null);
     return usernameChanged(this);
   }
@@ -779,11 +616,11 @@ class _$UsernameChanged
   TResult maybeMap<TResult extends Object>({
     TResult emailChanged(EmailChanged value),
     TResult passwordChanged(PasswordChanged value),
-    TResult rePasswordChanged(RePasswordChanged value),
     TResult usernameChanged(UsernameChanged value),
-    TResult secretAnswerChanged(SecretAnswerChanged value),
-    TResult nextPressed(NextPressed value),
-    TResult backPressed(BackPressed value),
+    TResult sexChanged(SexChanged value),
+    TResult ageChanged(AgeChanged value),
+    TResult heightChanged(HeightChanged value),
+    TResult weightChanged(WeightChanged value),
     TResult registerWithEmailAndPasswordPressed(
         RegisterWithEmailAndPasswordPressed value),
     @required TResult orElse(),
@@ -805,99 +642,90 @@ abstract class UsernameChanged implements SignupFormEvent {
 }
 
 /// @nodoc
-abstract class $SecretAnswerChangedCopyWith<$Res> {
-  factory $SecretAnswerChangedCopyWith(
-          SecretAnswerChanged value, $Res Function(SecretAnswerChanged) then) =
-      _$SecretAnswerChangedCopyWithImpl<$Res>;
-  $Res call({String secretAnswerStr});
+abstract class $SexChangedCopyWith<$Res> {
+  factory $SexChangedCopyWith(
+          SexChanged value, $Res Function(SexChanged) then) =
+      _$SexChangedCopyWithImpl<$Res>;
+  $Res call({String sexStr});
 }
 
 /// @nodoc
-class _$SecretAnswerChangedCopyWithImpl<$Res>
-    extends _$SignupFormEventCopyWithImpl<$Res>
-    implements $SecretAnswerChangedCopyWith<$Res> {
-  _$SecretAnswerChangedCopyWithImpl(
-      SecretAnswerChanged _value, $Res Function(SecretAnswerChanged) _then)
-      : super(_value, (v) => _then(v as SecretAnswerChanged));
+class _$SexChangedCopyWithImpl<$Res> extends _$SignupFormEventCopyWithImpl<$Res>
+    implements $SexChangedCopyWith<$Res> {
+  _$SexChangedCopyWithImpl(SexChanged _value, $Res Function(SexChanged) _then)
+      : super(_value, (v) => _then(v as SexChanged));
 
   @override
-  SecretAnswerChanged get _value => super._value as SecretAnswerChanged;
+  SexChanged get _value => super._value as SexChanged;
 
   @override
   $Res call({
-    Object secretAnswerStr = freezed,
+    Object sexStr = freezed,
   }) {
-    return _then(SecretAnswerChanged(
-      secretAnswerStr == freezed
-          ? _value.secretAnswerStr
-          : secretAnswerStr as String,
+    return _then(SexChanged(
+      sexStr == freezed ? _value.sexStr : sexStr as String,
     ));
   }
 }
 
 /// @nodoc
-class _$SecretAnswerChanged
-    with DiagnosticableTreeMixin
-    implements SecretAnswerChanged {
-  const _$SecretAnswerChanged(this.secretAnswerStr)
-      : assert(secretAnswerStr != null);
+class _$SexChanged with DiagnosticableTreeMixin implements SexChanged {
+  const _$SexChanged(this.sexStr) : assert(sexStr != null);
 
   @override
-  final String secretAnswerStr;
+  final String sexStr;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SignupFormEvent.secretAnswerChanged(secretAnswerStr: $secretAnswerStr)';
+    return 'SignupFormEvent.sexChanged(sexStr: $sexStr)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'SignupFormEvent.secretAnswerChanged'))
-      ..add(DiagnosticsProperty('secretAnswerStr', secretAnswerStr));
+      ..add(DiagnosticsProperty('type', 'SignupFormEvent.sexChanged'))
+      ..add(DiagnosticsProperty('sexStr', sexStr));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is SecretAnswerChanged &&
-            (identical(other.secretAnswerStr, secretAnswerStr) ||
-                const DeepCollectionEquality()
-                    .equals(other.secretAnswerStr, secretAnswerStr)));
+        (other is SexChanged &&
+            (identical(other.sexStr, sexStr) ||
+                const DeepCollectionEquality().equals(other.sexStr, sexStr)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(secretAnswerStr);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(sexStr);
 
   @JsonKey(ignore: true)
   @override
-  $SecretAnswerChangedCopyWith<SecretAnswerChanged> get copyWith =>
-      _$SecretAnswerChangedCopyWithImpl<SecretAnswerChanged>(this, _$identity);
+  $SexChangedCopyWith<SexChanged> get copyWith =>
+      _$SexChangedCopyWithImpl<SexChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult emailChanged(String emailStr),
     @required TResult passwordChanged(String passwordStr),
-    @required TResult rePasswordChanged(String rePasswordStr),
     @required TResult usernameChanged(String usernameStr),
-    @required TResult secretAnswerChanged(String secretAnswerStr),
-    @required TResult nextPressed(),
-    @required TResult backPressed(),
+    @required TResult sexChanged(String sexStr),
+    @required TResult ageChanged(int ageVal),
+    @required TResult heightChanged(double heightVal),
+    @required TResult weightChanged(double weightVal),
     @required TResult registerWithEmailAndPasswordPressed(),
   }) {
     assert(emailChanged != null);
     assert(passwordChanged != null);
-    assert(rePasswordChanged != null);
     assert(usernameChanged != null);
-    assert(secretAnswerChanged != null);
-    assert(nextPressed != null);
-    assert(backPressed != null);
+    assert(sexChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
     assert(registerWithEmailAndPasswordPressed != null);
-    return secretAnswerChanged(secretAnswerStr);
+    return sexChanged(sexStr);
   }
 
   @override
@@ -905,17 +733,17 @@ class _$SecretAnswerChanged
   TResult maybeWhen<TResult extends Object>({
     TResult emailChanged(String emailStr),
     TResult passwordChanged(String passwordStr),
-    TResult rePasswordChanged(String rePasswordStr),
     TResult usernameChanged(String usernameStr),
-    TResult secretAnswerChanged(String secretAnswerStr),
-    TResult nextPressed(),
-    TResult backPressed(),
+    TResult sexChanged(String sexStr),
+    TResult ageChanged(int ageVal),
+    TResult heightChanged(double heightVal),
+    TResult weightChanged(double weightVal),
     TResult registerWithEmailAndPasswordPressed(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
-    if (secretAnswerChanged != null) {
-      return secretAnswerChanged(secretAnswerStr);
+    if (sexChanged != null) {
+      return sexChanged(sexStr);
     }
     return orElse();
   }
@@ -925,24 +753,24 @@ class _$SecretAnswerChanged
   TResult map<TResult extends Object>({
     @required TResult emailChanged(EmailChanged value),
     @required TResult passwordChanged(PasswordChanged value),
-    @required TResult rePasswordChanged(RePasswordChanged value),
     @required TResult usernameChanged(UsernameChanged value),
-    @required TResult secretAnswerChanged(SecretAnswerChanged value),
-    @required TResult nextPressed(NextPressed value),
-    @required TResult backPressed(BackPressed value),
+    @required TResult sexChanged(SexChanged value),
+    @required TResult ageChanged(AgeChanged value),
+    @required TResult heightChanged(HeightChanged value),
+    @required TResult weightChanged(WeightChanged value),
     @required
         TResult registerWithEmailAndPasswordPressed(
             RegisterWithEmailAndPasswordPressed value),
   }) {
     assert(emailChanged != null);
     assert(passwordChanged != null);
-    assert(rePasswordChanged != null);
     assert(usernameChanged != null);
-    assert(secretAnswerChanged != null);
-    assert(nextPressed != null);
-    assert(backPressed != null);
+    assert(sexChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
     assert(registerWithEmailAndPasswordPressed != null);
-    return secretAnswerChanged(this);
+    return sexChanged(this);
   }
 
   @override
@@ -950,95 +778,116 @@ class _$SecretAnswerChanged
   TResult maybeMap<TResult extends Object>({
     TResult emailChanged(EmailChanged value),
     TResult passwordChanged(PasswordChanged value),
-    TResult rePasswordChanged(RePasswordChanged value),
     TResult usernameChanged(UsernameChanged value),
-    TResult secretAnswerChanged(SecretAnswerChanged value),
-    TResult nextPressed(NextPressed value),
-    TResult backPressed(BackPressed value),
+    TResult sexChanged(SexChanged value),
+    TResult ageChanged(AgeChanged value),
+    TResult heightChanged(HeightChanged value),
+    TResult weightChanged(WeightChanged value),
     TResult registerWithEmailAndPasswordPressed(
         RegisterWithEmailAndPasswordPressed value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
-    if (secretAnswerChanged != null) {
-      return secretAnswerChanged(this);
+    if (sexChanged != null) {
+      return sexChanged(this);
     }
     return orElse();
   }
 }
 
-abstract class SecretAnswerChanged implements SignupFormEvent {
-  const factory SecretAnswerChanged(String secretAnswerStr) =
-      _$SecretAnswerChanged;
+abstract class SexChanged implements SignupFormEvent {
+  const factory SexChanged(String sexStr) = _$SexChanged;
 
-  String get secretAnswerStr;
+  String get sexStr;
   @JsonKey(ignore: true)
-  $SecretAnswerChangedCopyWith<SecretAnswerChanged> get copyWith;
+  $SexChangedCopyWith<SexChanged> get copyWith;
 }
 
 /// @nodoc
-abstract class $NextPressedCopyWith<$Res> {
-  factory $NextPressedCopyWith(
-          NextPressed value, $Res Function(NextPressed) then) =
-      _$NextPressedCopyWithImpl<$Res>;
+abstract class $AgeChangedCopyWith<$Res> {
+  factory $AgeChangedCopyWith(
+          AgeChanged value, $Res Function(AgeChanged) then) =
+      _$AgeChangedCopyWithImpl<$Res>;
+  $Res call({int ageVal});
 }
 
 /// @nodoc
-class _$NextPressedCopyWithImpl<$Res>
-    extends _$SignupFormEventCopyWithImpl<$Res>
-    implements $NextPressedCopyWith<$Res> {
-  _$NextPressedCopyWithImpl(
-      NextPressed _value, $Res Function(NextPressed) _then)
-      : super(_value, (v) => _then(v as NextPressed));
+class _$AgeChangedCopyWithImpl<$Res> extends _$SignupFormEventCopyWithImpl<$Res>
+    implements $AgeChangedCopyWith<$Res> {
+  _$AgeChangedCopyWithImpl(AgeChanged _value, $Res Function(AgeChanged) _then)
+      : super(_value, (v) => _then(v as AgeChanged));
 
   @override
-  NextPressed get _value => super._value as NextPressed;
+  AgeChanged get _value => super._value as AgeChanged;
+
+  @override
+  $Res call({
+    Object ageVal = freezed,
+  }) {
+    return _then(AgeChanged(
+      ageVal == freezed ? _value.ageVal : ageVal as int,
+    ));
+  }
 }
 
 /// @nodoc
-class _$NextPressed with DiagnosticableTreeMixin implements NextPressed {
-  const _$NextPressed();
+class _$AgeChanged with DiagnosticableTreeMixin implements AgeChanged {
+  const _$AgeChanged(this.ageVal) : assert(ageVal != null);
+
+  @override
+  final int ageVal;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SignupFormEvent.nextPressed()';
+    return 'SignupFormEvent.ageChanged(ageVal: $ageVal)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'SignupFormEvent.nextPressed'));
+    properties
+      ..add(DiagnosticsProperty('type', 'SignupFormEvent.ageChanged'))
+      ..add(DiagnosticsProperty('ageVal', ageVal));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is NextPressed);
+    return identical(this, other) ||
+        (other is AgeChanged &&
+            (identical(other.ageVal, ageVal) ||
+                const DeepCollectionEquality().equals(other.ageVal, ageVal)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(ageVal);
+
+  @JsonKey(ignore: true)
+  @override
+  $AgeChangedCopyWith<AgeChanged> get copyWith =>
+      _$AgeChangedCopyWithImpl<AgeChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult emailChanged(String emailStr),
     @required TResult passwordChanged(String passwordStr),
-    @required TResult rePasswordChanged(String rePasswordStr),
     @required TResult usernameChanged(String usernameStr),
-    @required TResult secretAnswerChanged(String secretAnswerStr),
-    @required TResult nextPressed(),
-    @required TResult backPressed(),
+    @required TResult sexChanged(String sexStr),
+    @required TResult ageChanged(int ageVal),
+    @required TResult heightChanged(double heightVal),
+    @required TResult weightChanged(double weightVal),
     @required TResult registerWithEmailAndPasswordPressed(),
   }) {
     assert(emailChanged != null);
     assert(passwordChanged != null);
-    assert(rePasswordChanged != null);
     assert(usernameChanged != null);
-    assert(secretAnswerChanged != null);
-    assert(nextPressed != null);
-    assert(backPressed != null);
+    assert(sexChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
     assert(registerWithEmailAndPasswordPressed != null);
-    return nextPressed();
+    return ageChanged(ageVal);
   }
 
   @override
@@ -1046,17 +895,17 @@ class _$NextPressed with DiagnosticableTreeMixin implements NextPressed {
   TResult maybeWhen<TResult extends Object>({
     TResult emailChanged(String emailStr),
     TResult passwordChanged(String passwordStr),
-    TResult rePasswordChanged(String rePasswordStr),
     TResult usernameChanged(String usernameStr),
-    TResult secretAnswerChanged(String secretAnswerStr),
-    TResult nextPressed(),
-    TResult backPressed(),
+    TResult sexChanged(String sexStr),
+    TResult ageChanged(int ageVal),
+    TResult heightChanged(double heightVal),
+    TResult weightChanged(double weightVal),
     TResult registerWithEmailAndPasswordPressed(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
-    if (nextPressed != null) {
-      return nextPressed();
+    if (ageChanged != null) {
+      return ageChanged(ageVal);
     }
     return orElse();
   }
@@ -1066,24 +915,24 @@ class _$NextPressed with DiagnosticableTreeMixin implements NextPressed {
   TResult map<TResult extends Object>({
     @required TResult emailChanged(EmailChanged value),
     @required TResult passwordChanged(PasswordChanged value),
-    @required TResult rePasswordChanged(RePasswordChanged value),
     @required TResult usernameChanged(UsernameChanged value),
-    @required TResult secretAnswerChanged(SecretAnswerChanged value),
-    @required TResult nextPressed(NextPressed value),
-    @required TResult backPressed(BackPressed value),
+    @required TResult sexChanged(SexChanged value),
+    @required TResult ageChanged(AgeChanged value),
+    @required TResult heightChanged(HeightChanged value),
+    @required TResult weightChanged(WeightChanged value),
     @required
         TResult registerWithEmailAndPasswordPressed(
             RegisterWithEmailAndPasswordPressed value),
   }) {
     assert(emailChanged != null);
     assert(passwordChanged != null);
-    assert(rePasswordChanged != null);
     assert(usernameChanged != null);
-    assert(secretAnswerChanged != null);
-    assert(nextPressed != null);
-    assert(backPressed != null);
+    assert(sexChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
     assert(registerWithEmailAndPasswordPressed != null);
-    return nextPressed(this);
+    return ageChanged(this);
   }
 
   @override
@@ -1091,90 +940,119 @@ class _$NextPressed with DiagnosticableTreeMixin implements NextPressed {
   TResult maybeMap<TResult extends Object>({
     TResult emailChanged(EmailChanged value),
     TResult passwordChanged(PasswordChanged value),
-    TResult rePasswordChanged(RePasswordChanged value),
     TResult usernameChanged(UsernameChanged value),
-    TResult secretAnswerChanged(SecretAnswerChanged value),
-    TResult nextPressed(NextPressed value),
-    TResult backPressed(BackPressed value),
+    TResult sexChanged(SexChanged value),
+    TResult ageChanged(AgeChanged value),
+    TResult heightChanged(HeightChanged value),
+    TResult weightChanged(WeightChanged value),
     TResult registerWithEmailAndPasswordPressed(
         RegisterWithEmailAndPasswordPressed value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
-    if (nextPressed != null) {
-      return nextPressed(this);
+    if (ageChanged != null) {
+      return ageChanged(this);
     }
     return orElse();
   }
 }
 
-abstract class NextPressed implements SignupFormEvent {
-  const factory NextPressed() = _$NextPressed;
+abstract class AgeChanged implements SignupFormEvent {
+  const factory AgeChanged(int ageVal) = _$AgeChanged;
+
+  int get ageVal;
+  @JsonKey(ignore: true)
+  $AgeChangedCopyWith<AgeChanged> get copyWith;
 }
 
 /// @nodoc
-abstract class $BackPressedCopyWith<$Res> {
-  factory $BackPressedCopyWith(
-          BackPressed value, $Res Function(BackPressed) then) =
-      _$BackPressedCopyWithImpl<$Res>;
+abstract class $HeightChangedCopyWith<$Res> {
+  factory $HeightChangedCopyWith(
+          HeightChanged value, $Res Function(HeightChanged) then) =
+      _$HeightChangedCopyWithImpl<$Res>;
+  $Res call({double heightVal});
 }
 
 /// @nodoc
-class _$BackPressedCopyWithImpl<$Res>
+class _$HeightChangedCopyWithImpl<$Res>
     extends _$SignupFormEventCopyWithImpl<$Res>
-    implements $BackPressedCopyWith<$Res> {
-  _$BackPressedCopyWithImpl(
-      BackPressed _value, $Res Function(BackPressed) _then)
-      : super(_value, (v) => _then(v as BackPressed));
+    implements $HeightChangedCopyWith<$Res> {
+  _$HeightChangedCopyWithImpl(
+      HeightChanged _value, $Res Function(HeightChanged) _then)
+      : super(_value, (v) => _then(v as HeightChanged));
 
   @override
-  BackPressed get _value => super._value as BackPressed;
+  HeightChanged get _value => super._value as HeightChanged;
+
+  @override
+  $Res call({
+    Object heightVal = freezed,
+  }) {
+    return _then(HeightChanged(
+      heightVal == freezed ? _value.heightVal : heightVal as double,
+    ));
+  }
 }
 
 /// @nodoc
-class _$BackPressed with DiagnosticableTreeMixin implements BackPressed {
-  const _$BackPressed();
+class _$HeightChanged with DiagnosticableTreeMixin implements HeightChanged {
+  const _$HeightChanged(this.heightVal) : assert(heightVal != null);
+
+  @override
+  final double heightVal;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SignupFormEvent.backPressed()';
+    return 'SignupFormEvent.heightChanged(heightVal: $heightVal)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'SignupFormEvent.backPressed'));
+    properties
+      ..add(DiagnosticsProperty('type', 'SignupFormEvent.heightChanged'))
+      ..add(DiagnosticsProperty('heightVal', heightVal));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is BackPressed);
+    return identical(this, other) ||
+        (other is HeightChanged &&
+            (identical(other.heightVal, heightVal) ||
+                const DeepCollectionEquality()
+                    .equals(other.heightVal, heightVal)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(heightVal);
+
+  @JsonKey(ignore: true)
+  @override
+  $HeightChangedCopyWith<HeightChanged> get copyWith =>
+      _$HeightChangedCopyWithImpl<HeightChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult emailChanged(String emailStr),
     @required TResult passwordChanged(String passwordStr),
-    @required TResult rePasswordChanged(String rePasswordStr),
     @required TResult usernameChanged(String usernameStr),
-    @required TResult secretAnswerChanged(String secretAnswerStr),
-    @required TResult nextPressed(),
-    @required TResult backPressed(),
+    @required TResult sexChanged(String sexStr),
+    @required TResult ageChanged(int ageVal),
+    @required TResult heightChanged(double heightVal),
+    @required TResult weightChanged(double weightVal),
     @required TResult registerWithEmailAndPasswordPressed(),
   }) {
     assert(emailChanged != null);
     assert(passwordChanged != null);
-    assert(rePasswordChanged != null);
     assert(usernameChanged != null);
-    assert(secretAnswerChanged != null);
-    assert(nextPressed != null);
-    assert(backPressed != null);
+    assert(sexChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
     assert(registerWithEmailAndPasswordPressed != null);
-    return backPressed();
+    return heightChanged(heightVal);
   }
 
   @override
@@ -1182,17 +1060,17 @@ class _$BackPressed with DiagnosticableTreeMixin implements BackPressed {
   TResult maybeWhen<TResult extends Object>({
     TResult emailChanged(String emailStr),
     TResult passwordChanged(String passwordStr),
-    TResult rePasswordChanged(String rePasswordStr),
     TResult usernameChanged(String usernameStr),
-    TResult secretAnswerChanged(String secretAnswerStr),
-    TResult nextPressed(),
-    TResult backPressed(),
+    TResult sexChanged(String sexStr),
+    TResult ageChanged(int ageVal),
+    TResult heightChanged(double heightVal),
+    TResult weightChanged(double weightVal),
     TResult registerWithEmailAndPasswordPressed(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
-    if (backPressed != null) {
-      return backPressed();
+    if (heightChanged != null) {
+      return heightChanged(heightVal);
     }
     return orElse();
   }
@@ -1202,24 +1080,24 @@ class _$BackPressed with DiagnosticableTreeMixin implements BackPressed {
   TResult map<TResult extends Object>({
     @required TResult emailChanged(EmailChanged value),
     @required TResult passwordChanged(PasswordChanged value),
-    @required TResult rePasswordChanged(RePasswordChanged value),
     @required TResult usernameChanged(UsernameChanged value),
-    @required TResult secretAnswerChanged(SecretAnswerChanged value),
-    @required TResult nextPressed(NextPressed value),
-    @required TResult backPressed(BackPressed value),
+    @required TResult sexChanged(SexChanged value),
+    @required TResult ageChanged(AgeChanged value),
+    @required TResult heightChanged(HeightChanged value),
+    @required TResult weightChanged(WeightChanged value),
     @required
         TResult registerWithEmailAndPasswordPressed(
             RegisterWithEmailAndPasswordPressed value),
   }) {
     assert(emailChanged != null);
     assert(passwordChanged != null);
-    assert(rePasswordChanged != null);
     assert(usernameChanged != null);
-    assert(secretAnswerChanged != null);
-    assert(nextPressed != null);
-    assert(backPressed != null);
+    assert(sexChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
     assert(registerWithEmailAndPasswordPressed != null);
-    return backPressed(this);
+    return heightChanged(this);
   }
 
   @override
@@ -1227,25 +1105,194 @@ class _$BackPressed with DiagnosticableTreeMixin implements BackPressed {
   TResult maybeMap<TResult extends Object>({
     TResult emailChanged(EmailChanged value),
     TResult passwordChanged(PasswordChanged value),
-    TResult rePasswordChanged(RePasswordChanged value),
     TResult usernameChanged(UsernameChanged value),
-    TResult secretAnswerChanged(SecretAnswerChanged value),
-    TResult nextPressed(NextPressed value),
-    TResult backPressed(BackPressed value),
+    TResult sexChanged(SexChanged value),
+    TResult ageChanged(AgeChanged value),
+    TResult heightChanged(HeightChanged value),
+    TResult weightChanged(WeightChanged value),
     TResult registerWithEmailAndPasswordPressed(
         RegisterWithEmailAndPasswordPressed value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
-    if (backPressed != null) {
-      return backPressed(this);
+    if (heightChanged != null) {
+      return heightChanged(this);
     }
     return orElse();
   }
 }
 
-abstract class BackPressed implements SignupFormEvent {
-  const factory BackPressed() = _$BackPressed;
+abstract class HeightChanged implements SignupFormEvent {
+  const factory HeightChanged(double heightVal) = _$HeightChanged;
+
+  double get heightVal;
+  @JsonKey(ignore: true)
+  $HeightChangedCopyWith<HeightChanged> get copyWith;
+}
+
+/// @nodoc
+abstract class $WeightChangedCopyWith<$Res> {
+  factory $WeightChangedCopyWith(
+          WeightChanged value, $Res Function(WeightChanged) then) =
+      _$WeightChangedCopyWithImpl<$Res>;
+  $Res call({double weightVal});
+}
+
+/// @nodoc
+class _$WeightChangedCopyWithImpl<$Res>
+    extends _$SignupFormEventCopyWithImpl<$Res>
+    implements $WeightChangedCopyWith<$Res> {
+  _$WeightChangedCopyWithImpl(
+      WeightChanged _value, $Res Function(WeightChanged) _then)
+      : super(_value, (v) => _then(v as WeightChanged));
+
+  @override
+  WeightChanged get _value => super._value as WeightChanged;
+
+  @override
+  $Res call({
+    Object weightVal = freezed,
+  }) {
+    return _then(WeightChanged(
+      weightVal == freezed ? _value.weightVal : weightVal as double,
+    ));
+  }
+}
+
+/// @nodoc
+class _$WeightChanged with DiagnosticableTreeMixin implements WeightChanged {
+  const _$WeightChanged(this.weightVal) : assert(weightVal != null);
+
+  @override
+  final double weightVal;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'SignupFormEvent.weightChanged(weightVal: $weightVal)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'SignupFormEvent.weightChanged'))
+      ..add(DiagnosticsProperty('weightVal', weightVal));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is WeightChanged &&
+            (identical(other.weightVal, weightVal) ||
+                const DeepCollectionEquality()
+                    .equals(other.weightVal, weightVal)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(weightVal);
+
+  @JsonKey(ignore: true)
+  @override
+  $WeightChangedCopyWith<WeightChanged> get copyWith =>
+      _$WeightChangedCopyWithImpl<WeightChanged>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult emailChanged(String emailStr),
+    @required TResult passwordChanged(String passwordStr),
+    @required TResult usernameChanged(String usernameStr),
+    @required TResult sexChanged(String sexStr),
+    @required TResult ageChanged(int ageVal),
+    @required TResult heightChanged(double heightVal),
+    @required TResult weightChanged(double weightVal),
+    @required TResult registerWithEmailAndPasswordPressed(),
+  }) {
+    assert(emailChanged != null);
+    assert(passwordChanged != null);
+    assert(usernameChanged != null);
+    assert(sexChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
+    assert(registerWithEmailAndPasswordPressed != null);
+    return weightChanged(weightVal);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult emailChanged(String emailStr),
+    TResult passwordChanged(String passwordStr),
+    TResult usernameChanged(String usernameStr),
+    TResult sexChanged(String sexStr),
+    TResult ageChanged(int ageVal),
+    TResult heightChanged(double heightVal),
+    TResult weightChanged(double weightVal),
+    TResult registerWithEmailAndPasswordPressed(),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (weightChanged != null) {
+      return weightChanged(weightVal);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult passwordChanged(PasswordChanged value),
+    @required TResult usernameChanged(UsernameChanged value),
+    @required TResult sexChanged(SexChanged value),
+    @required TResult ageChanged(AgeChanged value),
+    @required TResult heightChanged(HeightChanged value),
+    @required TResult weightChanged(WeightChanged value),
+    @required
+        TResult registerWithEmailAndPasswordPressed(
+            RegisterWithEmailAndPasswordPressed value),
+  }) {
+    assert(emailChanged != null);
+    assert(passwordChanged != null);
+    assert(usernameChanged != null);
+    assert(sexChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
+    assert(registerWithEmailAndPasswordPressed != null);
+    return weightChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult emailChanged(EmailChanged value),
+    TResult passwordChanged(PasswordChanged value),
+    TResult usernameChanged(UsernameChanged value),
+    TResult sexChanged(SexChanged value),
+    TResult ageChanged(AgeChanged value),
+    TResult heightChanged(HeightChanged value),
+    TResult weightChanged(WeightChanged value),
+    TResult registerWithEmailAndPasswordPressed(
+        RegisterWithEmailAndPasswordPressed value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (weightChanged != null) {
+      return weightChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class WeightChanged implements SignupFormEvent {
+  const factory WeightChanged(double weightVal) = _$WeightChanged;
+
+  double get weightVal;
+  @JsonKey(ignore: true)
+  $WeightChangedCopyWith<WeightChanged> get copyWith;
 }
 
 /// @nodoc
@@ -1303,20 +1350,20 @@ class _$RegisterWithEmailAndPasswordPressed
   TResult when<TResult extends Object>({
     @required TResult emailChanged(String emailStr),
     @required TResult passwordChanged(String passwordStr),
-    @required TResult rePasswordChanged(String rePasswordStr),
     @required TResult usernameChanged(String usernameStr),
-    @required TResult secretAnswerChanged(String secretAnswerStr),
-    @required TResult nextPressed(),
-    @required TResult backPressed(),
+    @required TResult sexChanged(String sexStr),
+    @required TResult ageChanged(int ageVal),
+    @required TResult heightChanged(double heightVal),
+    @required TResult weightChanged(double weightVal),
     @required TResult registerWithEmailAndPasswordPressed(),
   }) {
     assert(emailChanged != null);
     assert(passwordChanged != null);
-    assert(rePasswordChanged != null);
     assert(usernameChanged != null);
-    assert(secretAnswerChanged != null);
-    assert(nextPressed != null);
-    assert(backPressed != null);
+    assert(sexChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
     assert(registerWithEmailAndPasswordPressed != null);
     return registerWithEmailAndPasswordPressed();
   }
@@ -1326,11 +1373,11 @@ class _$RegisterWithEmailAndPasswordPressed
   TResult maybeWhen<TResult extends Object>({
     TResult emailChanged(String emailStr),
     TResult passwordChanged(String passwordStr),
-    TResult rePasswordChanged(String rePasswordStr),
     TResult usernameChanged(String usernameStr),
-    TResult secretAnswerChanged(String secretAnswerStr),
-    TResult nextPressed(),
-    TResult backPressed(),
+    TResult sexChanged(String sexStr),
+    TResult ageChanged(int ageVal),
+    TResult heightChanged(double heightVal),
+    TResult weightChanged(double weightVal),
     TResult registerWithEmailAndPasswordPressed(),
     @required TResult orElse(),
   }) {
@@ -1346,22 +1393,22 @@ class _$RegisterWithEmailAndPasswordPressed
   TResult map<TResult extends Object>({
     @required TResult emailChanged(EmailChanged value),
     @required TResult passwordChanged(PasswordChanged value),
-    @required TResult rePasswordChanged(RePasswordChanged value),
     @required TResult usernameChanged(UsernameChanged value),
-    @required TResult secretAnswerChanged(SecretAnswerChanged value),
-    @required TResult nextPressed(NextPressed value),
-    @required TResult backPressed(BackPressed value),
+    @required TResult sexChanged(SexChanged value),
+    @required TResult ageChanged(AgeChanged value),
+    @required TResult heightChanged(HeightChanged value),
+    @required TResult weightChanged(WeightChanged value),
     @required
         TResult registerWithEmailAndPasswordPressed(
             RegisterWithEmailAndPasswordPressed value),
   }) {
     assert(emailChanged != null);
     assert(passwordChanged != null);
-    assert(rePasswordChanged != null);
     assert(usernameChanged != null);
-    assert(secretAnswerChanged != null);
-    assert(nextPressed != null);
-    assert(backPressed != null);
+    assert(sexChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
     assert(registerWithEmailAndPasswordPressed != null);
     return registerWithEmailAndPasswordPressed(this);
   }
@@ -1371,11 +1418,11 @@ class _$RegisterWithEmailAndPasswordPressed
   TResult maybeMap<TResult extends Object>({
     TResult emailChanged(EmailChanged value),
     TResult passwordChanged(PasswordChanged value),
-    TResult rePasswordChanged(RePasswordChanged value),
     TResult usernameChanged(UsernameChanged value),
-    TResult secretAnswerChanged(SecretAnswerChanged value),
-    TResult nextPressed(NextPressed value),
-    TResult backPressed(BackPressed value),
+    TResult sexChanged(SexChanged value),
+    TResult ageChanged(AgeChanged value),
+    TResult heightChanged(HeightChanged value),
+    TResult weightChanged(WeightChanged value),
     TResult registerWithEmailAndPasswordPressed(
         RegisterWithEmailAndPasswordPressed value),
     @required TResult orElse(),
@@ -1401,22 +1448,24 @@ class _$SignupFormStateTearOff {
   _SignupFormState call(
       {@required EmailAddress emailAddress,
       @required Password password,
-      @required Password rePassword,
       @required Username username,
-      @required SecretAnswer secretAnswer,
+      @required Sex sex,
+      @required Age age,
+      @required Height height,
+      @required Weight weight,
       @required bool showErrorMessages,
       @required bool isSubmitting,
-      @required bool nextPage,
       @required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption}) {
     return _SignupFormState(
       emailAddress: emailAddress,
       password: password,
-      rePassword: rePassword,
       username: username,
-      secretAnswer: secretAnswer,
+      sex: sex,
+      age: age,
+      height: height,
+      weight: weight,
       showErrorMessages: showErrorMessages,
       isSubmitting: isSubmitting,
-      nextPage: nextPage,
       authFailureOrSuccessOption: authFailureOrSuccessOption,
     );
   }
@@ -1430,12 +1479,13 @@ const $SignupFormState = _$SignupFormStateTearOff();
 mixin _$SignupFormState {
   EmailAddress get emailAddress;
   Password get password;
-  Password get rePassword;
   Username get username;
-  SecretAnswer get secretAnswer;
+  Sex get sex;
+  Age get age;
+  Height get height;
+  Weight get weight;
   bool get showErrorMessages;
   bool get isSubmitting;
-  bool get nextPage;
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption;
 
   @JsonKey(ignore: true)
@@ -1450,12 +1500,13 @@ abstract class $SignupFormStateCopyWith<$Res> {
   $Res call(
       {EmailAddress emailAddress,
       Password password,
-      Password rePassword,
       Username username,
-      SecretAnswer secretAnswer,
+      Sex sex,
+      Age age,
+      Height height,
+      Weight weight,
       bool showErrorMessages,
       bool isSubmitting,
-      bool nextPage,
       Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
 }
 
@@ -1472,12 +1523,13 @@ class _$SignupFormStateCopyWithImpl<$Res>
   $Res call({
     Object emailAddress = freezed,
     Object password = freezed,
-    Object rePassword = freezed,
     Object username = freezed,
-    Object secretAnswer = freezed,
+    Object sex = freezed,
+    Object age = freezed,
+    Object height = freezed,
+    Object weight = freezed,
     Object showErrorMessages = freezed,
     Object isSubmitting = freezed,
-    Object nextPage = freezed,
     Object authFailureOrSuccessOption = freezed,
   }) {
     return _then(_value.copyWith(
@@ -1485,18 +1537,16 @@ class _$SignupFormStateCopyWithImpl<$Res>
           ? _value.emailAddress
           : emailAddress as EmailAddress,
       password: password == freezed ? _value.password : password as Password,
-      rePassword:
-          rePassword == freezed ? _value.rePassword : rePassword as Password,
       username: username == freezed ? _value.username : username as Username,
-      secretAnswer: secretAnswer == freezed
-          ? _value.secretAnswer
-          : secretAnswer as SecretAnswer,
+      sex: sex == freezed ? _value.sex : sex as Sex,
+      age: age == freezed ? _value.age : age as Age,
+      height: height == freezed ? _value.height : height as Height,
+      weight: weight == freezed ? _value.weight : weight as Weight,
       showErrorMessages: showErrorMessages == freezed
           ? _value.showErrorMessages
           : showErrorMessages as bool,
       isSubmitting:
           isSubmitting == freezed ? _value.isSubmitting : isSubmitting as bool,
-      nextPage: nextPage == freezed ? _value.nextPage : nextPage as bool,
       authFailureOrSuccessOption: authFailureOrSuccessOption == freezed
           ? _value.authFailureOrSuccessOption
           : authFailureOrSuccessOption as Option<Either<AuthFailure, Unit>>,
@@ -1514,12 +1564,13 @@ abstract class _$SignupFormStateCopyWith<$Res>
   $Res call(
       {EmailAddress emailAddress,
       Password password,
-      Password rePassword,
       Username username,
-      SecretAnswer secretAnswer,
+      Sex sex,
+      Age age,
+      Height height,
+      Weight weight,
       bool showErrorMessages,
       bool isSubmitting,
-      bool nextPage,
       Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
 }
 
@@ -1538,12 +1589,13 @@ class __$SignupFormStateCopyWithImpl<$Res>
   $Res call({
     Object emailAddress = freezed,
     Object password = freezed,
-    Object rePassword = freezed,
     Object username = freezed,
-    Object secretAnswer = freezed,
+    Object sex = freezed,
+    Object age = freezed,
+    Object height = freezed,
+    Object weight = freezed,
     Object showErrorMessages = freezed,
     Object isSubmitting = freezed,
-    Object nextPage = freezed,
     Object authFailureOrSuccessOption = freezed,
   }) {
     return _then(_SignupFormState(
@@ -1551,18 +1603,16 @@ class __$SignupFormStateCopyWithImpl<$Res>
           ? _value.emailAddress
           : emailAddress as EmailAddress,
       password: password == freezed ? _value.password : password as Password,
-      rePassword:
-          rePassword == freezed ? _value.rePassword : rePassword as Password,
       username: username == freezed ? _value.username : username as Username,
-      secretAnswer: secretAnswer == freezed
-          ? _value.secretAnswer
-          : secretAnswer as SecretAnswer,
+      sex: sex == freezed ? _value.sex : sex as Sex,
+      age: age == freezed ? _value.age : age as Age,
+      height: height == freezed ? _value.height : height as Height,
+      weight: weight == freezed ? _value.weight : weight as Weight,
       showErrorMessages: showErrorMessages == freezed
           ? _value.showErrorMessages
           : showErrorMessages as bool,
       isSubmitting:
           isSubmitting == freezed ? _value.isSubmitting : isSubmitting as bool,
-      nextPage: nextPage == freezed ? _value.nextPage : nextPage as bool,
       authFailureOrSuccessOption: authFailureOrSuccessOption == freezed
           ? _value.authFailureOrSuccessOption
           : authFailureOrSuccessOption as Option<Either<AuthFailure, Unit>>,
@@ -1577,21 +1627,23 @@ class _$_SignupFormState
   const _$_SignupFormState(
       {@required this.emailAddress,
       @required this.password,
-      @required this.rePassword,
       @required this.username,
-      @required this.secretAnswer,
+      @required this.sex,
+      @required this.age,
+      @required this.height,
+      @required this.weight,
       @required this.showErrorMessages,
       @required this.isSubmitting,
-      @required this.nextPage,
       @required this.authFailureOrSuccessOption})
       : assert(emailAddress != null),
         assert(password != null),
-        assert(rePassword != null),
         assert(username != null),
-        assert(secretAnswer != null),
+        assert(sex != null),
+        assert(age != null),
+        assert(height != null),
+        assert(weight != null),
         assert(showErrorMessages != null),
         assert(isSubmitting != null),
-        assert(nextPage != null),
         assert(authFailureOrSuccessOption != null);
 
   @override
@@ -1599,23 +1651,25 @@ class _$_SignupFormState
   @override
   final Password password;
   @override
-  final Password rePassword;
-  @override
   final Username username;
   @override
-  final SecretAnswer secretAnswer;
+  final Sex sex;
+  @override
+  final Age age;
+  @override
+  final Height height;
+  @override
+  final Weight weight;
   @override
   final bool showErrorMessages;
   @override
   final bool isSubmitting;
   @override
-  final bool nextPage;
-  @override
   final Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SignupFormState(emailAddress: $emailAddress, password: $password, rePassword: $rePassword, username: $username, secretAnswer: $secretAnswer, showErrorMessages: $showErrorMessages, isSubmitting: $isSubmitting, nextPage: $nextPage, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
+    return 'SignupFormState(emailAddress: $emailAddress, password: $password, username: $username, sex: $sex, age: $age, height: $height, weight: $weight, showErrorMessages: $showErrorMessages, isSubmitting: $isSubmitting, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
   }
 
   @override
@@ -1625,12 +1679,13 @@ class _$_SignupFormState
       ..add(DiagnosticsProperty('type', 'SignupFormState'))
       ..add(DiagnosticsProperty('emailAddress', emailAddress))
       ..add(DiagnosticsProperty('password', password))
-      ..add(DiagnosticsProperty('rePassword', rePassword))
       ..add(DiagnosticsProperty('username', username))
-      ..add(DiagnosticsProperty('secretAnswer', secretAnswer))
+      ..add(DiagnosticsProperty('sex', sex))
+      ..add(DiagnosticsProperty('age', age))
+      ..add(DiagnosticsProperty('height', height))
+      ..add(DiagnosticsProperty('weight', weight))
       ..add(DiagnosticsProperty('showErrorMessages', showErrorMessages))
       ..add(DiagnosticsProperty('isSubmitting', isSubmitting))
-      ..add(DiagnosticsProperty('nextPage', nextPage))
       ..add(DiagnosticsProperty(
           'authFailureOrSuccessOption', authFailureOrSuccessOption));
   }
@@ -1645,24 +1700,23 @@ class _$_SignupFormState
             (identical(other.password, password) ||
                 const DeepCollectionEquality()
                     .equals(other.password, password)) &&
-            (identical(other.rePassword, rePassword) ||
-                const DeepCollectionEquality()
-                    .equals(other.rePassword, rePassword)) &&
             (identical(other.username, username) ||
                 const DeepCollectionEquality()
                     .equals(other.username, username)) &&
-            (identical(other.secretAnswer, secretAnswer) ||
-                const DeepCollectionEquality()
-                    .equals(other.secretAnswer, secretAnswer)) &&
+            (identical(other.sex, sex) ||
+                const DeepCollectionEquality().equals(other.sex, sex)) &&
+            (identical(other.age, age) ||
+                const DeepCollectionEquality().equals(other.age, age)) &&
+            (identical(other.height, height) ||
+                const DeepCollectionEquality().equals(other.height, height)) &&
+            (identical(other.weight, weight) ||
+                const DeepCollectionEquality().equals(other.weight, weight)) &&
             (identical(other.showErrorMessages, showErrorMessages) ||
                 const DeepCollectionEquality()
                     .equals(other.showErrorMessages, showErrorMessages)) &&
             (identical(other.isSubmitting, isSubmitting) ||
                 const DeepCollectionEquality()
                     .equals(other.isSubmitting, isSubmitting)) &&
-            (identical(other.nextPage, nextPage) ||
-                const DeepCollectionEquality()
-                    .equals(other.nextPage, nextPage)) &&
             (identical(other.authFailureOrSuccessOption,
                     authFailureOrSuccessOption) ||
                 const DeepCollectionEquality().equals(
@@ -1675,12 +1729,13 @@ class _$_SignupFormState
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(emailAddress) ^
       const DeepCollectionEquality().hash(password) ^
-      const DeepCollectionEquality().hash(rePassword) ^
       const DeepCollectionEquality().hash(username) ^
-      const DeepCollectionEquality().hash(secretAnswer) ^
+      const DeepCollectionEquality().hash(sex) ^
+      const DeepCollectionEquality().hash(age) ^
+      const DeepCollectionEquality().hash(height) ^
+      const DeepCollectionEquality().hash(weight) ^
       const DeepCollectionEquality().hash(showErrorMessages) ^
       const DeepCollectionEquality().hash(isSubmitting) ^
-      const DeepCollectionEquality().hash(nextPage) ^
       const DeepCollectionEquality().hash(authFailureOrSuccessOption);
 
   @JsonKey(ignore: true)
@@ -1696,17 +1751,19 @@ abstract class _SignupFormState implements SignupFormState {
           @required
               Password password,
           @required
-              Password rePassword,
-          @required
               Username username,
           @required
-              SecretAnswer secretAnswer,
+              Sex sex,
+          @required
+              Age age,
+          @required
+              Height height,
+          @required
+              Weight weight,
           @required
               bool showErrorMessages,
           @required
               bool isSubmitting,
-          @required
-              bool nextPage,
           @required
               Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption}) =
       _$_SignupFormState;
@@ -1716,17 +1773,19 @@ abstract class _SignupFormState implements SignupFormState {
   @override
   Password get password;
   @override
-  Password get rePassword;
-  @override
   Username get username;
   @override
-  SecretAnswer get secretAnswer;
+  Sex get sex;
+  @override
+  Age get age;
+  @override
+  Height get height;
+  @override
+  Weight get weight;
   @override
   bool get showErrorMessages;
   @override
   bool get isSubmitting;
-  @override
-  bool get nextPage;
   @override
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption;
   @override

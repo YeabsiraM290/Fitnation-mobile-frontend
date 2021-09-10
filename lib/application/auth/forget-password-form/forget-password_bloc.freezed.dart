@@ -28,13 +28,6 @@ class _$ForgetPasswordEventTearOff {
   }
 
 // ignore: unused_element
-  SecretAnswerChanged secretAnswerChanged(String secretStr) {
-    return SecretAnswerChanged(
-      secretStr,
-    );
-  }
-
-// ignore: unused_element
   ChangePassword changePassword() {
     return const ChangePassword();
   }
@@ -50,14 +43,12 @@ mixin _$ForgetPasswordEvent {
   TResult when<TResult extends Object>({
     @required TResult emailChanged(String emailStr),
     @required TResult passwordChanged(String passwordStr),
-    @required TResult secretAnswerChanged(String secretStr),
     @required TResult changePassword(),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult emailChanged(String emailStr),
     TResult passwordChanged(String passwordStr),
-    TResult secretAnswerChanged(String secretStr),
     TResult changePassword(),
     @required TResult orElse(),
   });
@@ -65,14 +56,12 @@ mixin _$ForgetPasswordEvent {
   TResult map<TResult extends Object>({
     @required TResult emailChanged(EmailChanged value),
     @required TResult passwordChanged(PasswordChanged value),
-    @required TResult secretAnswerChanged(SecretAnswerChanged value),
     @required TResult changePassword(ChangePassword value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult emailChanged(EmailChanged value),
     TResult passwordChanged(PasswordChanged value),
-    TResult secretAnswerChanged(SecretAnswerChanged value),
     TResult changePassword(ChangePassword value),
     @required TResult orElse(),
   });
@@ -167,12 +156,10 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
   TResult when<TResult extends Object>({
     @required TResult emailChanged(String emailStr),
     @required TResult passwordChanged(String passwordStr),
-    @required TResult secretAnswerChanged(String secretStr),
     @required TResult changePassword(),
   }) {
     assert(emailChanged != null);
     assert(passwordChanged != null);
-    assert(secretAnswerChanged != null);
     assert(changePassword != null);
     return emailChanged(emailStr);
   }
@@ -182,7 +169,6 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
   TResult maybeWhen<TResult extends Object>({
     TResult emailChanged(String emailStr),
     TResult passwordChanged(String passwordStr),
-    TResult secretAnswerChanged(String secretStr),
     TResult changePassword(),
     @required TResult orElse(),
   }) {
@@ -198,12 +184,10 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
   TResult map<TResult extends Object>({
     @required TResult emailChanged(EmailChanged value),
     @required TResult passwordChanged(PasswordChanged value),
-    @required TResult secretAnswerChanged(SecretAnswerChanged value),
     @required TResult changePassword(ChangePassword value),
   }) {
     assert(emailChanged != null);
     assert(passwordChanged != null);
-    assert(secretAnswerChanged != null);
     assert(changePassword != null);
     return emailChanged(this);
   }
@@ -213,7 +197,6 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
   TResult maybeMap<TResult extends Object>({
     TResult emailChanged(EmailChanged value),
     TResult passwordChanged(PasswordChanged value),
-    TResult secretAnswerChanged(SecretAnswerChanged value),
     TResult changePassword(ChangePassword value),
     @required TResult orElse(),
   }) {
@@ -307,12 +290,10 @@ class _$PasswordChanged
   TResult when<TResult extends Object>({
     @required TResult emailChanged(String emailStr),
     @required TResult passwordChanged(String passwordStr),
-    @required TResult secretAnswerChanged(String secretStr),
     @required TResult changePassword(),
   }) {
     assert(emailChanged != null);
     assert(passwordChanged != null);
-    assert(secretAnswerChanged != null);
     assert(changePassword != null);
     return passwordChanged(passwordStr);
   }
@@ -322,7 +303,6 @@ class _$PasswordChanged
   TResult maybeWhen<TResult extends Object>({
     TResult emailChanged(String emailStr),
     TResult passwordChanged(String passwordStr),
-    TResult secretAnswerChanged(String secretStr),
     TResult changePassword(),
     @required TResult orElse(),
   }) {
@@ -338,12 +318,10 @@ class _$PasswordChanged
   TResult map<TResult extends Object>({
     @required TResult emailChanged(EmailChanged value),
     @required TResult passwordChanged(PasswordChanged value),
-    @required TResult secretAnswerChanged(SecretAnswerChanged value),
     @required TResult changePassword(ChangePassword value),
   }) {
     assert(emailChanged != null);
     assert(passwordChanged != null);
-    assert(secretAnswerChanged != null);
     assert(changePassword != null);
     return passwordChanged(this);
   }
@@ -353,7 +331,6 @@ class _$PasswordChanged
   TResult maybeMap<TResult extends Object>({
     TResult emailChanged(EmailChanged value),
     TResult passwordChanged(PasswordChanged value),
-    TResult secretAnswerChanged(SecretAnswerChanged value),
     TResult changePassword(ChangePassword value),
     @required TResult orElse(),
   }) {
@@ -371,147 +348,6 @@ abstract class PasswordChanged implements ForgetPasswordEvent {
   String get passwordStr;
   @JsonKey(ignore: true)
   $PasswordChangedCopyWith<PasswordChanged> get copyWith;
-}
-
-/// @nodoc
-abstract class $SecretAnswerChangedCopyWith<$Res> {
-  factory $SecretAnswerChangedCopyWith(
-          SecretAnswerChanged value, $Res Function(SecretAnswerChanged) then) =
-      _$SecretAnswerChangedCopyWithImpl<$Res>;
-  $Res call({String secretStr});
-}
-
-/// @nodoc
-class _$SecretAnswerChangedCopyWithImpl<$Res>
-    extends _$ForgetPasswordEventCopyWithImpl<$Res>
-    implements $SecretAnswerChangedCopyWith<$Res> {
-  _$SecretAnswerChangedCopyWithImpl(
-      SecretAnswerChanged _value, $Res Function(SecretAnswerChanged) _then)
-      : super(_value, (v) => _then(v as SecretAnswerChanged));
-
-  @override
-  SecretAnswerChanged get _value => super._value as SecretAnswerChanged;
-
-  @override
-  $Res call({
-    Object secretStr = freezed,
-  }) {
-    return _then(SecretAnswerChanged(
-      secretStr == freezed ? _value.secretStr : secretStr as String,
-    ));
-  }
-}
-
-/// @nodoc
-class _$SecretAnswerChanged
-    with DiagnosticableTreeMixin
-    implements SecretAnswerChanged {
-  const _$SecretAnswerChanged(this.secretStr) : assert(secretStr != null);
-
-  @override
-  final String secretStr;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ForgetPasswordEvent.secretAnswerChanged(secretStr: $secretStr)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty(
-          'type', 'ForgetPasswordEvent.secretAnswerChanged'))
-      ..add(DiagnosticsProperty('secretStr', secretStr));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is SecretAnswerChanged &&
-            (identical(other.secretStr, secretStr) ||
-                const DeepCollectionEquality()
-                    .equals(other.secretStr, secretStr)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(secretStr);
-
-  @JsonKey(ignore: true)
-  @override
-  $SecretAnswerChangedCopyWith<SecretAnswerChanged> get copyWith =>
-      _$SecretAnswerChangedCopyWithImpl<SecretAnswerChanged>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult emailChanged(String emailStr),
-    @required TResult passwordChanged(String passwordStr),
-    @required TResult secretAnswerChanged(String secretStr),
-    @required TResult changePassword(),
-  }) {
-    assert(emailChanged != null);
-    assert(passwordChanged != null);
-    assert(secretAnswerChanged != null);
-    assert(changePassword != null);
-    return secretAnswerChanged(secretStr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult emailChanged(String emailStr),
-    TResult passwordChanged(String passwordStr),
-    TResult secretAnswerChanged(String secretStr),
-    TResult changePassword(),
-    @required TResult orElse(),
-  }) {
-    assert(orElse != null);
-    if (secretAnswerChanged != null) {
-      return secretAnswerChanged(secretStr);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult emailChanged(EmailChanged value),
-    @required TResult passwordChanged(PasswordChanged value),
-    @required TResult secretAnswerChanged(SecretAnswerChanged value),
-    @required TResult changePassword(ChangePassword value),
-  }) {
-    assert(emailChanged != null);
-    assert(passwordChanged != null);
-    assert(secretAnswerChanged != null);
-    assert(changePassword != null);
-    return secretAnswerChanged(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult emailChanged(EmailChanged value),
-    TResult passwordChanged(PasswordChanged value),
-    TResult secretAnswerChanged(SecretAnswerChanged value),
-    TResult changePassword(ChangePassword value),
-    @required TResult orElse(),
-  }) {
-    assert(orElse != null);
-    if (secretAnswerChanged != null) {
-      return secretAnswerChanged(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class SecretAnswerChanged implements ForgetPasswordEvent {
-  const factory SecretAnswerChanged(String secretStr) = _$SecretAnswerChanged;
-
-  String get secretStr;
-  @JsonKey(ignore: true)
-  $SecretAnswerChangedCopyWith<SecretAnswerChanged> get copyWith;
 }
 
 /// @nodoc
@@ -562,12 +398,10 @@ class _$ChangePassword with DiagnosticableTreeMixin implements ChangePassword {
   TResult when<TResult extends Object>({
     @required TResult emailChanged(String emailStr),
     @required TResult passwordChanged(String passwordStr),
-    @required TResult secretAnswerChanged(String secretStr),
     @required TResult changePassword(),
   }) {
     assert(emailChanged != null);
     assert(passwordChanged != null);
-    assert(secretAnswerChanged != null);
     assert(changePassword != null);
     return changePassword();
   }
@@ -577,7 +411,6 @@ class _$ChangePassword with DiagnosticableTreeMixin implements ChangePassword {
   TResult maybeWhen<TResult extends Object>({
     TResult emailChanged(String emailStr),
     TResult passwordChanged(String passwordStr),
-    TResult secretAnswerChanged(String secretStr),
     TResult changePassword(),
     @required TResult orElse(),
   }) {
@@ -593,12 +426,10 @@ class _$ChangePassword with DiagnosticableTreeMixin implements ChangePassword {
   TResult map<TResult extends Object>({
     @required TResult emailChanged(EmailChanged value),
     @required TResult passwordChanged(PasswordChanged value),
-    @required TResult secretAnswerChanged(SecretAnswerChanged value),
     @required TResult changePassword(ChangePassword value),
   }) {
     assert(emailChanged != null);
     assert(passwordChanged != null);
-    assert(secretAnswerChanged != null);
     assert(changePassword != null);
     return changePassword(this);
   }
@@ -608,7 +439,6 @@ class _$ChangePassword with DiagnosticableTreeMixin implements ChangePassword {
   TResult maybeMap<TResult extends Object>({
     TResult emailChanged(EmailChanged value),
     TResult passwordChanged(PasswordChanged value),
-    TResult secretAnswerChanged(SecretAnswerChanged value),
     TResult changePassword(ChangePassword value),
     @required TResult orElse(),
   }) {
@@ -632,14 +462,12 @@ class _$ForgetPasswordStateTearOff {
   _ForgetPasswordState call(
       {@required EmailAddress emailAddress,
       @required Password password,
-      @required SecretAnswer secretAnswer,
       @required bool showErrorMessages,
       @required bool isSubmitting,
       @required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption}) {
     return _ForgetPasswordState(
       emailAddress: emailAddress,
       password: password,
-      secretAnswer: secretAnswer,
       showErrorMessages: showErrorMessages,
       isSubmitting: isSubmitting,
       authFailureOrSuccessOption: authFailureOrSuccessOption,
@@ -655,7 +483,6 @@ const $ForgetPasswordState = _$ForgetPasswordStateTearOff();
 mixin _$ForgetPasswordState {
   EmailAddress get emailAddress;
   Password get password;
-  SecretAnswer get secretAnswer;
   bool get showErrorMessages;
   bool get isSubmitting;
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption;
@@ -672,7 +499,6 @@ abstract class $ForgetPasswordStateCopyWith<$Res> {
   $Res call(
       {EmailAddress emailAddress,
       Password password,
-      SecretAnswer secretAnswer,
       bool showErrorMessages,
       bool isSubmitting,
       Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
@@ -691,7 +517,6 @@ class _$ForgetPasswordStateCopyWithImpl<$Res>
   $Res call({
     Object emailAddress = freezed,
     Object password = freezed,
-    Object secretAnswer = freezed,
     Object showErrorMessages = freezed,
     Object isSubmitting = freezed,
     Object authFailureOrSuccessOption = freezed,
@@ -701,9 +526,6 @@ class _$ForgetPasswordStateCopyWithImpl<$Res>
           ? _value.emailAddress
           : emailAddress as EmailAddress,
       password: password == freezed ? _value.password : password as Password,
-      secretAnswer: secretAnswer == freezed
-          ? _value.secretAnswer
-          : secretAnswer as SecretAnswer,
       showErrorMessages: showErrorMessages == freezed
           ? _value.showErrorMessages
           : showErrorMessages as bool,
@@ -726,7 +548,6 @@ abstract class _$ForgetPasswordStateCopyWith<$Res>
   $Res call(
       {EmailAddress emailAddress,
       Password password,
-      SecretAnswer secretAnswer,
       bool showErrorMessages,
       bool isSubmitting,
       Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
@@ -747,7 +568,6 @@ class __$ForgetPasswordStateCopyWithImpl<$Res>
   $Res call({
     Object emailAddress = freezed,
     Object password = freezed,
-    Object secretAnswer = freezed,
     Object showErrorMessages = freezed,
     Object isSubmitting = freezed,
     Object authFailureOrSuccessOption = freezed,
@@ -757,9 +577,6 @@ class __$ForgetPasswordStateCopyWithImpl<$Res>
           ? _value.emailAddress
           : emailAddress as EmailAddress,
       password: password == freezed ? _value.password : password as Password,
-      secretAnswer: secretAnswer == freezed
-          ? _value.secretAnswer
-          : secretAnswer as SecretAnswer,
       showErrorMessages: showErrorMessages == freezed
           ? _value.showErrorMessages
           : showErrorMessages as bool,
@@ -779,13 +596,11 @@ class _$_ForgetPasswordState
   const _$_ForgetPasswordState(
       {@required this.emailAddress,
       @required this.password,
-      @required this.secretAnswer,
       @required this.showErrorMessages,
       @required this.isSubmitting,
       @required this.authFailureOrSuccessOption})
       : assert(emailAddress != null),
         assert(password != null),
-        assert(secretAnswer != null),
         assert(showErrorMessages != null),
         assert(isSubmitting != null),
         assert(authFailureOrSuccessOption != null);
@@ -795,8 +610,6 @@ class _$_ForgetPasswordState
   @override
   final Password password;
   @override
-  final SecretAnswer secretAnswer;
-  @override
   final bool showErrorMessages;
   @override
   final bool isSubmitting;
@@ -805,7 +618,7 @@ class _$_ForgetPasswordState
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ForgetPasswordState(emailAddress: $emailAddress, password: $password, secretAnswer: $secretAnswer, showErrorMessages: $showErrorMessages, isSubmitting: $isSubmitting, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
+    return 'ForgetPasswordState(emailAddress: $emailAddress, password: $password, showErrorMessages: $showErrorMessages, isSubmitting: $isSubmitting, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
   }
 
   @override
@@ -815,7 +628,6 @@ class _$_ForgetPasswordState
       ..add(DiagnosticsProperty('type', 'ForgetPasswordState'))
       ..add(DiagnosticsProperty('emailAddress', emailAddress))
       ..add(DiagnosticsProperty('password', password))
-      ..add(DiagnosticsProperty('secretAnswer', secretAnswer))
       ..add(DiagnosticsProperty('showErrorMessages', showErrorMessages))
       ..add(DiagnosticsProperty('isSubmitting', isSubmitting))
       ..add(DiagnosticsProperty(
@@ -832,9 +644,6 @@ class _$_ForgetPasswordState
             (identical(other.password, password) ||
                 const DeepCollectionEquality()
                     .equals(other.password, password)) &&
-            (identical(other.secretAnswer, secretAnswer) ||
-                const DeepCollectionEquality()
-                    .equals(other.secretAnswer, secretAnswer)) &&
             (identical(other.showErrorMessages, showErrorMessages) ||
                 const DeepCollectionEquality()
                     .equals(other.showErrorMessages, showErrorMessages)) &&
@@ -853,7 +662,6 @@ class _$_ForgetPasswordState
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(emailAddress) ^
       const DeepCollectionEquality().hash(password) ^
-      const DeepCollectionEquality().hash(secretAnswer) ^
       const DeepCollectionEquality().hash(showErrorMessages) ^
       const DeepCollectionEquality().hash(isSubmitting) ^
       const DeepCollectionEquality().hash(authFailureOrSuccessOption);
@@ -872,8 +680,6 @@ abstract class _ForgetPasswordState implements ForgetPasswordState {
           @required
               Password password,
           @required
-              SecretAnswer secretAnswer,
-          @required
               bool showErrorMessages,
           @required
               bool isSubmitting,
@@ -885,8 +691,6 @@ abstract class _ForgetPasswordState implements ForgetPasswordState {
   EmailAddress get emailAddress;
   @override
   Password get password;
-  @override
-  SecretAnswer get secretAnswer;
   @override
   bool get showErrorMessages;
   @override

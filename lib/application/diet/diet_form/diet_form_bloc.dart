@@ -6,12 +6,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:kt_dart/kt.dart';
 import 'package:meta/meta.dart';
-import 'package:temp_builder/domain/diet/diet_failure.dart';
-import 'package:temp_builder/domain/diet/diet_repository.dart';
-import 'package:temp_builder/domain/diet/diet_plan.dart';
-import 'package:temp_builder/domain/exercise/value_objects.dart';
+import 'package:fitnation_frontend/domain/diet/diet_failure.dart';
+import 'package:fitnation_frontend/domain/diet/diet_repository.dart';
+import 'package:fitnation_frontend/domain/diet/diet_plan.dart';
+import 'package:fitnation_frontend/domain/exercise/value_objects.dart';
 
-import 'package:temp_builder/presentation/user_pages/diet/diet_misc/schedule_presentation_classes.dart';
+import 'package:fitnation_frontend/presentation/user_pages/diet/diet_misc/schedule_presentation_classes.dart';
 
 part 'diet_form_event.dart';
 part 'diet_form_state.dart';

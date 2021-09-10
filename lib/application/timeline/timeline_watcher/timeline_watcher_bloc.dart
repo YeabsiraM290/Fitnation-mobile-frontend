@@ -8,9 +8,9 @@ import 'package:kt_dart/kt.dart';
 
 import 'package:meta/meta.dart';
 
-import 'package:temp_builder/domain/timeline/timeline.dart';
-import 'package:temp_builder/domain/timeline/timeline_failure.dart';
-import 'package:temp_builder/domain/timeline/timeline_repository.dart';
+import 'package:fitnation_frontend/domain/timeline/timeline.dart';
+import 'package:fitnation_frontend/domain/timeline/timeline_failure.dart';
+import 'package:fitnation_frontend/domain/timeline/timeline_repository.dart';
 
 part 'timeline_watcher_event.dart';
 part 'timeline_watcher_state.dart';

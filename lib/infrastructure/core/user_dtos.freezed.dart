@@ -24,8 +24,6 @@ class _$UserDtoTearOff {
       @required int age,
       @required double height,
       @required double weight,
-      String answer,
-      String question,
       String password}) {
     return _UserDto(
       username: username,
@@ -34,8 +32,6 @@ class _$UserDtoTearOff {
       age: age,
       height: height,
       weight: weight,
-      answer: answer,
-      question: question,
       password: password,
     );
   }
@@ -58,8 +54,6 @@ mixin _$UserDto {
   int get age;
   double get height;
   double get weight;
-  String get answer;
-  String get question;
   String get password;
 
   Map<String, dynamic> toJson();
@@ -78,8 +72,6 @@ abstract class $UserDtoCopyWith<$Res> {
       int age,
       double height,
       double weight,
-      String answer,
-      String question,
       String password});
 }
 
@@ -99,8 +91,6 @@ class _$UserDtoCopyWithImpl<$Res> implements $UserDtoCopyWith<$Res> {
     Object age = freezed,
     Object height = freezed,
     Object weight = freezed,
-    Object answer = freezed,
-    Object question = freezed,
     Object password = freezed,
   }) {
     return _then(_value.copyWith(
@@ -112,8 +102,6 @@ class _$UserDtoCopyWithImpl<$Res> implements $UserDtoCopyWith<$Res> {
       age: age == freezed ? _value.age : age as int,
       height: height == freezed ? _value.height : height as double,
       weight: weight == freezed ? _value.weight : weight as double,
-      answer: answer == freezed ? _value.answer : answer as String,
-      question: question == freezed ? _value.question : question as String,
       password: password == freezed ? _value.password : password as String,
     ));
   }
@@ -131,8 +119,6 @@ abstract class _$UserDtoCopyWith<$Res> implements $UserDtoCopyWith<$Res> {
       int age,
       double height,
       double weight,
-      String answer,
-      String question,
       String password});
 }
 
@@ -153,8 +139,6 @@ class __$UserDtoCopyWithImpl<$Res> extends _$UserDtoCopyWithImpl<$Res>
     Object age = freezed,
     Object height = freezed,
     Object weight = freezed,
-    Object answer = freezed,
-    Object question = freezed,
     Object password = freezed,
   }) {
     return _then(_UserDto(
@@ -166,8 +150,6 @@ class __$UserDtoCopyWithImpl<$Res> extends _$UserDtoCopyWithImpl<$Res>
       age: age == freezed ? _value.age : age as int,
       height: height == freezed ? _value.height : height as double,
       weight: weight == freezed ? _value.weight : weight as double,
-      answer: answer == freezed ? _value.answer : answer as String,
-      question: question == freezed ? _value.question : question as String,
       password: password == freezed ? _value.password : password as String,
     ));
   }
@@ -184,8 +166,6 @@ class _$_UserDto extends _UserDto {
       @required this.age,
       @required this.height,
       @required this.weight,
-      this.answer,
-      this.question,
       this.password})
       : assert(username != null),
         assert(emailAddress != null),
@@ -211,15 +191,11 @@ class _$_UserDto extends _UserDto {
   @override
   final double weight;
   @override
-  final String answer;
-  @override
-  final String question;
-  @override
   final String password;
 
   @override
   String toString() {
-    return 'UserDto(username: $username, emailAddress: $emailAddress, sex: $sex, age: $age, height: $height, weight: $weight, answer: $answer, question: $question, password: $password)';
+    return 'UserDto(username: $username, emailAddress: $emailAddress, sex: $sex, age: $age, height: $height, weight: $weight, password: $password)';
   }
 
   @override
@@ -240,11 +216,6 @@ class _$_UserDto extends _UserDto {
                 const DeepCollectionEquality().equals(other.height, height)) &&
             (identical(other.weight, weight) ||
                 const DeepCollectionEquality().equals(other.weight, weight)) &&
-            (identical(other.answer, answer) ||
-                const DeepCollectionEquality().equals(other.answer, answer)) &&
-            (identical(other.question, question) ||
-                const DeepCollectionEquality()
-                    .equals(other.question, question)) &&
             (identical(other.password, password) ||
                 const DeepCollectionEquality()
                     .equals(other.password, password)));
@@ -259,8 +230,6 @@ class _$_UserDto extends _UserDto {
       const DeepCollectionEquality().hash(age) ^
       const DeepCollectionEquality().hash(height) ^
       const DeepCollectionEquality().hash(weight) ^
-      const DeepCollectionEquality().hash(answer) ^
-      const DeepCollectionEquality().hash(question) ^
       const DeepCollectionEquality().hash(password);
 
   @JsonKey(ignore: true)
@@ -283,8 +252,6 @@ abstract class _UserDto extends UserDto {
       @required int age,
       @required double height,
       @required double weight,
-      String answer,
-      String question,
       String password}) = _$_UserDto;
 
   factory _UserDto.fromJson(Map<String, dynamic> json) = _$_UserDto.fromJson;
@@ -301,10 +268,6 @@ abstract class _UserDto extends UserDto {
   double get height;
   @override
   double get weight;
-  @override
-  String get answer;
-  @override
-  String get question;
   @override
   String get password;
   @override

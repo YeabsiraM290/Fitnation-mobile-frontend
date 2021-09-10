@@ -3,6 +3,7 @@ import 'package:fitnation_frontend/domain/core/failures.dart';
 import 'package:fitnation_frontend/domain/core/value_objects.dart';
 import 'package:fitnation_frontend/domain/core/value_validators.dart';
 
+//Email model
 class EmailAddress extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
@@ -16,6 +17,7 @@ class EmailAddress extends ValueObject<String> {
   const EmailAddress._(this.value);
 }
 
+//Password model
 class Password extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
@@ -29,32 +31,7 @@ class Password extends ValueObject<String> {
   const Password._(this.value);
 }
 
-class Question extends ValueObject<String> {
-  @override
-  final Either<ValueFailure<String>, String> value;
-
-  factory Question(String input) {
-    return Question._(
-      validateQuestion(input),
-    );
-  }
-
-  const Question._(this.value);
-}
-
-class PasswordEquality extends ValueObject<String> {
-  @override
-  final Either<ValueFailure<String>, String> value;
-
-  factory PasswordEquality(String input1, String input2) {
-    return PasswordEquality._(
-      validatePasswordEquality(input1, input2),
-    );
-  }
-
-  const PasswordEquality._(this.value);
-}
-
+//Username model
 class Username extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
@@ -68,19 +45,7 @@ class Username extends ValueObject<String> {
   const Username._(this.value);
 }
 
-class SecretAnswer extends ValueObject<String> {
-  @override
-  final Either<ValueFailure<String>, String> value;
-
-  factory SecretAnswer(String input) {
-    return SecretAnswer._(
-      validateSecretAnswer(input),
-    );
-  }
-
-  const SecretAnswer._(this.value);
-}
-
+//Sex model
 class Sex extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
@@ -94,6 +59,7 @@ class Sex extends ValueObject<String> {
   const Sex._(this.value);
 }
 
+//Age model
 class Age extends ValueObject<int> {
   @override
   final Either<ValueFailure<int>, int> value;
@@ -107,6 +73,7 @@ class Age extends ValueObject<int> {
   const Age._(this.value);
 }
 
+//Weight model
 class Weight extends ValueObject<double> {
   @override
   final Either<ValueFailure<double>, double> value;
@@ -120,6 +87,7 @@ class Weight extends ValueObject<double> {
   const Weight._(this.value);
 }
 
+//Height model
 class Height extends ValueObject<double> {
   @override
   final Either<ValueFailure<double>, double> value;

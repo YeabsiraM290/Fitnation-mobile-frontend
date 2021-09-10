@@ -45,20 +45,22 @@ class LoginFormBloc extends Bloc<LoginFormEvent, LoginFormState> {
   }
 
   Stream<LoginFormState> _performActionOnAuthFacadeWithEmailAndPassword(
-    Future<Either<AuthFailure, Unit>> Function({
+    Future<Either<AuthFailure, String>> Function({
       @required EmailAddress emailAddress,
       @required Password password,
     })
         forwardedCall,
   ) async* {
-    Either<AuthFailure, Unit> failureOrSuccess;
-
+    Either<AuthFailure, String> failureOrSuccess;
     final isEmailValid = state.emailAddress.isValid();
+    final isPasswordValid = state.password.isValid();
 
-    failureOrSuccess = await forwardedCall(
-      emailAddress: state.emailAddress,
-      password: state.password,
-    );
+    if (isEmailValid && isPasswordValid) {
+      failureOrSuccess = await forwardedCall(
+        emailAddress: state.emailAddress,
+        password: state.password,
+      );
+    }
 
     yield state.copyWith(
       isSubmitting: false,

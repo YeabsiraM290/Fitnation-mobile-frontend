@@ -8,8 +8,6 @@ abstract class User with _$User {
   const factory User({
     @required EmailAddress emailAddress,
     Password password,
-    Question question,
-    SecretAnswer secretAnswer,
     @required Sex sex,
     @required Username username,
     @required Age age,

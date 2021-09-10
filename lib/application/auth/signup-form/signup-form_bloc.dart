@@ -43,23 +43,29 @@ class SignupFormBloc extends Bloc<SignupFormEvent, SignupFormState> {
           authFailureOrSuccessOption: none(),
         );
       },
-      secretAnswerChanged: (e) async* {
+      sexChanged: (e) async* {
         yield state.copyWith(
-          secretAnswer: SecretAnswer(e.secretAnswerStr),
+          sex: Sex(e.sexStr),
           authFailureOrSuccessOption: none(),
         );
       },
-      rePasswordChanged: (e) async* {
+      ageChanged: (e) async* {
         yield state.copyWith(
-          rePassword: Password(e.rePasswordStr),
+          age: Age(e.ageVal),
           authFailureOrSuccessOption: none(),
         );
       },
-      nextPressed: (e) async* {
-        yield* _performActionOnAuthFacadeNextPressed();
+      heightChanged: (e) async* {
+        yield state.copyWith(
+          height: Height(e.heightVal),
+          authFailureOrSuccessOption: none(),
+        );
       },
-      backPressed: (e) async* {
-        yield* _performActionOnAuthFacadeBackPressed();
+      weightChanged: (e) async* {
+        yield state.copyWith(
+          weight: Weight(e.weightVal),
+          authFailureOrSuccessOption: none(),
+        );
       },
       registerWithEmailAndPasswordPressed: (e) async* {
         yield* _performActionOnAuthFacadeWithEmailAndPassword(
@@ -69,24 +75,15 @@ class SignupFormBloc extends Bloc<SignupFormEvent, SignupFormState> {
     );
   }
 
-  Stream<SignupFormState> _performActionOnAuthFacadeNextPressed() async* {
-    yield state.copyWith(
-      nextPage: true,
-    );
-  }
-
-  Stream<SignupFormState> _performActionOnAuthFacadeBackPressed() async* {
-    yield state.copyWith(
-      nextPage: false,
-    );
-  }
-
   Stream<SignupFormState> _performActionOnAuthFacadeWithEmailAndPassword(
     Future<Either<AuthFailure, Unit>> Function({
       @required EmailAddress emailAddress,
       @required Password password,
       @required Username username,
-      @required SecretAnswer secretAnswer,
+      @required Sex sex,
+      @required Age age,
+      @required Height height,
+      @required Weight weight,
     })
         forwardedCall,
   ) async* {
@@ -95,10 +92,13 @@ class SignupFormBloc extends Bloc<SignupFormEvent, SignupFormState> {
     final isEmailValid = state.emailAddress.isValid();
     final isPasswordValid = state.password.isValid();
     final isUsernameValid = state.username.isValid();
-    final isSecretAnswerValid = state.secretAnswer.isValid();
+    final isAgeValid = state.age.isValid();
+    final isSexValid = state.sex.isValid();
+    final isHeightValid = state.height.isValid();
+    final isWeightValid = state.weight.isValid();
 
-    if (isEmailValid && isPasswordValid) {
-      if (isUsernameValid && isSecretAnswerValid) {
+    if (isEmailValid && isPasswordValid && isUsernameValid) {
+      if (isAgeValid && isSexValid && isHeightValid && isWeightValid) {
         yield state.copyWith(
           isSubmitting: true,
           authFailureOrSuccessOption: none(),
@@ -108,7 +108,10 @@ class SignupFormBloc extends Bloc<SignupFormEvent, SignupFormState> {
           emailAddress: state.emailAddress,
           password: state.password,
           username: state.username,
-          secretAnswer: state.secretAnswer,
+          sex: state.sex,
+          age: state.age,
+          height: state.height,
+          weight: state.weight,
         );
       }
     }

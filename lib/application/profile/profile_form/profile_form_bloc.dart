@@ -84,15 +84,11 @@ class ProfileFormBloc extends Bloc<ProfileFormEvent, ProfileFormState> {
       editProfile: (e) async* {
         yield state.copyWith(
           editting: !state.editting,
-          isSubmitting: false,
-          actionFailureOrSuccessOption: none(),
         );
       },
       editPassword: (e) async* {
         yield state.copyWith(
           changingPassword: !state.changingPassword,
-          isSubmitting: false,
-          actionFailureOrSuccessOption: none(),
         );
       },
     );
@@ -121,7 +117,6 @@ class ProfileFormBloc extends Bloc<ProfileFormEvent, ProfileFormState> {
     yield state.copyWith(
       isSubmitting: false,
       showErrorMessages: true,
-      changingPassword: true,
       actionFailureOrSuccessOption: optionOf(failureOrSuccess),
     );
   }
@@ -151,7 +146,7 @@ class ProfileFormBloc extends Bloc<ProfileFormEvent, ProfileFormState> {
     final isSexValid = state.sex.isValid();
     final isHeightValid = state.height.isValid();
     final isWeightValid = state.weight.isValid();
-
+    print(isUsernameValid);
     if (isUsernameValid && isAgeValid && isSexValid) {
       if (isHeightValid && isWeightValid) {
         yield state.copyWith(
@@ -172,20 +167,10 @@ class ProfileFormBloc extends Bloc<ProfileFormEvent, ProfileFormState> {
       }
     }
 
-    if (optionOf(failureOrSuccess) == unit) {
-      yield state.copyWith(
-        isSubmitting: false,
-        editting: false,
-        showErrorMessages: false,
-        actionFailureOrSuccessOption: optionOf(failureOrSuccess),
-      );
-    } else {
-      yield state.copyWith(
-        isSubmitting: false,
-        editting: true,
-        showErrorMessages: true,
-        actionFailureOrSuccessOption: optionOf(failureOrSuccess),
-      );
-    }
+    yield state.copyWith(
+      isSubmitting: false,
+      showErrorMessages: true,
+      actionFailureOrSuccessOption: optionOf(failureOrSuccess),
+    );
   }
 }

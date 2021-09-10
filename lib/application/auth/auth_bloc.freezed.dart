@@ -258,8 +258,10 @@ class _$AuthStateTearOff {
   }
 
 // ignore: unused_element
-  Authenticated authenticated() {
-    return const Authenticated();
+  Authenticated authenticated({@required String role}) {
+    return Authenticated(
+      role: role,
+    );
   }
 
 // ignore: unused_element
@@ -277,13 +279,13 @@ mixin _$AuthState {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult initial(),
-    @required TResult authenticated(),
+    @required TResult authenticated(String role),
     @required TResult unauthenticated(),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult initial(),
-    TResult authenticated(),
+    TResult authenticated(String role),
     TResult unauthenticated(),
     @required TResult orElse(),
   });
@@ -354,7 +356,7 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult initial(),
-    @required TResult authenticated(),
+    @required TResult authenticated(String role),
     @required TResult unauthenticated(),
   }) {
     assert(initial != null);
@@ -367,7 +369,7 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult initial(),
-    TResult authenticated(),
+    TResult authenticated(String role),
     TResult unauthenticated(),
     @required TResult orElse(),
   }) {
@@ -416,6 +418,7 @@ abstract class $AuthenticatedCopyWith<$Res> {
   factory $AuthenticatedCopyWith(
           Authenticated value, $Res Function(Authenticated) then) =
       _$AuthenticatedCopyWithImpl<$Res>;
+  $Res call({String role});
 }
 
 /// @nodoc
@@ -427,49 +430,70 @@ class _$AuthenticatedCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
 
   @override
   Authenticated get _value => super._value as Authenticated;
+
+  @override
+  $Res call({
+    Object role = freezed,
+  }) {
+    return _then(Authenticated(
+      role: role == freezed ? _value.role : role as String,
+    ));
+  }
 }
 
 /// @nodoc
 class _$Authenticated implements Authenticated {
-  const _$Authenticated();
+  const _$Authenticated({@required this.role}) : assert(role != null);
+
+  @override
+  final String role;
 
   @override
   String toString() {
-    return 'AuthState.authenticated()';
+    return 'AuthState.authenticated(role: $role)';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is Authenticated);
+    return identical(this, other) ||
+        (other is Authenticated &&
+            (identical(other.role, role) ||
+                const DeepCollectionEquality().equals(other.role, role)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(role);
+
+  @JsonKey(ignore: true)
+  @override
+  $AuthenticatedCopyWith<Authenticated> get copyWith =>
+      _$AuthenticatedCopyWithImpl<Authenticated>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult initial(),
-    @required TResult authenticated(),
+    @required TResult authenticated(String role),
     @required TResult unauthenticated(),
   }) {
     assert(initial != null);
     assert(authenticated != null);
     assert(unauthenticated != null);
-    return authenticated();
+    return authenticated(role);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult initial(),
-    TResult authenticated(),
+    TResult authenticated(String role),
     TResult unauthenticated(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (authenticated != null) {
-      return authenticated();
+      return authenticated(role);
     }
     return orElse();
   }
@@ -504,7 +528,11 @@ class _$Authenticated implements Authenticated {
 }
 
 abstract class Authenticated implements AuthState {
-  const factory Authenticated() = _$Authenticated;
+  const factory Authenticated({@required String role}) = _$Authenticated;
+
+  String get role;
+  @JsonKey(ignore: true)
+  $AuthenticatedCopyWith<Authenticated> get copyWith;
 }
 
 /// @nodoc
@@ -546,7 +574,7 @@ class _$Unauthenticated implements Unauthenticated {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult initial(),
-    @required TResult authenticated(),
+    @required TResult authenticated(String role),
     @required TResult unauthenticated(),
   }) {
     assert(initial != null);
@@ -559,7 +587,7 @@ class _$Unauthenticated implements Unauthenticated {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult initial(),
-    TResult authenticated(),
+    TResult authenticated(String role),
     TResult unauthenticated(),
     @required TResult orElse(),
   }) {

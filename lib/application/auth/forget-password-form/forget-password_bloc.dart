@@ -38,15 +38,9 @@ class ForgetPasswordBloc
           authFailureOrSuccessOption: none(),
         );
       },
-      secretAnswerChanged: (e) async* {
-        yield state.copyWith(
-          secretAnswer: SecretAnswer(e.secretStr),
-          authFailureOrSuccessOption: none(),
-        );
-      },
       changePassword: (e) async* {
         yield* _performActionOnAuthFacadeChangePassword(
-            _authFacade.changePassword);
+            _authFacade.forgetPassword);
       },
     );
   }
@@ -55,7 +49,6 @@ class ForgetPasswordBloc
     Future<Either<AuthFailure, Unit>> Function({
       @required EmailAddress emailAddress,
       @required Password password,
-      @required SecretAnswer secretAnswer,
     })
         forwardedCall,
   ) async* {
@@ -64,7 +57,6 @@ class ForgetPasswordBloc
     failureOrSuccess = await forwardedCall(
       emailAddress: state.emailAddress,
       password: state.password,
-      secretAnswer: state.secretAnswer,
     );
 
     yield state.copyWith(

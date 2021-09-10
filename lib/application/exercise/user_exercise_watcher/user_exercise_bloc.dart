@@ -6,9 +6,9 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 
 import 'package:meta/meta.dart';
-import 'package:temp_builder/domain/exercise/exercise_failure.dart';
-import 'package:temp_builder/domain/exercise/schedule.dart';
-import 'package:temp_builder/domain/exercise/exercise_repository.dart';
+import 'package:fitnation_frontend/domain/exercise/exercise_failure.dart';
+import 'package:fitnation_frontend/domain/exercise/schedule.dart';
+import 'package:fitnation_frontend/domain/exercise/exercise_repository.dart';
 
 part 'user_exercise_event.dart';
 part 'user_exercise_state.dart';

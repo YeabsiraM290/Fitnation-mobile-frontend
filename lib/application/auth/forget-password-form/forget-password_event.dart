@@ -6,7 +6,6 @@ abstract class ForgetPasswordEvent with _$ForgetPasswordEvent {
       EmailChanged;
   const factory ForgetPasswordEvent.passwordChanged(String passwordStr) =
       PasswordChanged;
-  const factory ForgetPasswordEvent.secretAnswerChanged(String secretStr) =
-      SecretAnswerChanged;
+
   const factory ForgetPasswordEvent.changePassword() = ChangePassword;
 }

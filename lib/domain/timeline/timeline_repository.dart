@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
 import 'package:kt_dart/kt.dart';
 
-import 'package:temp_builder/domain/timeline/timeline.dart';
+import 'package:fitnation_frontend/domain/timeline/timeline.dart';
 
 import 'timeline_failure.dart';
 

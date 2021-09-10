@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
 import 'package:kt_dart/kt.dart';
-import 'package:temp_builder/domain/diet/diet_plan.dart';
-import 'package:temp_builder/domain/exercise/value_objects.dart';
+import 'package:fitnation_frontend/domain/diet/diet_plan.dart';
+import 'package:fitnation_frontend/domain/exercise/value_objects.dart';
 
 import 'diet_failure.dart';
 

@@ -28,8 +28,22 @@ class _$ValueFailureTearOff {
   }
 
 // ignore: unused_element
-  ShortQuestion<T> shortQuestion<T>({@required T failedValue}) {
-    return ShortQuestion<T>(
+  ShortName<T> shortName<T>({@required T failedValue}) {
+    return ShortName<T>(
+      failedValue: failedValue,
+    );
+  }
+
+// ignore: unused_element
+  ListEmpty<T> listEmpty<T>({@required T failedValue}) {
+    return ListEmpty<T>(
+      failedValue: failedValue,
+    );
+  }
+
+// ignore: unused_element
+  ShortUrl<T> shortUrl<T>({@required T failedValue}) {
+    return ShortUrl<T>(
       failedValue: failedValue,
     );
   }
@@ -42,22 +56,15 @@ class _$ValueFailureTearOff {
   }
 
 // ignore: unused_element
-  UnmatchedPassword<T> unmatchedPassword<T>({@required T failedValue}) {
-    return UnmatchedPassword<T>(
-      failedValue: failedValue,
-    );
-  }
-
-// ignore: unused_element
-  ShortSecretAnswer<T> shortSecretAnswer<T>({@required T failedValue}) {
-    return ShortSecretAnswer<T>(
-      failedValue: failedValue,
-    );
-  }
-
-// ignore: unused_element
   InvalidAge<T> invalidAge<T>({@required T failedValue}) {
     return InvalidAge<T>(
+      failedValue: failedValue,
+    );
+  }
+
+// ignore: unused_element
+  InvalidRepetation<T> invalidRepetation<T>({@required T failedValue}) {
+    return InvalidRepetation<T>(
       failedValue: failedValue,
     );
   }
@@ -96,11 +103,12 @@ mixin _$ValueFailure<T> {
   TResult when<TResult extends Object>({
     @required TResult invalidEmail(T failedValue),
     @required TResult shortPassword(T failedValue),
-    @required TResult shortQuestion(T failedValue),
+    @required TResult shortName(T failedValue),
+    @required TResult listEmpty(T failedValue),
+    @required TResult shortUrl(T failedValue),
     @required TResult shortUsername(T failedValue),
-    @required TResult unmatchedPassword(T failedValue),
-    @required TResult shortSecretAnswer(T failedValue),
     @required TResult invalidAge(T failedValue),
+    @required TResult invalidRepetation(T failedValue),
     @required TResult invalidHeight(T failedValue),
     @required TResult invalidSex(T failedValue),
     @required TResult invalidWeight(T failedValue),
@@ -109,11 +117,12 @@ mixin _$ValueFailure<T> {
   TResult maybeWhen<TResult extends Object>({
     TResult invalidEmail(T failedValue),
     TResult shortPassword(T failedValue),
-    TResult shortQuestion(T failedValue),
+    TResult shortName(T failedValue),
+    TResult listEmpty(T failedValue),
+    TResult shortUrl(T failedValue),
     TResult shortUsername(T failedValue),
-    TResult unmatchedPassword(T failedValue),
-    TResult shortSecretAnswer(T failedValue),
     TResult invalidAge(T failedValue),
+    TResult invalidRepetation(T failedValue),
     TResult invalidHeight(T failedValue),
     TResult invalidSex(T failedValue),
     TResult invalidWeight(T failedValue),
@@ -123,11 +132,12 @@ mixin _$ValueFailure<T> {
   TResult map<TResult extends Object>({
     @required TResult invalidEmail(InvalidEmail<T> value),
     @required TResult shortPassword(ShortPassword<T> value),
-    @required TResult shortQuestion(ShortQuestion<T> value),
+    @required TResult shortName(ShortName<T> value),
+    @required TResult listEmpty(ListEmpty<T> value),
+    @required TResult shortUrl(ShortUrl<T> value),
     @required TResult shortUsername(ShortUsername<T> value),
-    @required TResult unmatchedPassword(UnmatchedPassword<T> value),
-    @required TResult shortSecretAnswer(ShortSecretAnswer<T> value),
     @required TResult invalidAge(InvalidAge<T> value),
+    @required TResult invalidRepetation(InvalidRepetation<T> value),
     @required TResult invalidHeight(InvalidHeight<T> value),
     @required TResult invalidSex(InvalidSex<T> value),
     @required TResult invalidWeight(InvalidWeight<T> value),
@@ -136,11 +146,12 @@ mixin _$ValueFailure<T> {
   TResult maybeMap<TResult extends Object>({
     TResult invalidEmail(InvalidEmail<T> value),
     TResult shortPassword(ShortPassword<T> value),
-    TResult shortQuestion(ShortQuestion<T> value),
+    TResult shortName(ShortName<T> value),
+    TResult listEmpty(ListEmpty<T> value),
+    TResult shortUrl(ShortUrl<T> value),
     TResult shortUsername(ShortUsername<T> value),
-    TResult unmatchedPassword(UnmatchedPassword<T> value),
-    TResult shortSecretAnswer(ShortSecretAnswer<T> value),
     TResult invalidAge(InvalidAge<T> value),
+    TResult invalidRepetation(InvalidRepetation<T> value),
     TResult invalidHeight(InvalidHeight<T> value),
     TResult invalidSex(InvalidSex<T> value),
     TResult invalidWeight(InvalidWeight<T> value),
@@ -247,22 +258,24 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   TResult when<TResult extends Object>({
     @required TResult invalidEmail(T failedValue),
     @required TResult shortPassword(T failedValue),
-    @required TResult shortQuestion(T failedValue),
+    @required TResult shortName(T failedValue),
+    @required TResult listEmpty(T failedValue),
+    @required TResult shortUrl(T failedValue),
     @required TResult shortUsername(T failedValue),
-    @required TResult unmatchedPassword(T failedValue),
-    @required TResult shortSecretAnswer(T failedValue),
     @required TResult invalidAge(T failedValue),
+    @required TResult invalidRepetation(T failedValue),
     @required TResult invalidHeight(T failedValue),
     @required TResult invalidSex(T failedValue),
     @required TResult invalidWeight(T failedValue),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
-    assert(shortQuestion != null);
+    assert(shortName != null);
+    assert(listEmpty != null);
+    assert(shortUrl != null);
     assert(shortUsername != null);
-    assert(unmatchedPassword != null);
-    assert(shortSecretAnswer != null);
     assert(invalidAge != null);
+    assert(invalidRepetation != null);
     assert(invalidHeight != null);
     assert(invalidSex != null);
     assert(invalidWeight != null);
@@ -274,11 +287,12 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   TResult maybeWhen<TResult extends Object>({
     TResult invalidEmail(T failedValue),
     TResult shortPassword(T failedValue),
-    TResult shortQuestion(T failedValue),
+    TResult shortName(T failedValue),
+    TResult listEmpty(T failedValue),
+    TResult shortUrl(T failedValue),
     TResult shortUsername(T failedValue),
-    TResult unmatchedPassword(T failedValue),
-    TResult shortSecretAnswer(T failedValue),
     TResult invalidAge(T failedValue),
+    TResult invalidRepetation(T failedValue),
     TResult invalidHeight(T failedValue),
     TResult invalidSex(T failedValue),
     TResult invalidWeight(T failedValue),
@@ -296,22 +310,24 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   TResult map<TResult extends Object>({
     @required TResult invalidEmail(InvalidEmail<T> value),
     @required TResult shortPassword(ShortPassword<T> value),
-    @required TResult shortQuestion(ShortQuestion<T> value),
+    @required TResult shortName(ShortName<T> value),
+    @required TResult listEmpty(ListEmpty<T> value),
+    @required TResult shortUrl(ShortUrl<T> value),
     @required TResult shortUsername(ShortUsername<T> value),
-    @required TResult unmatchedPassword(UnmatchedPassword<T> value),
-    @required TResult shortSecretAnswer(ShortSecretAnswer<T> value),
     @required TResult invalidAge(InvalidAge<T> value),
+    @required TResult invalidRepetation(InvalidRepetation<T> value),
     @required TResult invalidHeight(InvalidHeight<T> value),
     @required TResult invalidSex(InvalidSex<T> value),
     @required TResult invalidWeight(InvalidWeight<T> value),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
-    assert(shortQuestion != null);
+    assert(shortName != null);
+    assert(listEmpty != null);
+    assert(shortUrl != null);
     assert(shortUsername != null);
-    assert(unmatchedPassword != null);
-    assert(shortSecretAnswer != null);
     assert(invalidAge != null);
+    assert(invalidRepetation != null);
     assert(invalidHeight != null);
     assert(invalidSex != null);
     assert(invalidWeight != null);
@@ -323,11 +339,12 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   TResult maybeMap<TResult extends Object>({
     TResult invalidEmail(InvalidEmail<T> value),
     TResult shortPassword(ShortPassword<T> value),
-    TResult shortQuestion(ShortQuestion<T> value),
+    TResult shortName(ShortName<T> value),
+    TResult listEmpty(ListEmpty<T> value),
+    TResult shortUrl(ShortUrl<T> value),
     TResult shortUsername(ShortUsername<T> value),
-    TResult unmatchedPassword(UnmatchedPassword<T> value),
-    TResult shortSecretAnswer(ShortSecretAnswer<T> value),
     TResult invalidAge(InvalidAge<T> value),
+    TResult invalidRepetation(InvalidRepetation<T> value),
     TResult invalidHeight(InvalidHeight<T> value),
     TResult invalidSex(InvalidSex<T> value),
     TResult invalidWeight(InvalidWeight<T> value),
@@ -419,22 +436,24 @@ class _$ShortPassword<T> implements ShortPassword<T> {
   TResult when<TResult extends Object>({
     @required TResult invalidEmail(T failedValue),
     @required TResult shortPassword(T failedValue),
-    @required TResult shortQuestion(T failedValue),
+    @required TResult shortName(T failedValue),
+    @required TResult listEmpty(T failedValue),
+    @required TResult shortUrl(T failedValue),
     @required TResult shortUsername(T failedValue),
-    @required TResult unmatchedPassword(T failedValue),
-    @required TResult shortSecretAnswer(T failedValue),
     @required TResult invalidAge(T failedValue),
+    @required TResult invalidRepetation(T failedValue),
     @required TResult invalidHeight(T failedValue),
     @required TResult invalidSex(T failedValue),
     @required TResult invalidWeight(T failedValue),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
-    assert(shortQuestion != null);
+    assert(shortName != null);
+    assert(listEmpty != null);
+    assert(shortUrl != null);
     assert(shortUsername != null);
-    assert(unmatchedPassword != null);
-    assert(shortSecretAnswer != null);
     assert(invalidAge != null);
+    assert(invalidRepetation != null);
     assert(invalidHeight != null);
     assert(invalidSex != null);
     assert(invalidWeight != null);
@@ -446,11 +465,12 @@ class _$ShortPassword<T> implements ShortPassword<T> {
   TResult maybeWhen<TResult extends Object>({
     TResult invalidEmail(T failedValue),
     TResult shortPassword(T failedValue),
-    TResult shortQuestion(T failedValue),
+    TResult shortName(T failedValue),
+    TResult listEmpty(T failedValue),
+    TResult shortUrl(T failedValue),
     TResult shortUsername(T failedValue),
-    TResult unmatchedPassword(T failedValue),
-    TResult shortSecretAnswer(T failedValue),
     TResult invalidAge(T failedValue),
+    TResult invalidRepetation(T failedValue),
     TResult invalidHeight(T failedValue),
     TResult invalidSex(T failedValue),
     TResult invalidWeight(T failedValue),
@@ -468,22 +488,24 @@ class _$ShortPassword<T> implements ShortPassword<T> {
   TResult map<TResult extends Object>({
     @required TResult invalidEmail(InvalidEmail<T> value),
     @required TResult shortPassword(ShortPassword<T> value),
-    @required TResult shortQuestion(ShortQuestion<T> value),
+    @required TResult shortName(ShortName<T> value),
+    @required TResult listEmpty(ListEmpty<T> value),
+    @required TResult shortUrl(ShortUrl<T> value),
     @required TResult shortUsername(ShortUsername<T> value),
-    @required TResult unmatchedPassword(UnmatchedPassword<T> value),
-    @required TResult shortSecretAnswer(ShortSecretAnswer<T> value),
     @required TResult invalidAge(InvalidAge<T> value),
+    @required TResult invalidRepetation(InvalidRepetation<T> value),
     @required TResult invalidHeight(InvalidHeight<T> value),
     @required TResult invalidSex(InvalidSex<T> value),
     @required TResult invalidWeight(InvalidWeight<T> value),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
-    assert(shortQuestion != null);
+    assert(shortName != null);
+    assert(listEmpty != null);
+    assert(shortUrl != null);
     assert(shortUsername != null);
-    assert(unmatchedPassword != null);
-    assert(shortSecretAnswer != null);
     assert(invalidAge != null);
+    assert(invalidRepetation != null);
     assert(invalidHeight != null);
     assert(invalidSex != null);
     assert(invalidWeight != null);
@@ -495,11 +517,12 @@ class _$ShortPassword<T> implements ShortPassword<T> {
   TResult maybeMap<TResult extends Object>({
     TResult invalidEmail(InvalidEmail<T> value),
     TResult shortPassword(ShortPassword<T> value),
-    TResult shortQuestion(ShortQuestion<T> value),
+    TResult shortName(ShortName<T> value),
+    TResult listEmpty(ListEmpty<T> value),
+    TResult shortUrl(ShortUrl<T> value),
     TResult shortUsername(ShortUsername<T> value),
-    TResult unmatchedPassword(UnmatchedPassword<T> value),
-    TResult shortSecretAnswer(ShortSecretAnswer<T> value),
     TResult invalidAge(InvalidAge<T> value),
+    TResult invalidRepetation(InvalidRepetation<T> value),
     TResult invalidHeight(InvalidHeight<T> value),
     TResult invalidSex(InvalidSex<T> value),
     TResult invalidWeight(InvalidWeight<T> value),
@@ -524,31 +547,31 @@ abstract class ShortPassword<T> implements ValueFailure<T> {
 }
 
 /// @nodoc
-abstract class $ShortQuestionCopyWith<T, $Res>
+abstract class $ShortNameCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $ShortQuestionCopyWith(
-          ShortQuestion<T> value, $Res Function(ShortQuestion<T>) then) =
-      _$ShortQuestionCopyWithImpl<T, $Res>;
+  factory $ShortNameCopyWith(
+          ShortName<T> value, $Res Function(ShortName<T>) then) =
+      _$ShortNameCopyWithImpl<T, $Res>;
   @override
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$ShortQuestionCopyWithImpl<T, $Res>
+class _$ShortNameCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $ShortQuestionCopyWith<T, $Res> {
-  _$ShortQuestionCopyWithImpl(
-      ShortQuestion<T> _value, $Res Function(ShortQuestion<T>) _then)
-      : super(_value, (v) => _then(v as ShortQuestion<T>));
+    implements $ShortNameCopyWith<T, $Res> {
+  _$ShortNameCopyWithImpl(
+      ShortName<T> _value, $Res Function(ShortName<T>) _then)
+      : super(_value, (v) => _then(v as ShortName<T>));
 
   @override
-  ShortQuestion<T> get _value => super._value as ShortQuestion<T>;
+  ShortName<T> get _value => super._value as ShortName<T>;
 
   @override
   $Res call({
     Object failedValue = freezed,
   }) {
-    return _then(ShortQuestion<T>(
+    return _then(ShortName<T>(
       failedValue:
           failedValue == freezed ? _value.failedValue : failedValue as T,
     ));
@@ -556,22 +579,21 @@ class _$ShortQuestionCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
-class _$ShortQuestion<T> implements ShortQuestion<T> {
-  const _$ShortQuestion({@required this.failedValue})
-      : assert(failedValue != null);
+class _$ShortName<T> implements ShortName<T> {
+  const _$ShortName({@required this.failedValue}) : assert(failedValue != null);
 
   @override
   final T failedValue;
 
   @override
   String toString() {
-    return 'ValueFailure<$T>.shortQuestion(failedValue: $failedValue)';
+    return 'ValueFailure<$T>.shortName(failedValue: $failedValue)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ShortQuestion<T> &&
+        (other is ShortName<T> &&
             (identical(other.failedValue, failedValue) ||
                 const DeepCollectionEquality()
                     .equals(other.failedValue, failedValue)));
@@ -583,34 +605,36 @@ class _$ShortQuestion<T> implements ShortQuestion<T> {
 
   @JsonKey(ignore: true)
   @override
-  $ShortQuestionCopyWith<T, ShortQuestion<T>> get copyWith =>
-      _$ShortQuestionCopyWithImpl<T, ShortQuestion<T>>(this, _$identity);
+  $ShortNameCopyWith<T, ShortName<T>> get copyWith =>
+      _$ShortNameCopyWithImpl<T, ShortName<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult invalidEmail(T failedValue),
     @required TResult shortPassword(T failedValue),
-    @required TResult shortQuestion(T failedValue),
+    @required TResult shortName(T failedValue),
+    @required TResult listEmpty(T failedValue),
+    @required TResult shortUrl(T failedValue),
     @required TResult shortUsername(T failedValue),
-    @required TResult unmatchedPassword(T failedValue),
-    @required TResult shortSecretAnswer(T failedValue),
     @required TResult invalidAge(T failedValue),
+    @required TResult invalidRepetation(T failedValue),
     @required TResult invalidHeight(T failedValue),
     @required TResult invalidSex(T failedValue),
     @required TResult invalidWeight(T failedValue),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
-    assert(shortQuestion != null);
+    assert(shortName != null);
+    assert(listEmpty != null);
+    assert(shortUrl != null);
     assert(shortUsername != null);
-    assert(unmatchedPassword != null);
-    assert(shortSecretAnswer != null);
     assert(invalidAge != null);
+    assert(invalidRepetation != null);
     assert(invalidHeight != null);
     assert(invalidSex != null);
     assert(invalidWeight != null);
-    return shortQuestion(failedValue);
+    return shortName(failedValue);
   }
 
   @override
@@ -618,19 +642,20 @@ class _$ShortQuestion<T> implements ShortQuestion<T> {
   TResult maybeWhen<TResult extends Object>({
     TResult invalidEmail(T failedValue),
     TResult shortPassword(T failedValue),
-    TResult shortQuestion(T failedValue),
+    TResult shortName(T failedValue),
+    TResult listEmpty(T failedValue),
+    TResult shortUrl(T failedValue),
     TResult shortUsername(T failedValue),
-    TResult unmatchedPassword(T failedValue),
-    TResult shortSecretAnswer(T failedValue),
     TResult invalidAge(T failedValue),
+    TResult invalidRepetation(T failedValue),
     TResult invalidHeight(T failedValue),
     TResult invalidSex(T failedValue),
     TResult invalidWeight(T failedValue),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
-    if (shortQuestion != null) {
-      return shortQuestion(failedValue);
+    if (shortName != null) {
+      return shortName(failedValue);
     }
     return orElse();
   }
@@ -640,26 +665,28 @@ class _$ShortQuestion<T> implements ShortQuestion<T> {
   TResult map<TResult extends Object>({
     @required TResult invalidEmail(InvalidEmail<T> value),
     @required TResult shortPassword(ShortPassword<T> value),
-    @required TResult shortQuestion(ShortQuestion<T> value),
+    @required TResult shortName(ShortName<T> value),
+    @required TResult listEmpty(ListEmpty<T> value),
+    @required TResult shortUrl(ShortUrl<T> value),
     @required TResult shortUsername(ShortUsername<T> value),
-    @required TResult unmatchedPassword(UnmatchedPassword<T> value),
-    @required TResult shortSecretAnswer(ShortSecretAnswer<T> value),
     @required TResult invalidAge(InvalidAge<T> value),
+    @required TResult invalidRepetation(InvalidRepetation<T> value),
     @required TResult invalidHeight(InvalidHeight<T> value),
     @required TResult invalidSex(InvalidSex<T> value),
     @required TResult invalidWeight(InvalidWeight<T> value),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
-    assert(shortQuestion != null);
+    assert(shortName != null);
+    assert(listEmpty != null);
+    assert(shortUrl != null);
     assert(shortUsername != null);
-    assert(unmatchedPassword != null);
-    assert(shortSecretAnswer != null);
     assert(invalidAge != null);
+    assert(invalidRepetation != null);
     assert(invalidHeight != null);
     assert(invalidSex != null);
     assert(invalidWeight != null);
-    return shortQuestion(this);
+    return shortName(this);
   }
 
   @override
@@ -667,32 +694,386 @@ class _$ShortQuestion<T> implements ShortQuestion<T> {
   TResult maybeMap<TResult extends Object>({
     TResult invalidEmail(InvalidEmail<T> value),
     TResult shortPassword(ShortPassword<T> value),
-    TResult shortQuestion(ShortQuestion<T> value),
+    TResult shortName(ShortName<T> value),
+    TResult listEmpty(ListEmpty<T> value),
+    TResult shortUrl(ShortUrl<T> value),
     TResult shortUsername(ShortUsername<T> value),
-    TResult unmatchedPassword(UnmatchedPassword<T> value),
-    TResult shortSecretAnswer(ShortSecretAnswer<T> value),
     TResult invalidAge(InvalidAge<T> value),
+    TResult invalidRepetation(InvalidRepetation<T> value),
     TResult invalidHeight(InvalidHeight<T> value),
     TResult invalidSex(InvalidSex<T> value),
     TResult invalidWeight(InvalidWeight<T> value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
-    if (shortQuestion != null) {
-      return shortQuestion(this);
+    if (shortName != null) {
+      return shortName(this);
     }
     return orElse();
   }
 }
 
-abstract class ShortQuestion<T> implements ValueFailure<T> {
-  const factory ShortQuestion({@required T failedValue}) = _$ShortQuestion<T>;
+abstract class ShortName<T> implements ValueFailure<T> {
+  const factory ShortName({@required T failedValue}) = _$ShortName<T>;
 
   @override
   T get failedValue;
   @override
   @JsonKey(ignore: true)
-  $ShortQuestionCopyWith<T, ShortQuestion<T>> get copyWith;
+  $ShortNameCopyWith<T, ShortName<T>> get copyWith;
+}
+
+/// @nodoc
+abstract class $ListEmptyCopyWith<T, $Res>
+    implements $ValueFailureCopyWith<T, $Res> {
+  factory $ListEmptyCopyWith(
+          ListEmpty<T> value, $Res Function(ListEmpty<T>) then) =
+      _$ListEmptyCopyWithImpl<T, $Res>;
+  @override
+  $Res call({T failedValue});
+}
+
+/// @nodoc
+class _$ListEmptyCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res>
+    implements $ListEmptyCopyWith<T, $Res> {
+  _$ListEmptyCopyWithImpl(
+      ListEmpty<T> _value, $Res Function(ListEmpty<T>) _then)
+      : super(_value, (v) => _then(v as ListEmpty<T>));
+
+  @override
+  ListEmpty<T> get _value => super._value as ListEmpty<T>;
+
+  @override
+  $Res call({
+    Object failedValue = freezed,
+  }) {
+    return _then(ListEmpty<T>(
+      failedValue:
+          failedValue == freezed ? _value.failedValue : failedValue as T,
+    ));
+  }
+}
+
+/// @nodoc
+class _$ListEmpty<T> implements ListEmpty<T> {
+  const _$ListEmpty({@required this.failedValue}) : assert(failedValue != null);
+
+  @override
+  final T failedValue;
+
+  @override
+  String toString() {
+    return 'ValueFailure<$T>.listEmpty(failedValue: $failedValue)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is ListEmpty<T> &&
+            (identical(other.failedValue, failedValue) ||
+                const DeepCollectionEquality()
+                    .equals(other.failedValue, failedValue)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+
+  @JsonKey(ignore: true)
+  @override
+  $ListEmptyCopyWith<T, ListEmpty<T>> get copyWith =>
+      _$ListEmptyCopyWithImpl<T, ListEmpty<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult invalidEmail(T failedValue),
+    @required TResult shortPassword(T failedValue),
+    @required TResult shortName(T failedValue),
+    @required TResult listEmpty(T failedValue),
+    @required TResult shortUrl(T failedValue),
+    @required TResult shortUsername(T failedValue),
+    @required TResult invalidAge(T failedValue),
+    @required TResult invalidRepetation(T failedValue),
+    @required TResult invalidHeight(T failedValue),
+    @required TResult invalidSex(T failedValue),
+    @required TResult invalidWeight(T failedValue),
+  }) {
+    assert(invalidEmail != null);
+    assert(shortPassword != null);
+    assert(shortName != null);
+    assert(listEmpty != null);
+    assert(shortUrl != null);
+    assert(shortUsername != null);
+    assert(invalidAge != null);
+    assert(invalidRepetation != null);
+    assert(invalidHeight != null);
+    assert(invalidSex != null);
+    assert(invalidWeight != null);
+    return listEmpty(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidEmail(T failedValue),
+    TResult shortPassword(T failedValue),
+    TResult shortName(T failedValue),
+    TResult listEmpty(T failedValue),
+    TResult shortUrl(T failedValue),
+    TResult shortUsername(T failedValue),
+    TResult invalidAge(T failedValue),
+    TResult invalidRepetation(T failedValue),
+    TResult invalidHeight(T failedValue),
+    TResult invalidSex(T failedValue),
+    TResult invalidWeight(T failedValue),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (listEmpty != null) {
+      return listEmpty(failedValue);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult invalidEmail(InvalidEmail<T> value),
+    @required TResult shortPassword(ShortPassword<T> value),
+    @required TResult shortName(ShortName<T> value),
+    @required TResult listEmpty(ListEmpty<T> value),
+    @required TResult shortUrl(ShortUrl<T> value),
+    @required TResult shortUsername(ShortUsername<T> value),
+    @required TResult invalidAge(InvalidAge<T> value),
+    @required TResult invalidRepetation(InvalidRepetation<T> value),
+    @required TResult invalidHeight(InvalidHeight<T> value),
+    @required TResult invalidSex(InvalidSex<T> value),
+    @required TResult invalidWeight(InvalidWeight<T> value),
+  }) {
+    assert(invalidEmail != null);
+    assert(shortPassword != null);
+    assert(shortName != null);
+    assert(listEmpty != null);
+    assert(shortUrl != null);
+    assert(shortUsername != null);
+    assert(invalidAge != null);
+    assert(invalidRepetation != null);
+    assert(invalidHeight != null);
+    assert(invalidSex != null);
+    assert(invalidWeight != null);
+    return listEmpty(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidEmail(InvalidEmail<T> value),
+    TResult shortPassword(ShortPassword<T> value),
+    TResult shortName(ShortName<T> value),
+    TResult listEmpty(ListEmpty<T> value),
+    TResult shortUrl(ShortUrl<T> value),
+    TResult shortUsername(ShortUsername<T> value),
+    TResult invalidAge(InvalidAge<T> value),
+    TResult invalidRepetation(InvalidRepetation<T> value),
+    TResult invalidHeight(InvalidHeight<T> value),
+    TResult invalidSex(InvalidSex<T> value),
+    TResult invalidWeight(InvalidWeight<T> value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (listEmpty != null) {
+      return listEmpty(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ListEmpty<T> implements ValueFailure<T> {
+  const factory ListEmpty({@required T failedValue}) = _$ListEmpty<T>;
+
+  @override
+  T get failedValue;
+  @override
+  @JsonKey(ignore: true)
+  $ListEmptyCopyWith<T, ListEmpty<T>> get copyWith;
+}
+
+/// @nodoc
+abstract class $ShortUrlCopyWith<T, $Res>
+    implements $ValueFailureCopyWith<T, $Res> {
+  factory $ShortUrlCopyWith(
+          ShortUrl<T> value, $Res Function(ShortUrl<T>) then) =
+      _$ShortUrlCopyWithImpl<T, $Res>;
+  @override
+  $Res call({T failedValue});
+}
+
+/// @nodoc
+class _$ShortUrlCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res>
+    implements $ShortUrlCopyWith<T, $Res> {
+  _$ShortUrlCopyWithImpl(ShortUrl<T> _value, $Res Function(ShortUrl<T>) _then)
+      : super(_value, (v) => _then(v as ShortUrl<T>));
+
+  @override
+  ShortUrl<T> get _value => super._value as ShortUrl<T>;
+
+  @override
+  $Res call({
+    Object failedValue = freezed,
+  }) {
+    return _then(ShortUrl<T>(
+      failedValue:
+          failedValue == freezed ? _value.failedValue : failedValue as T,
+    ));
+  }
+}
+
+/// @nodoc
+class _$ShortUrl<T> implements ShortUrl<T> {
+  const _$ShortUrl({@required this.failedValue}) : assert(failedValue != null);
+
+  @override
+  final T failedValue;
+
+  @override
+  String toString() {
+    return 'ValueFailure<$T>.shortUrl(failedValue: $failedValue)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is ShortUrl<T> &&
+            (identical(other.failedValue, failedValue) ||
+                const DeepCollectionEquality()
+                    .equals(other.failedValue, failedValue)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+
+  @JsonKey(ignore: true)
+  @override
+  $ShortUrlCopyWith<T, ShortUrl<T>> get copyWith =>
+      _$ShortUrlCopyWithImpl<T, ShortUrl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult invalidEmail(T failedValue),
+    @required TResult shortPassword(T failedValue),
+    @required TResult shortName(T failedValue),
+    @required TResult listEmpty(T failedValue),
+    @required TResult shortUrl(T failedValue),
+    @required TResult shortUsername(T failedValue),
+    @required TResult invalidAge(T failedValue),
+    @required TResult invalidRepetation(T failedValue),
+    @required TResult invalidHeight(T failedValue),
+    @required TResult invalidSex(T failedValue),
+    @required TResult invalidWeight(T failedValue),
+  }) {
+    assert(invalidEmail != null);
+    assert(shortPassword != null);
+    assert(shortName != null);
+    assert(listEmpty != null);
+    assert(shortUrl != null);
+    assert(shortUsername != null);
+    assert(invalidAge != null);
+    assert(invalidRepetation != null);
+    assert(invalidHeight != null);
+    assert(invalidSex != null);
+    assert(invalidWeight != null);
+    return shortUrl(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidEmail(T failedValue),
+    TResult shortPassword(T failedValue),
+    TResult shortName(T failedValue),
+    TResult listEmpty(T failedValue),
+    TResult shortUrl(T failedValue),
+    TResult shortUsername(T failedValue),
+    TResult invalidAge(T failedValue),
+    TResult invalidRepetation(T failedValue),
+    TResult invalidHeight(T failedValue),
+    TResult invalidSex(T failedValue),
+    TResult invalidWeight(T failedValue),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (shortUrl != null) {
+      return shortUrl(failedValue);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult invalidEmail(InvalidEmail<T> value),
+    @required TResult shortPassword(ShortPassword<T> value),
+    @required TResult shortName(ShortName<T> value),
+    @required TResult listEmpty(ListEmpty<T> value),
+    @required TResult shortUrl(ShortUrl<T> value),
+    @required TResult shortUsername(ShortUsername<T> value),
+    @required TResult invalidAge(InvalidAge<T> value),
+    @required TResult invalidRepetation(InvalidRepetation<T> value),
+    @required TResult invalidHeight(InvalidHeight<T> value),
+    @required TResult invalidSex(InvalidSex<T> value),
+    @required TResult invalidWeight(InvalidWeight<T> value),
+  }) {
+    assert(invalidEmail != null);
+    assert(shortPassword != null);
+    assert(shortName != null);
+    assert(listEmpty != null);
+    assert(shortUrl != null);
+    assert(shortUsername != null);
+    assert(invalidAge != null);
+    assert(invalidRepetation != null);
+    assert(invalidHeight != null);
+    assert(invalidSex != null);
+    assert(invalidWeight != null);
+    return shortUrl(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidEmail(InvalidEmail<T> value),
+    TResult shortPassword(ShortPassword<T> value),
+    TResult shortName(ShortName<T> value),
+    TResult listEmpty(ListEmpty<T> value),
+    TResult shortUrl(ShortUrl<T> value),
+    TResult shortUsername(ShortUsername<T> value),
+    TResult invalidAge(InvalidAge<T> value),
+    TResult invalidRepetation(InvalidRepetation<T> value),
+    TResult invalidHeight(InvalidHeight<T> value),
+    TResult invalidSex(InvalidSex<T> value),
+    TResult invalidWeight(InvalidWeight<T> value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (shortUrl != null) {
+      return shortUrl(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ShortUrl<T> implements ValueFailure<T> {
+  const factory ShortUrl({@required T failedValue}) = _$ShortUrl<T>;
+
+  @override
+  T get failedValue;
+  @override
+  @JsonKey(ignore: true)
+  $ShortUrlCopyWith<T, ShortUrl<T>> get copyWith;
 }
 
 /// @nodoc
@@ -763,22 +1144,24 @@ class _$ShortUsername<T> implements ShortUsername<T> {
   TResult when<TResult extends Object>({
     @required TResult invalidEmail(T failedValue),
     @required TResult shortPassword(T failedValue),
-    @required TResult shortQuestion(T failedValue),
+    @required TResult shortName(T failedValue),
+    @required TResult listEmpty(T failedValue),
+    @required TResult shortUrl(T failedValue),
     @required TResult shortUsername(T failedValue),
-    @required TResult unmatchedPassword(T failedValue),
-    @required TResult shortSecretAnswer(T failedValue),
     @required TResult invalidAge(T failedValue),
+    @required TResult invalidRepetation(T failedValue),
     @required TResult invalidHeight(T failedValue),
     @required TResult invalidSex(T failedValue),
     @required TResult invalidWeight(T failedValue),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
-    assert(shortQuestion != null);
+    assert(shortName != null);
+    assert(listEmpty != null);
+    assert(shortUrl != null);
     assert(shortUsername != null);
-    assert(unmatchedPassword != null);
-    assert(shortSecretAnswer != null);
     assert(invalidAge != null);
+    assert(invalidRepetation != null);
     assert(invalidHeight != null);
     assert(invalidSex != null);
     assert(invalidWeight != null);
@@ -790,11 +1173,12 @@ class _$ShortUsername<T> implements ShortUsername<T> {
   TResult maybeWhen<TResult extends Object>({
     TResult invalidEmail(T failedValue),
     TResult shortPassword(T failedValue),
-    TResult shortQuestion(T failedValue),
+    TResult shortName(T failedValue),
+    TResult listEmpty(T failedValue),
+    TResult shortUrl(T failedValue),
     TResult shortUsername(T failedValue),
-    TResult unmatchedPassword(T failedValue),
-    TResult shortSecretAnswer(T failedValue),
     TResult invalidAge(T failedValue),
+    TResult invalidRepetation(T failedValue),
     TResult invalidHeight(T failedValue),
     TResult invalidSex(T failedValue),
     TResult invalidWeight(T failedValue),
@@ -812,22 +1196,24 @@ class _$ShortUsername<T> implements ShortUsername<T> {
   TResult map<TResult extends Object>({
     @required TResult invalidEmail(InvalidEmail<T> value),
     @required TResult shortPassword(ShortPassword<T> value),
-    @required TResult shortQuestion(ShortQuestion<T> value),
+    @required TResult shortName(ShortName<T> value),
+    @required TResult listEmpty(ListEmpty<T> value),
+    @required TResult shortUrl(ShortUrl<T> value),
     @required TResult shortUsername(ShortUsername<T> value),
-    @required TResult unmatchedPassword(UnmatchedPassword<T> value),
-    @required TResult shortSecretAnswer(ShortSecretAnswer<T> value),
     @required TResult invalidAge(InvalidAge<T> value),
+    @required TResult invalidRepetation(InvalidRepetation<T> value),
     @required TResult invalidHeight(InvalidHeight<T> value),
     @required TResult invalidSex(InvalidSex<T> value),
     @required TResult invalidWeight(InvalidWeight<T> value),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
-    assert(shortQuestion != null);
+    assert(shortName != null);
+    assert(listEmpty != null);
+    assert(shortUrl != null);
     assert(shortUsername != null);
-    assert(unmatchedPassword != null);
-    assert(shortSecretAnswer != null);
     assert(invalidAge != null);
+    assert(invalidRepetation != null);
     assert(invalidHeight != null);
     assert(invalidSex != null);
     assert(invalidWeight != null);
@@ -839,11 +1225,12 @@ class _$ShortUsername<T> implements ShortUsername<T> {
   TResult maybeMap<TResult extends Object>({
     TResult invalidEmail(InvalidEmail<T> value),
     TResult shortPassword(ShortPassword<T> value),
-    TResult shortQuestion(ShortQuestion<T> value),
+    TResult shortName(ShortName<T> value),
+    TResult listEmpty(ListEmpty<T> value),
+    TResult shortUrl(ShortUrl<T> value),
     TResult shortUsername(ShortUsername<T> value),
-    TResult unmatchedPassword(UnmatchedPassword<T> value),
-    TResult shortSecretAnswer(ShortSecretAnswer<T> value),
     TResult invalidAge(InvalidAge<T> value),
+    TResult invalidRepetation(InvalidRepetation<T> value),
     TResult invalidHeight(InvalidHeight<T> value),
     TResult invalidSex(InvalidSex<T> value),
     TResult invalidWeight(InvalidWeight<T> value),
@@ -865,354 +1252,6 @@ abstract class ShortUsername<T> implements ValueFailure<T> {
   @override
   @JsonKey(ignore: true)
   $ShortUsernameCopyWith<T, ShortUsername<T>> get copyWith;
-}
-
-/// @nodoc
-abstract class $UnmatchedPasswordCopyWith<T, $Res>
-    implements $ValueFailureCopyWith<T, $Res> {
-  factory $UnmatchedPasswordCopyWith(UnmatchedPassword<T> value,
-          $Res Function(UnmatchedPassword<T>) then) =
-      _$UnmatchedPasswordCopyWithImpl<T, $Res>;
-  @override
-  $Res call({T failedValue});
-}
-
-/// @nodoc
-class _$UnmatchedPasswordCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $UnmatchedPasswordCopyWith<T, $Res> {
-  _$UnmatchedPasswordCopyWithImpl(
-      UnmatchedPassword<T> _value, $Res Function(UnmatchedPassword<T>) _then)
-      : super(_value, (v) => _then(v as UnmatchedPassword<T>));
-
-  @override
-  UnmatchedPassword<T> get _value => super._value as UnmatchedPassword<T>;
-
-  @override
-  $Res call({
-    Object failedValue = freezed,
-  }) {
-    return _then(UnmatchedPassword<T>(
-      failedValue:
-          failedValue == freezed ? _value.failedValue : failedValue as T,
-    ));
-  }
-}
-
-/// @nodoc
-class _$UnmatchedPassword<T> implements UnmatchedPassword<T> {
-  const _$UnmatchedPassword({@required this.failedValue})
-      : assert(failedValue != null);
-
-  @override
-  final T failedValue;
-
-  @override
-  String toString() {
-    return 'ValueFailure<$T>.unmatchedPassword(failedValue: $failedValue)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is UnmatchedPassword<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
-
-  @JsonKey(ignore: true)
-  @override
-  $UnmatchedPasswordCopyWith<T, UnmatchedPassword<T>> get copyWith =>
-      _$UnmatchedPasswordCopyWithImpl<T, UnmatchedPassword<T>>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult invalidEmail(T failedValue),
-    @required TResult shortPassword(T failedValue),
-    @required TResult shortQuestion(T failedValue),
-    @required TResult shortUsername(T failedValue),
-    @required TResult unmatchedPassword(T failedValue),
-    @required TResult shortSecretAnswer(T failedValue),
-    @required TResult invalidAge(T failedValue),
-    @required TResult invalidHeight(T failedValue),
-    @required TResult invalidSex(T failedValue),
-    @required TResult invalidWeight(T failedValue),
-  }) {
-    assert(invalidEmail != null);
-    assert(shortPassword != null);
-    assert(shortQuestion != null);
-    assert(shortUsername != null);
-    assert(unmatchedPassword != null);
-    assert(shortSecretAnswer != null);
-    assert(invalidAge != null);
-    assert(invalidHeight != null);
-    assert(invalidSex != null);
-    assert(invalidWeight != null);
-    return unmatchedPassword(failedValue);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult invalidEmail(T failedValue),
-    TResult shortPassword(T failedValue),
-    TResult shortQuestion(T failedValue),
-    TResult shortUsername(T failedValue),
-    TResult unmatchedPassword(T failedValue),
-    TResult shortSecretAnswer(T failedValue),
-    TResult invalidAge(T failedValue),
-    TResult invalidHeight(T failedValue),
-    TResult invalidSex(T failedValue),
-    TResult invalidWeight(T failedValue),
-    @required TResult orElse(),
-  }) {
-    assert(orElse != null);
-    if (unmatchedPassword != null) {
-      return unmatchedPassword(failedValue);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult invalidEmail(InvalidEmail<T> value),
-    @required TResult shortPassword(ShortPassword<T> value),
-    @required TResult shortQuestion(ShortQuestion<T> value),
-    @required TResult shortUsername(ShortUsername<T> value),
-    @required TResult unmatchedPassword(UnmatchedPassword<T> value),
-    @required TResult shortSecretAnswer(ShortSecretAnswer<T> value),
-    @required TResult invalidAge(InvalidAge<T> value),
-    @required TResult invalidHeight(InvalidHeight<T> value),
-    @required TResult invalidSex(InvalidSex<T> value),
-    @required TResult invalidWeight(InvalidWeight<T> value),
-  }) {
-    assert(invalidEmail != null);
-    assert(shortPassword != null);
-    assert(shortQuestion != null);
-    assert(shortUsername != null);
-    assert(unmatchedPassword != null);
-    assert(shortSecretAnswer != null);
-    assert(invalidAge != null);
-    assert(invalidHeight != null);
-    assert(invalidSex != null);
-    assert(invalidWeight != null);
-    return unmatchedPassword(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult invalidEmail(InvalidEmail<T> value),
-    TResult shortPassword(ShortPassword<T> value),
-    TResult shortQuestion(ShortQuestion<T> value),
-    TResult shortUsername(ShortUsername<T> value),
-    TResult unmatchedPassword(UnmatchedPassword<T> value),
-    TResult shortSecretAnswer(ShortSecretAnswer<T> value),
-    TResult invalidAge(InvalidAge<T> value),
-    TResult invalidHeight(InvalidHeight<T> value),
-    TResult invalidSex(InvalidSex<T> value),
-    TResult invalidWeight(InvalidWeight<T> value),
-    @required TResult orElse(),
-  }) {
-    assert(orElse != null);
-    if (unmatchedPassword != null) {
-      return unmatchedPassword(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class UnmatchedPassword<T> implements ValueFailure<T> {
-  const factory UnmatchedPassword({@required T failedValue}) =
-      _$UnmatchedPassword<T>;
-
-  @override
-  T get failedValue;
-  @override
-  @JsonKey(ignore: true)
-  $UnmatchedPasswordCopyWith<T, UnmatchedPassword<T>> get copyWith;
-}
-
-/// @nodoc
-abstract class $ShortSecretAnswerCopyWith<T, $Res>
-    implements $ValueFailureCopyWith<T, $Res> {
-  factory $ShortSecretAnswerCopyWith(ShortSecretAnswer<T> value,
-          $Res Function(ShortSecretAnswer<T>) then) =
-      _$ShortSecretAnswerCopyWithImpl<T, $Res>;
-  @override
-  $Res call({T failedValue});
-}
-
-/// @nodoc
-class _$ShortSecretAnswerCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $ShortSecretAnswerCopyWith<T, $Res> {
-  _$ShortSecretAnswerCopyWithImpl(
-      ShortSecretAnswer<T> _value, $Res Function(ShortSecretAnswer<T>) _then)
-      : super(_value, (v) => _then(v as ShortSecretAnswer<T>));
-
-  @override
-  ShortSecretAnswer<T> get _value => super._value as ShortSecretAnswer<T>;
-
-  @override
-  $Res call({
-    Object failedValue = freezed,
-  }) {
-    return _then(ShortSecretAnswer<T>(
-      failedValue:
-          failedValue == freezed ? _value.failedValue : failedValue as T,
-    ));
-  }
-}
-
-/// @nodoc
-class _$ShortSecretAnswer<T> implements ShortSecretAnswer<T> {
-  const _$ShortSecretAnswer({@required this.failedValue})
-      : assert(failedValue != null);
-
-  @override
-  final T failedValue;
-
-  @override
-  String toString() {
-    return 'ValueFailure<$T>.shortSecretAnswer(failedValue: $failedValue)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is ShortSecretAnswer<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
-
-  @JsonKey(ignore: true)
-  @override
-  $ShortSecretAnswerCopyWith<T, ShortSecretAnswer<T>> get copyWith =>
-      _$ShortSecretAnswerCopyWithImpl<T, ShortSecretAnswer<T>>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult invalidEmail(T failedValue),
-    @required TResult shortPassword(T failedValue),
-    @required TResult shortQuestion(T failedValue),
-    @required TResult shortUsername(T failedValue),
-    @required TResult unmatchedPassword(T failedValue),
-    @required TResult shortSecretAnswer(T failedValue),
-    @required TResult invalidAge(T failedValue),
-    @required TResult invalidHeight(T failedValue),
-    @required TResult invalidSex(T failedValue),
-    @required TResult invalidWeight(T failedValue),
-  }) {
-    assert(invalidEmail != null);
-    assert(shortPassword != null);
-    assert(shortQuestion != null);
-    assert(shortUsername != null);
-    assert(unmatchedPassword != null);
-    assert(shortSecretAnswer != null);
-    assert(invalidAge != null);
-    assert(invalidHeight != null);
-    assert(invalidSex != null);
-    assert(invalidWeight != null);
-    return shortSecretAnswer(failedValue);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult invalidEmail(T failedValue),
-    TResult shortPassword(T failedValue),
-    TResult shortQuestion(T failedValue),
-    TResult shortUsername(T failedValue),
-    TResult unmatchedPassword(T failedValue),
-    TResult shortSecretAnswer(T failedValue),
-    TResult invalidAge(T failedValue),
-    TResult invalidHeight(T failedValue),
-    TResult invalidSex(T failedValue),
-    TResult invalidWeight(T failedValue),
-    @required TResult orElse(),
-  }) {
-    assert(orElse != null);
-    if (shortSecretAnswer != null) {
-      return shortSecretAnswer(failedValue);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult invalidEmail(InvalidEmail<T> value),
-    @required TResult shortPassword(ShortPassword<T> value),
-    @required TResult shortQuestion(ShortQuestion<T> value),
-    @required TResult shortUsername(ShortUsername<T> value),
-    @required TResult unmatchedPassword(UnmatchedPassword<T> value),
-    @required TResult shortSecretAnswer(ShortSecretAnswer<T> value),
-    @required TResult invalidAge(InvalidAge<T> value),
-    @required TResult invalidHeight(InvalidHeight<T> value),
-    @required TResult invalidSex(InvalidSex<T> value),
-    @required TResult invalidWeight(InvalidWeight<T> value),
-  }) {
-    assert(invalidEmail != null);
-    assert(shortPassword != null);
-    assert(shortQuestion != null);
-    assert(shortUsername != null);
-    assert(unmatchedPassword != null);
-    assert(shortSecretAnswer != null);
-    assert(invalidAge != null);
-    assert(invalidHeight != null);
-    assert(invalidSex != null);
-    assert(invalidWeight != null);
-    return shortSecretAnswer(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult invalidEmail(InvalidEmail<T> value),
-    TResult shortPassword(ShortPassword<T> value),
-    TResult shortQuestion(ShortQuestion<T> value),
-    TResult shortUsername(ShortUsername<T> value),
-    TResult unmatchedPassword(UnmatchedPassword<T> value),
-    TResult shortSecretAnswer(ShortSecretAnswer<T> value),
-    TResult invalidAge(InvalidAge<T> value),
-    TResult invalidHeight(InvalidHeight<T> value),
-    TResult invalidSex(InvalidSex<T> value),
-    TResult invalidWeight(InvalidWeight<T> value),
-    @required TResult orElse(),
-  }) {
-    assert(orElse != null);
-    if (shortSecretAnswer != null) {
-      return shortSecretAnswer(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ShortSecretAnswer<T> implements ValueFailure<T> {
-  const factory ShortSecretAnswer({@required T failedValue}) =
-      _$ShortSecretAnswer<T>;
-
-  @override
-  T get failedValue;
-  @override
-  @JsonKey(ignore: true)
-  $ShortSecretAnswerCopyWith<T, ShortSecretAnswer<T>> get copyWith;
 }
 
 /// @nodoc
@@ -1283,22 +1322,24 @@ class _$InvalidAge<T> implements InvalidAge<T> {
   TResult when<TResult extends Object>({
     @required TResult invalidEmail(T failedValue),
     @required TResult shortPassword(T failedValue),
-    @required TResult shortQuestion(T failedValue),
+    @required TResult shortName(T failedValue),
+    @required TResult listEmpty(T failedValue),
+    @required TResult shortUrl(T failedValue),
     @required TResult shortUsername(T failedValue),
-    @required TResult unmatchedPassword(T failedValue),
-    @required TResult shortSecretAnswer(T failedValue),
     @required TResult invalidAge(T failedValue),
+    @required TResult invalidRepetation(T failedValue),
     @required TResult invalidHeight(T failedValue),
     @required TResult invalidSex(T failedValue),
     @required TResult invalidWeight(T failedValue),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
-    assert(shortQuestion != null);
+    assert(shortName != null);
+    assert(listEmpty != null);
+    assert(shortUrl != null);
     assert(shortUsername != null);
-    assert(unmatchedPassword != null);
-    assert(shortSecretAnswer != null);
     assert(invalidAge != null);
+    assert(invalidRepetation != null);
     assert(invalidHeight != null);
     assert(invalidSex != null);
     assert(invalidWeight != null);
@@ -1310,11 +1351,12 @@ class _$InvalidAge<T> implements InvalidAge<T> {
   TResult maybeWhen<TResult extends Object>({
     TResult invalidEmail(T failedValue),
     TResult shortPassword(T failedValue),
-    TResult shortQuestion(T failedValue),
+    TResult shortName(T failedValue),
+    TResult listEmpty(T failedValue),
+    TResult shortUrl(T failedValue),
     TResult shortUsername(T failedValue),
-    TResult unmatchedPassword(T failedValue),
-    TResult shortSecretAnswer(T failedValue),
     TResult invalidAge(T failedValue),
+    TResult invalidRepetation(T failedValue),
     TResult invalidHeight(T failedValue),
     TResult invalidSex(T failedValue),
     TResult invalidWeight(T failedValue),
@@ -1332,22 +1374,24 @@ class _$InvalidAge<T> implements InvalidAge<T> {
   TResult map<TResult extends Object>({
     @required TResult invalidEmail(InvalidEmail<T> value),
     @required TResult shortPassword(ShortPassword<T> value),
-    @required TResult shortQuestion(ShortQuestion<T> value),
+    @required TResult shortName(ShortName<T> value),
+    @required TResult listEmpty(ListEmpty<T> value),
+    @required TResult shortUrl(ShortUrl<T> value),
     @required TResult shortUsername(ShortUsername<T> value),
-    @required TResult unmatchedPassword(UnmatchedPassword<T> value),
-    @required TResult shortSecretAnswer(ShortSecretAnswer<T> value),
     @required TResult invalidAge(InvalidAge<T> value),
+    @required TResult invalidRepetation(InvalidRepetation<T> value),
     @required TResult invalidHeight(InvalidHeight<T> value),
     @required TResult invalidSex(InvalidSex<T> value),
     @required TResult invalidWeight(InvalidWeight<T> value),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
-    assert(shortQuestion != null);
+    assert(shortName != null);
+    assert(listEmpty != null);
+    assert(shortUrl != null);
     assert(shortUsername != null);
-    assert(unmatchedPassword != null);
-    assert(shortSecretAnswer != null);
     assert(invalidAge != null);
+    assert(invalidRepetation != null);
     assert(invalidHeight != null);
     assert(invalidSex != null);
     assert(invalidWeight != null);
@@ -1359,11 +1403,12 @@ class _$InvalidAge<T> implements InvalidAge<T> {
   TResult maybeMap<TResult extends Object>({
     TResult invalidEmail(InvalidEmail<T> value),
     TResult shortPassword(ShortPassword<T> value),
-    TResult shortQuestion(ShortQuestion<T> value),
+    TResult shortName(ShortName<T> value),
+    TResult listEmpty(ListEmpty<T> value),
+    TResult shortUrl(ShortUrl<T> value),
     TResult shortUsername(ShortUsername<T> value),
-    TResult unmatchedPassword(UnmatchedPassword<T> value),
-    TResult shortSecretAnswer(ShortSecretAnswer<T> value),
     TResult invalidAge(InvalidAge<T> value),
+    TResult invalidRepetation(InvalidRepetation<T> value),
     TResult invalidHeight(InvalidHeight<T> value),
     TResult invalidSex(InvalidSex<T> value),
     TResult invalidWeight(InvalidWeight<T> value),
@@ -1385,6 +1430,186 @@ abstract class InvalidAge<T> implements ValueFailure<T> {
   @override
   @JsonKey(ignore: true)
   $InvalidAgeCopyWith<T, InvalidAge<T>> get copyWith;
+}
+
+/// @nodoc
+abstract class $InvalidRepetationCopyWith<T, $Res>
+    implements $ValueFailureCopyWith<T, $Res> {
+  factory $InvalidRepetationCopyWith(InvalidRepetation<T> value,
+          $Res Function(InvalidRepetation<T>) then) =
+      _$InvalidRepetationCopyWithImpl<T, $Res>;
+  @override
+  $Res call({T failedValue});
+}
+
+/// @nodoc
+class _$InvalidRepetationCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res>
+    implements $InvalidRepetationCopyWith<T, $Res> {
+  _$InvalidRepetationCopyWithImpl(
+      InvalidRepetation<T> _value, $Res Function(InvalidRepetation<T>) _then)
+      : super(_value, (v) => _then(v as InvalidRepetation<T>));
+
+  @override
+  InvalidRepetation<T> get _value => super._value as InvalidRepetation<T>;
+
+  @override
+  $Res call({
+    Object failedValue = freezed,
+  }) {
+    return _then(InvalidRepetation<T>(
+      failedValue:
+          failedValue == freezed ? _value.failedValue : failedValue as T,
+    ));
+  }
+}
+
+/// @nodoc
+class _$InvalidRepetation<T> implements InvalidRepetation<T> {
+  const _$InvalidRepetation({@required this.failedValue})
+      : assert(failedValue != null);
+
+  @override
+  final T failedValue;
+
+  @override
+  String toString() {
+    return 'ValueFailure<$T>.invalidRepetation(failedValue: $failedValue)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InvalidRepetation<T> &&
+            (identical(other.failedValue, failedValue) ||
+                const DeepCollectionEquality()
+                    .equals(other.failedValue, failedValue)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+
+  @JsonKey(ignore: true)
+  @override
+  $InvalidRepetationCopyWith<T, InvalidRepetation<T>> get copyWith =>
+      _$InvalidRepetationCopyWithImpl<T, InvalidRepetation<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult invalidEmail(T failedValue),
+    @required TResult shortPassword(T failedValue),
+    @required TResult shortName(T failedValue),
+    @required TResult listEmpty(T failedValue),
+    @required TResult shortUrl(T failedValue),
+    @required TResult shortUsername(T failedValue),
+    @required TResult invalidAge(T failedValue),
+    @required TResult invalidRepetation(T failedValue),
+    @required TResult invalidHeight(T failedValue),
+    @required TResult invalidSex(T failedValue),
+    @required TResult invalidWeight(T failedValue),
+  }) {
+    assert(invalidEmail != null);
+    assert(shortPassword != null);
+    assert(shortName != null);
+    assert(listEmpty != null);
+    assert(shortUrl != null);
+    assert(shortUsername != null);
+    assert(invalidAge != null);
+    assert(invalidRepetation != null);
+    assert(invalidHeight != null);
+    assert(invalidSex != null);
+    assert(invalidWeight != null);
+    return invalidRepetation(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidEmail(T failedValue),
+    TResult shortPassword(T failedValue),
+    TResult shortName(T failedValue),
+    TResult listEmpty(T failedValue),
+    TResult shortUrl(T failedValue),
+    TResult shortUsername(T failedValue),
+    TResult invalidAge(T failedValue),
+    TResult invalidRepetation(T failedValue),
+    TResult invalidHeight(T failedValue),
+    TResult invalidSex(T failedValue),
+    TResult invalidWeight(T failedValue),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (invalidRepetation != null) {
+      return invalidRepetation(failedValue);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult invalidEmail(InvalidEmail<T> value),
+    @required TResult shortPassword(ShortPassword<T> value),
+    @required TResult shortName(ShortName<T> value),
+    @required TResult listEmpty(ListEmpty<T> value),
+    @required TResult shortUrl(ShortUrl<T> value),
+    @required TResult shortUsername(ShortUsername<T> value),
+    @required TResult invalidAge(InvalidAge<T> value),
+    @required TResult invalidRepetation(InvalidRepetation<T> value),
+    @required TResult invalidHeight(InvalidHeight<T> value),
+    @required TResult invalidSex(InvalidSex<T> value),
+    @required TResult invalidWeight(InvalidWeight<T> value),
+  }) {
+    assert(invalidEmail != null);
+    assert(shortPassword != null);
+    assert(shortName != null);
+    assert(listEmpty != null);
+    assert(shortUrl != null);
+    assert(shortUsername != null);
+    assert(invalidAge != null);
+    assert(invalidRepetation != null);
+    assert(invalidHeight != null);
+    assert(invalidSex != null);
+    assert(invalidWeight != null);
+    return invalidRepetation(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidEmail(InvalidEmail<T> value),
+    TResult shortPassword(ShortPassword<T> value),
+    TResult shortName(ShortName<T> value),
+    TResult listEmpty(ListEmpty<T> value),
+    TResult shortUrl(ShortUrl<T> value),
+    TResult shortUsername(ShortUsername<T> value),
+    TResult invalidAge(InvalidAge<T> value),
+    TResult invalidRepetation(InvalidRepetation<T> value),
+    TResult invalidHeight(InvalidHeight<T> value),
+    TResult invalidSex(InvalidSex<T> value),
+    TResult invalidWeight(InvalidWeight<T> value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (invalidRepetation != null) {
+      return invalidRepetation(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class InvalidRepetation<T> implements ValueFailure<T> {
+  const factory InvalidRepetation({@required T failedValue}) =
+      _$InvalidRepetation<T>;
+
+  @override
+  T get failedValue;
+  @override
+  @JsonKey(ignore: true)
+  $InvalidRepetationCopyWith<T, InvalidRepetation<T>> get copyWith;
 }
 
 /// @nodoc
@@ -1455,22 +1680,24 @@ class _$InvalidHeight<T> implements InvalidHeight<T> {
   TResult when<TResult extends Object>({
     @required TResult invalidEmail(T failedValue),
     @required TResult shortPassword(T failedValue),
-    @required TResult shortQuestion(T failedValue),
+    @required TResult shortName(T failedValue),
+    @required TResult listEmpty(T failedValue),
+    @required TResult shortUrl(T failedValue),
     @required TResult shortUsername(T failedValue),
-    @required TResult unmatchedPassword(T failedValue),
-    @required TResult shortSecretAnswer(T failedValue),
     @required TResult invalidAge(T failedValue),
+    @required TResult invalidRepetation(T failedValue),
     @required TResult invalidHeight(T failedValue),
     @required TResult invalidSex(T failedValue),
     @required TResult invalidWeight(T failedValue),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
-    assert(shortQuestion != null);
+    assert(shortName != null);
+    assert(listEmpty != null);
+    assert(shortUrl != null);
     assert(shortUsername != null);
-    assert(unmatchedPassword != null);
-    assert(shortSecretAnswer != null);
     assert(invalidAge != null);
+    assert(invalidRepetation != null);
     assert(invalidHeight != null);
     assert(invalidSex != null);
     assert(invalidWeight != null);
@@ -1482,11 +1709,12 @@ class _$InvalidHeight<T> implements InvalidHeight<T> {
   TResult maybeWhen<TResult extends Object>({
     TResult invalidEmail(T failedValue),
     TResult shortPassword(T failedValue),
-    TResult shortQuestion(T failedValue),
+    TResult shortName(T failedValue),
+    TResult listEmpty(T failedValue),
+    TResult shortUrl(T failedValue),
     TResult shortUsername(T failedValue),
-    TResult unmatchedPassword(T failedValue),
-    TResult shortSecretAnswer(T failedValue),
     TResult invalidAge(T failedValue),
+    TResult invalidRepetation(T failedValue),
     TResult invalidHeight(T failedValue),
     TResult invalidSex(T failedValue),
     TResult invalidWeight(T failedValue),
@@ -1504,22 +1732,24 @@ class _$InvalidHeight<T> implements InvalidHeight<T> {
   TResult map<TResult extends Object>({
     @required TResult invalidEmail(InvalidEmail<T> value),
     @required TResult shortPassword(ShortPassword<T> value),
-    @required TResult shortQuestion(ShortQuestion<T> value),
+    @required TResult shortName(ShortName<T> value),
+    @required TResult listEmpty(ListEmpty<T> value),
+    @required TResult shortUrl(ShortUrl<T> value),
     @required TResult shortUsername(ShortUsername<T> value),
-    @required TResult unmatchedPassword(UnmatchedPassword<T> value),
-    @required TResult shortSecretAnswer(ShortSecretAnswer<T> value),
     @required TResult invalidAge(InvalidAge<T> value),
+    @required TResult invalidRepetation(InvalidRepetation<T> value),
     @required TResult invalidHeight(InvalidHeight<T> value),
     @required TResult invalidSex(InvalidSex<T> value),
     @required TResult invalidWeight(InvalidWeight<T> value),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
-    assert(shortQuestion != null);
+    assert(shortName != null);
+    assert(listEmpty != null);
+    assert(shortUrl != null);
     assert(shortUsername != null);
-    assert(unmatchedPassword != null);
-    assert(shortSecretAnswer != null);
     assert(invalidAge != null);
+    assert(invalidRepetation != null);
     assert(invalidHeight != null);
     assert(invalidSex != null);
     assert(invalidWeight != null);
@@ -1531,11 +1761,12 @@ class _$InvalidHeight<T> implements InvalidHeight<T> {
   TResult maybeMap<TResult extends Object>({
     TResult invalidEmail(InvalidEmail<T> value),
     TResult shortPassword(ShortPassword<T> value),
-    TResult shortQuestion(ShortQuestion<T> value),
+    TResult shortName(ShortName<T> value),
+    TResult listEmpty(ListEmpty<T> value),
+    TResult shortUrl(ShortUrl<T> value),
     TResult shortUsername(ShortUsername<T> value),
-    TResult unmatchedPassword(UnmatchedPassword<T> value),
-    TResult shortSecretAnswer(ShortSecretAnswer<T> value),
     TResult invalidAge(InvalidAge<T> value),
+    TResult invalidRepetation(InvalidRepetation<T> value),
     TResult invalidHeight(InvalidHeight<T> value),
     TResult invalidSex(InvalidSex<T> value),
     TResult invalidWeight(InvalidWeight<T> value),
@@ -1627,22 +1858,24 @@ class _$InvalidSex<T> implements InvalidSex<T> {
   TResult when<TResult extends Object>({
     @required TResult invalidEmail(T failedValue),
     @required TResult shortPassword(T failedValue),
-    @required TResult shortQuestion(T failedValue),
+    @required TResult shortName(T failedValue),
+    @required TResult listEmpty(T failedValue),
+    @required TResult shortUrl(T failedValue),
     @required TResult shortUsername(T failedValue),
-    @required TResult unmatchedPassword(T failedValue),
-    @required TResult shortSecretAnswer(T failedValue),
     @required TResult invalidAge(T failedValue),
+    @required TResult invalidRepetation(T failedValue),
     @required TResult invalidHeight(T failedValue),
     @required TResult invalidSex(T failedValue),
     @required TResult invalidWeight(T failedValue),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
-    assert(shortQuestion != null);
+    assert(shortName != null);
+    assert(listEmpty != null);
+    assert(shortUrl != null);
     assert(shortUsername != null);
-    assert(unmatchedPassword != null);
-    assert(shortSecretAnswer != null);
     assert(invalidAge != null);
+    assert(invalidRepetation != null);
     assert(invalidHeight != null);
     assert(invalidSex != null);
     assert(invalidWeight != null);
@@ -1654,11 +1887,12 @@ class _$InvalidSex<T> implements InvalidSex<T> {
   TResult maybeWhen<TResult extends Object>({
     TResult invalidEmail(T failedValue),
     TResult shortPassword(T failedValue),
-    TResult shortQuestion(T failedValue),
+    TResult shortName(T failedValue),
+    TResult listEmpty(T failedValue),
+    TResult shortUrl(T failedValue),
     TResult shortUsername(T failedValue),
-    TResult unmatchedPassword(T failedValue),
-    TResult shortSecretAnswer(T failedValue),
     TResult invalidAge(T failedValue),
+    TResult invalidRepetation(T failedValue),
     TResult invalidHeight(T failedValue),
     TResult invalidSex(T failedValue),
     TResult invalidWeight(T failedValue),
@@ -1676,22 +1910,24 @@ class _$InvalidSex<T> implements InvalidSex<T> {
   TResult map<TResult extends Object>({
     @required TResult invalidEmail(InvalidEmail<T> value),
     @required TResult shortPassword(ShortPassword<T> value),
-    @required TResult shortQuestion(ShortQuestion<T> value),
+    @required TResult shortName(ShortName<T> value),
+    @required TResult listEmpty(ListEmpty<T> value),
+    @required TResult shortUrl(ShortUrl<T> value),
     @required TResult shortUsername(ShortUsername<T> value),
-    @required TResult unmatchedPassword(UnmatchedPassword<T> value),
-    @required TResult shortSecretAnswer(ShortSecretAnswer<T> value),
     @required TResult invalidAge(InvalidAge<T> value),
+    @required TResult invalidRepetation(InvalidRepetation<T> value),
     @required TResult invalidHeight(InvalidHeight<T> value),
     @required TResult invalidSex(InvalidSex<T> value),
     @required TResult invalidWeight(InvalidWeight<T> value),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
-    assert(shortQuestion != null);
+    assert(shortName != null);
+    assert(listEmpty != null);
+    assert(shortUrl != null);
     assert(shortUsername != null);
-    assert(unmatchedPassword != null);
-    assert(shortSecretAnswer != null);
     assert(invalidAge != null);
+    assert(invalidRepetation != null);
     assert(invalidHeight != null);
     assert(invalidSex != null);
     assert(invalidWeight != null);
@@ -1703,11 +1939,12 @@ class _$InvalidSex<T> implements InvalidSex<T> {
   TResult maybeMap<TResult extends Object>({
     TResult invalidEmail(InvalidEmail<T> value),
     TResult shortPassword(ShortPassword<T> value),
-    TResult shortQuestion(ShortQuestion<T> value),
+    TResult shortName(ShortName<T> value),
+    TResult listEmpty(ListEmpty<T> value),
+    TResult shortUrl(ShortUrl<T> value),
     TResult shortUsername(ShortUsername<T> value),
-    TResult unmatchedPassword(UnmatchedPassword<T> value),
-    TResult shortSecretAnswer(ShortSecretAnswer<T> value),
     TResult invalidAge(InvalidAge<T> value),
+    TResult invalidRepetation(InvalidRepetation<T> value),
     TResult invalidHeight(InvalidHeight<T> value),
     TResult invalidSex(InvalidSex<T> value),
     TResult invalidWeight(InvalidWeight<T> value),
@@ -1799,22 +2036,24 @@ class _$InvalidWeight<T> implements InvalidWeight<T> {
   TResult when<TResult extends Object>({
     @required TResult invalidEmail(T failedValue),
     @required TResult shortPassword(T failedValue),
-    @required TResult shortQuestion(T failedValue),
+    @required TResult shortName(T failedValue),
+    @required TResult listEmpty(T failedValue),
+    @required TResult shortUrl(T failedValue),
     @required TResult shortUsername(T failedValue),
-    @required TResult unmatchedPassword(T failedValue),
-    @required TResult shortSecretAnswer(T failedValue),
     @required TResult invalidAge(T failedValue),
+    @required TResult invalidRepetation(T failedValue),
     @required TResult invalidHeight(T failedValue),
     @required TResult invalidSex(T failedValue),
     @required TResult invalidWeight(T failedValue),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
-    assert(shortQuestion != null);
+    assert(shortName != null);
+    assert(listEmpty != null);
+    assert(shortUrl != null);
     assert(shortUsername != null);
-    assert(unmatchedPassword != null);
-    assert(shortSecretAnswer != null);
     assert(invalidAge != null);
+    assert(invalidRepetation != null);
     assert(invalidHeight != null);
     assert(invalidSex != null);
     assert(invalidWeight != null);
@@ -1826,11 +2065,12 @@ class _$InvalidWeight<T> implements InvalidWeight<T> {
   TResult maybeWhen<TResult extends Object>({
     TResult invalidEmail(T failedValue),
     TResult shortPassword(T failedValue),
-    TResult shortQuestion(T failedValue),
+    TResult shortName(T failedValue),
+    TResult listEmpty(T failedValue),
+    TResult shortUrl(T failedValue),
     TResult shortUsername(T failedValue),
-    TResult unmatchedPassword(T failedValue),
-    TResult shortSecretAnswer(T failedValue),
     TResult invalidAge(T failedValue),
+    TResult invalidRepetation(T failedValue),
     TResult invalidHeight(T failedValue),
     TResult invalidSex(T failedValue),
     TResult invalidWeight(T failedValue),
@@ -1848,22 +2088,24 @@ class _$InvalidWeight<T> implements InvalidWeight<T> {
   TResult map<TResult extends Object>({
     @required TResult invalidEmail(InvalidEmail<T> value),
     @required TResult shortPassword(ShortPassword<T> value),
-    @required TResult shortQuestion(ShortQuestion<T> value),
+    @required TResult shortName(ShortName<T> value),
+    @required TResult listEmpty(ListEmpty<T> value),
+    @required TResult shortUrl(ShortUrl<T> value),
     @required TResult shortUsername(ShortUsername<T> value),
-    @required TResult unmatchedPassword(UnmatchedPassword<T> value),
-    @required TResult shortSecretAnswer(ShortSecretAnswer<T> value),
     @required TResult invalidAge(InvalidAge<T> value),
+    @required TResult invalidRepetation(InvalidRepetation<T> value),
     @required TResult invalidHeight(InvalidHeight<T> value),
     @required TResult invalidSex(InvalidSex<T> value),
     @required TResult invalidWeight(InvalidWeight<T> value),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
-    assert(shortQuestion != null);
+    assert(shortName != null);
+    assert(listEmpty != null);
+    assert(shortUrl != null);
     assert(shortUsername != null);
-    assert(unmatchedPassword != null);
-    assert(shortSecretAnswer != null);
     assert(invalidAge != null);
+    assert(invalidRepetation != null);
     assert(invalidHeight != null);
     assert(invalidSex != null);
     assert(invalidWeight != null);
@@ -1875,11 +2117,12 @@ class _$InvalidWeight<T> implements InvalidWeight<T> {
   TResult maybeMap<TResult extends Object>({
     TResult invalidEmail(InvalidEmail<T> value),
     TResult shortPassword(ShortPassword<T> value),
-    TResult shortQuestion(ShortQuestion<T> value),
+    TResult shortName(ShortName<T> value),
+    TResult listEmpty(ListEmpty<T> value),
+    TResult shortUrl(ShortUrl<T> value),
     TResult shortUsername(ShortUsername<T> value),
-    TResult unmatchedPassword(UnmatchedPassword<T> value),
-    TResult shortSecretAnswer(ShortSecretAnswer<T> value),
     TResult invalidAge(InvalidAge<T> value),
+    TResult invalidRepetation(InvalidRepetation<T> value),
     TResult invalidHeight(InvalidHeight<T> value),
     TResult invalidSex(InvalidSex<T> value),
     TResult invalidWeight(InvalidWeight<T> value),

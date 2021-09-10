@@ -2,10 +2,10 @@ import 'package:dartz/dartz.dart';
 
 import 'package:injectable/injectable.dart';
 
-import 'package:temp_builder/domain/status/status.dart';
-import 'package:temp_builder/domain/status/status_failure.dart';
-import 'package:temp_builder/domain/status/status_repository.dart';
-import 'package:temp_builder/infrastructure/core/request_helper.dart';
+import 'package:fitnation_frontend/domain/status/status.dart';
+import 'package:fitnation_frontend/domain/status/status_failure.dart';
+import 'package:fitnation_frontend/domain/status/status_repository.dart';
+import 'package:fitnation_frontend/infrastructure/core/request_helper.dart';
 
 @LazySingleton(as: StatusRepository)
 class ApiStatusRepository implements StatusRepository {
